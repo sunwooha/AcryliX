@@ -38,9 +38,8 @@ public class AcryliXFXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         brushTool = canvas.getGraphicsContext2D();
         canvas.setOnMouseDragged(e -> {
-            double size = Double.parseDouble(bsize.getText());
-            double x = e.getX() - size / 2;
-            double y = e.getY() - size / 2;
+            double x = e.getX() - 10 / 2;
+            double y = e.getY() - 10 / 2;
             
             if(toolSelected && !bsize.getText().isEmpty()){
                 brushTool.setFill(colorpicker.getValue());
