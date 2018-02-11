@@ -21,9 +21,6 @@ public class MainApp extends Application {
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
         
-        runner = new JMonetRunner();
-        runner.startJMonet();
-        
         stage.setTitle("AcryliX");
         stage.setScene(scene);
         stage.show();

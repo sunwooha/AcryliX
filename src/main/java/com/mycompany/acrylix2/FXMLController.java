@@ -19,6 +19,10 @@ import javafx.scene.layout.Pane;
 
 public class FXMLController implements Initializable {
     
+    JMonetRunner runner;
+    JFXPaintCanvasNode myCanvas;
+    
+    
     @FXML
     private Label label;
     
@@ -153,17 +157,13 @@ public class FXMLController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-         JFXPaintCanvasNode myCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
-         aPane.getChildren().add(myCanvas);
-         myCanvas.setLayoutX(aPane.getLayoutX());
-         myCanvas.setLayoutY(aPane.getLayoutY());
-         
-         PaintTool activeTool = PaintToolBuilder.create(PaintToolType.PAINTBRUSH)
-        .withStroke(BasicBrush.ROUND_8X8.stroke)
-        .withFillPaint(Color.RED)
-        .makeActiveOnCanvas(myCanvas)
-        .build();
-         
+        
+        runner = new JMonetRunner();
+        runner.startJMonet();
+        
+        myCanvas = runner.currentCanvas;
+        
+        aPane.getChildren().add(myCanvas);
+        myCanvas.getCanvas().setSize(1025, 595);
     }    
 }
