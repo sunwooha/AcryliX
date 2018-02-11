@@ -195,7 +195,7 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
-    private void clickShowComment(ActionEvent event){
+    private void clickShowComments(ActionEvent event){
         System.out.println("You clicked the comment button!");
     }
     
