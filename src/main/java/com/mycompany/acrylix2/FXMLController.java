@@ -22,7 +22,6 @@ public class FXMLController implements Initializable {
     JMonetRunner runner;
     JFXPaintCanvasNode myCanvas;
     
-    
     @FXML
     private Label label;
     
@@ -32,11 +31,10 @@ public class FXMLController implements Initializable {
     @FXML
     private AnchorPane aPane;
     
-    
-    
     @FXML
     private void colorRed(ActionEvent event){
         System.out.println("You clicked red!");
+        runner.switchTools(PaintToolType.PAINTBRUSH, Color.RED);
     }
     
     @FXML
