@@ -156,8 +156,7 @@ public class FXMLController implements Initializable {
         // TODO
          JFXPaintCanvasNode myCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
          aPane.getChildren().add(myCanvas);
-         myCanvas.setLayoutX(aPane.getLayoutX());
-         myCanvas.setLayoutY(aPane.getLayoutY());
+         myCanvas.getCanvas().setSize(1025, 595);
          
          PaintTool activeTool = PaintToolBuilder.create(PaintToolType.PAINTBRUSH)
         .withStroke(BasicBrush.ROUND_8X8.stroke)
