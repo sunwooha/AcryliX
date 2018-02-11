@@ -36,7 +36,6 @@ public class JMonetRunner {
             
             // Store the current tool's attributes
             Stroke currentStroke = activeTool.getStroke();
-            Paint currentColor = activeTool.getStrokePaint();
             
             // Deactivate the current tool
             activeTool.deactivate();
@@ -44,7 +43,7 @@ public class JMonetRunner {
             // Switch the tool's type
             activeTool = PaintToolBuilder.create(tooltype)
                 .withStroke(currentStroke)
-                .withFillPaint(currentColor)
+                .withFillPaint(Color.BLACK)
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
         }
@@ -66,6 +65,8 @@ public class JMonetRunner {
             activeTool = PaintToolBuilder.create(currentToolType)
                 .withStroke(currentStroke)
                 .withFillPaint(col)
+                .withFontColor(col)
+                .withStrokePaint(col)
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
         }  
