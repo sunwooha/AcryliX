@@ -36,10 +36,14 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void clickErase(ActionEvent event){
+        System.out.println("You clicked erase!");
+        runner.switchToolType(PaintToolType.ERASER);
     }
     
     @FXML
     private void clickRotate(ActionEvent event){
+        System.out.println("You clicked rotate!");
+        runner.switchToolType(PaintToolType.ROTATE);
     }
     
     @FXML
@@ -136,21 +140,25 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickGroup(ActionEvent event){
         System.out.println("You clicked the group button!");
+        runner.switchToolType(PaintToolType.SELECTION);
     }
     
     @FXML
     private void clickZoomIn(ActionEvent event){
         System.out.println("You clicked the zoom in button!");
+        runner.switchToolType(PaintToolType.MAGNIFIER);
     }
     
     @FXML
     private void clickZoomOut(ActionEvent event){
         System.out.println("You clicked the zoom out button!");
+        runner.switchToolType(PaintToolType.MAGNIFIER);
     }
     
     @FXML
     private void clickSelect(ActionEvent event){
         System.out.println("You clicked the select button!");
+        runner.switchToolType(PaintToolType.ARROW);
     }
     
     @FXML
