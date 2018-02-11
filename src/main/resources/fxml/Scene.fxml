@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -15,61 +17,124 @@
    <children>
       <HBox alignment="TOP_CENTER" layoutX="147.0" layoutY="1.0" prefHeight="57.0" prefWidth="996.0" spacing="10.0">
          <children>
-            <Button fx:id="text" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Text">
+            <Button fx:id="text" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/text.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="brush" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickBrush" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Brush">
+            <Button fx:id="brush" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickBrush" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/paintbrush.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="curve" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickCurve" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Curve">
+            <Button fx:id="curve" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickCurve" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/curve.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Image">
+            <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickLine" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Line">
+            <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickLine" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/line.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button fx:id="group" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickGroup" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Group">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="zoomin" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Zoom In">
+            <Button fx:id="zoomin" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/zoomin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="zoomout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomOut" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Zoom Out">
+            <Button fx:id="zoomout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomOut" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/zoomout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Select">
+            <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/selection.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="print" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickPrint" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Print">
+            <Button fx:id="print" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickPrint" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
          <padding>
@@ -126,14 +191,21 @@
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="fill" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorFill" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0)rgb(0,0,0);" text="Fill">
+            <Button fx:id="fill" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorFill" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/fill.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
       </VBox>
-      <VBox alignment="TOP_CENTER" layoutX="1164.0" layoutY="-1.0" prefHeight="723.0" prefWidth="120.0">
+      <VBox alignment="TOP_CENTER" layoutX="1158.0" layoutY="-1.0" prefHeight="723.0" prefWidth="124.0">
          <children>
             <Label alignment="CENTER" prefHeight="57.0" prefWidth="147.0" style="-fx-background-color: rgb(140,140,140); -fx-border-color: rgb(0,0,0);" text="Shapes" textFill="WHITE">
                <font>
@@ -143,29 +215,50 @@
                   <Insets left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="rect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickRect" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Rectangle">
+            <Button fx:id="rect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickRect" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/rectangle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="circle" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickCircle" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Circle">
+            <Button fx:id="circle" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickCircle" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/oval.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="poly" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickPoly" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Polygon">
+            <Button fx:id="poly" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickPoly" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/polygon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Label alignment="CENTER" prefHeight="57.0" prefWidth="147.0" style="-fx-background-color: rgb(140,140,140); -fx-border-color: rgb(0,0,0);" text="Attributes" textFill="WHITE">
                <font>
@@ -175,21 +268,35 @@
                   <Insets left="5.0" right="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="eyedrop" mnemonicParsing="false" onAction="#clickEye" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Eye">
+            <Button fx:id="eyedrop" mnemonicParsing="false" onAction="#clickEye" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="comment" mnemonicParsing="false" onAction="#clickComment" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Comment">
+            <Button fx:id="comment" mnemonicParsing="false" onAction="#clickComment" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/comment.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Pane prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgb(150,150,150); -fx-border-color: rgb(0,0,0);">
                <VBox.margin>
