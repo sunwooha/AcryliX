@@ -31,6 +31,26 @@ public class FXMLController implements Initializable {
     private AnchorPane aPane;
     
     @FXML
+    private void clickExport(ActionEvent event){
+    }
+    
+    @FXML
+    private void clickErase(ActionEvent event){
+    }
+    
+    @FXML
+    private void clickRotate(ActionEvent event){
+    }
+    
+    @FXML
+    private void clickAcrylix(ActionEvent event){
+    }
+    
+    @FXML
+    private void clickOnReset(ActionEvent event){
+    }
+    
+    @FXML
     private void colorRed(ActionEvent event){
         System.out.println("You clicked red!");
         runner.switchToolColor(Color.RED);
@@ -171,21 +191,12 @@ public class FXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
          JFXPaintCanvasNode myCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
-         aPane.getChildren().add(myCanvas);
-         myCanvas.getCanvas().setSize(1025, 595);
-         
-         PaintTool activeTool = PaintToolBuilder.create(PaintToolType.PAINTBRUSH)
-        .withStroke(BasicBrush.ROUND_8X8.stroke)
-        .withFillPaint(Color.RED)
-        .makeActiveOnCanvas(myCanvas)
-        .build();
         
         runner = new JMonetRunner();
         runner.startJMonet();
         
         myCanvas = runner.currentCanvas;
-        
         aPane.getChildren().add(myCanvas);
-        myCanvas.getCanvas().setSize(1025, 595);
+        myCanvas.getCanvas().setSize(1184, 595);
     }    
 }

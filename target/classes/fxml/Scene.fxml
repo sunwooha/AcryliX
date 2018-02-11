@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgb(232, 240, 255)rgb(232, 240, 255);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLController">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1440.0" style="-fx-background-color: rgb(232, 240, 255)rgb(232, 240, 255);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLController">
    <children>
-      <HBox alignment="TOP_CENTER" layoutX="147.0" layoutY="1.0" prefHeight="57.0" prefWidth="996.0" spacing="10.0">
+      <HBox alignment="TOP_CENTER" layoutX="147.0" layoutY="55.0" prefHeight="57.0" prefWidth="996.0" spacing="10.0">
          <children>
             <Button fx:id="text" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <HBox.margin>
@@ -67,6 +67,18 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Button fx:id="export" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickExport" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="36.0">
+                     <image>
+                        <Image url="@../icons/export.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickLine" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
@@ -103,18 +115,6 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="zoomout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomOut" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/zoomout.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
             <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
@@ -142,14 +142,35 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Button fx:id="eraser" mnemonicParsing="false" onAction="#clickErase" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214) rgb(214,214,214); -fx-border-color: rgb(0,0,0) rgb(0,0,0);">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="47.0">
+                     <image>
+                        <Image url="@../icons/eraser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="rotate" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickRotate" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="44.0">
+                     <image>
+                        <Image url="@../icons/rotate.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
          <padding>
             <Insets top="5.0" />
          </padding>
       </HBox>
-      <VBox alignment="TOP_CENTER" layoutY="-1.0" prefHeight="722.0" prefWidth="120.0">
+      <VBox alignment="TOP_CENTER" layoutY="58.0" prefHeight="722.0" prefWidth="120.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="57.0" prefWidth="147.0" style="-fx-background-color: rgb(140,140,140); -fx-border-color: rgb(0,0,0);" text="Colors" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="110.0" style="-fx-background-color: rgb(140,140,140); -fx-border-color: rgb(0,0,0);" text="Colors" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
@@ -157,42 +178,42 @@
                   <Insets left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="red" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorRed" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(235,38,31); -fx-border-color: rgb(0,0,0);">
+            <Button fx:id="red" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorRed" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: rgb(235,38,31); -fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="orange" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorOrange" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(253,146,38); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="orange" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorOrange" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: rgb(253,146,38); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="yellow" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorYellow" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(254,249,55); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="yellow" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorYellow" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: rgb(254,249,55); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="green" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorGreen" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(40,247,45); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="green" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorGreen" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: rgb(40,247,45); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="blue" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlue" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(16,63,251); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="blue" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlue" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: rgb(16,63,251); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="purple" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorPurple" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(146,40,144); -fx-border-color: rgb(0,0,0);">
+            <Button fx:id="purple" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorPurple" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: rgb(146,40,144); -fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="white" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorWhite" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(0,0,0);">
+            <Button fx:id="white" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorWhite" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="black" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlack" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(0,0,0); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="black" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlack" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: rgb(0,0,0); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
@@ -211,7 +232,7 @@
             </Button>
          </children>
       </VBox>
-      <VBox alignment="TOP_CENTER" layoutX="1158.0" layoutY="-1.0" prefHeight="723.0" prefWidth="124.0">
+      <VBox alignment="TOP_CENTER" layoutX="1309.0" layoutY="58.0" prefHeight="723.0" prefWidth="124.0">
          <children>
             <Label alignment="CENTER" prefHeight="57.0" prefWidth="147.0" style="-fx-background-color: rgb(140,140,140); -fx-border-color: rgb(0,0,0);" text="Shapes" textFill="WHITE">
                <font>
@@ -221,7 +242,7 @@
                   <Insets left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="rect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickRect" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
+            <Button fx:id="rect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickRect" prefHeight="50.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
@@ -236,7 +257,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="circle" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickCircle" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
+            <Button fx:id="circle" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickCircle" prefHeight="50.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
@@ -251,7 +272,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="poly" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickPoly" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
+            <Button fx:id="poly" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickPoly" prefHeight="50.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
@@ -274,7 +295,7 @@
                   <Insets left="5.0" right="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="eyedrop" mnemonicParsing="false" onAction="#clickEye" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
+            <Button fx:id="eyedrop" mnemonicParsing="false" onAction="#clickEye" prefHeight="50.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
@@ -289,7 +310,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="comment" mnemonicParsing="false" onAction="#clickComment" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
+            <Button fx:id="comment" mnemonicParsing="false" onAction="#clickComment" prefHeight="50.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
@@ -347,6 +368,17 @@
             </Pane>
          </children>
       </VBox>
-      <AnchorPane fx:id="aPane" layoutX="120.0" layoutY="70.0" prefHeight="595.0" prefWidth="1025.0" style="-fx-background-color: #ffffff;" />
+      <AnchorPane fx:id="aPane" layoutX="120.0" layoutY="120.0" prefHeight="595.0" prefWidth="1184.0" style="-fx-background-color: #ffffff;" />
+      <HBox alignment="TOP_CENTER" layoutX="7.0" layoutY="5.0" prefHeight="50.0" prefWidth="1421.0" spacing="550.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#clickAcrylix" prefHeight="45.0" prefWidth="80.0" text="Acrylix" />
+            <TextField alignment="CENTER" text="Untitled">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="reset" mnemonicParsing="false" onAction="#clickOnReset" prefHeight="45.0" prefWidth="80.0" text="Reset" />
+         </children>
+      </HBox>
    </children>
 </Pane>

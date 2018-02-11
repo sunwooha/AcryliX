@@ -28,6 +28,12 @@ import javafx.scene.layout.Pane;
  */
 public class AttributesFXML implements Initializable {
     
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+    
+    }
+    
 }
 
 
