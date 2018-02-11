@@ -1,5 +1,13 @@
 package com.mycompany.acrylix2;
 
+import com.defano.jmonet.canvas.JFXPaintCanvasNode;
+import com.defano.jmonet.canvas.JMonetCanvas;
+import com.defano.jmonet.model.PaintToolType;
+import com.defano.jmonet.tools.brushes.BasicBrush;
+import com.defano.jmonet.tools.builder.PaintTool;
+import com.defano.jmonet.tools.builder.PaintToolBuilder;
+import java.awt.Canvas;
+import java.awt.Color;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -11,6 +19,7 @@ public class FXMLController implements Initializable {
     
     @FXML
     private Label label;
+    
     
     @FXML
     private void colorRed(ActionEvent event){

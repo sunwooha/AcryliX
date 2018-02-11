@@ -308,7 +308,7 @@
                         <Font name="Helvetica Neue" size="20.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="100.0" text="Go to:" textFill="WHITE">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="100.0" text="Go to:" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="20.0" />
                      </font>
@@ -320,14 +320,14 @@
                         <Font name="Helvetica Neue" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="23.0" layoutY="161.0" text="y:" textFill="WHITE">
+                  <Label layoutX="22.0" layoutY="161.0" text="y:" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="20.0" />
                      </font>
                   </Label>
                   <TextField fx:id="currX" editable="false" layoutX="57.0" layoutY="34.0" prefHeight="27.0" prefWidth="38.0" />
                   <TextField fx:id="currY" editable="false" layoutX="57.0" layoutY="70.0" prefHeight="27.0" prefWidth="38.0" />
-                  <Label layoutX="21.0" layoutY="34.0" text="x:" textFill="WHITE">
+                  <Label layoutX="22.0" layoutY="34.0" text="x:" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="20.0" />
                      </font>
@@ -341,7 +341,7 @@
             </Pane>
          </children>
       </VBox>
-      <Canvas fx:id="canvas" height="598.0" layoutX="121.0" layoutY="75.0" width="1044.0">
+      <Canvas fx:id="canvas" height="600.0" layoutX="153.0" layoutY="75.0" width="990.0">
          <effect>
             <Shadow />
          </effect>
