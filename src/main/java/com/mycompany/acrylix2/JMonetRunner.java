@@ -15,9 +15,6 @@ public class JMonetRunner {
         currentCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
         controller = new ToolController();
         controller.setDefaultTool(currentCanvas);
-        
-        // Placeholder for now
-        new TestStage(currentCanvas);
     }
     
     void newCanvas() {
@@ -27,5 +24,4 @@ public class JMonetRunner {
     JFXPaintCanvasNode getCurrentCanvas() {
         return currentCanvas;
     }
-    
 }
