@@ -14,11 +14,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 public class FXMLController implements Initializable {
     
     @FXML
     private Label label;
+    
+    @FXML
+    private Pane pane;
+    
+    @FXML
+    private AnchorPane aPane;
+    
     
     
     @FXML
@@ -145,5 +154,16 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+         JFXPaintCanvasNode myCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
+         aPane.getChildren().add(myCanvas);
+         myCanvas.setLayoutX(aPane.getLayoutX());
+         myCanvas.setLayoutY(aPane.getLayoutY());
+         
+         PaintTool activeTool = PaintToolBuilder.create(PaintToolType.PAINTBRUSH)
+        .withStroke(BasicBrush.ROUND_8X8.stroke)
+        .withFillPaint(Color.RED)
+        .makeActiveOnCanvas(myCanvas)
+        .build();
+         
     }    
 }
