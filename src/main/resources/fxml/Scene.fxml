@@ -72,7 +72,7 @@
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="38.0" fitWidth="36.0">
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
                      <image>
                         <Image url="@../icons/export.png" />
                      </image>
@@ -159,6 +159,23 @@
                   <ImageView fitHeight="37.0" fitWidth="44.0">
                      <image>
                         <Image url="@../icons/rotate.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="comment" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickComment" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Com">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="help" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickHelp" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/help.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -310,7 +327,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="comment" mnemonicParsing="false" onAction="#clickComment" prefHeight="50.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
+            <Button fx:id="showComments" mnemonicParsing="false" onAction="#clickShowComments" prefHeight="50.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
@@ -318,7 +335,7 @@
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/comment.png" />
                      </image>
