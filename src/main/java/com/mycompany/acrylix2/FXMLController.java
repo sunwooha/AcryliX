@@ -33,42 +33,49 @@ public class FXMLController implements Initializable {
     @FXML
     private void colorRed(ActionEvent event){
         System.out.println("You clicked red!");
-        runner.switchTools(PaintToolType.PAINTBRUSH, Color.RED);
+        runner.switchToolColor(Color.RED);
     }
     
     @FXML
     private void colorOrange(ActionEvent event){
         System.out.println("You clicked orange!");
+        runner.switchToolColor(Color.ORANGE);
     }
     
     @FXML
     private void colorYellow(ActionEvent event){
         System.out.println("You clicked yellow!");
+        runner.switchToolColor(Color.YELLOW);
     }
     
     @FXML
     private void colorGreen(ActionEvent event){
         System.out.println("You clicked green!");
+        runner.switchToolColor(Color.GREEN);
     }
     
     @FXML
     private void colorBlue(ActionEvent event){
         System.out.println("You clicked blue!");
+        runner.switchToolColor(Color.BLUE);
     }
     
     @FXML
     private void colorPurple(ActionEvent event){
         System.out.println("You clicked purple!");
+        runner.switchToolColor(Color.MAGENTA);
     }
     
     @FXML
     private void colorBlack(ActionEvent event){
         System.out.println("You clicked black!");
+        runner.switchToolColor(Color.BLACK);
     }
     
     @FXML
     private void colorWhite(ActionEvent event){
         System.out.println("You clicked white!");
+        runner.switchToolColor(Color.WHITE);
     }
     
     @FXML

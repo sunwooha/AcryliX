@@ -6,7 +6,7 @@ import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import com.defano.jmonet.model.PaintToolType;
 import com.defano.jmonet.tools.brushes.BasicBrush;
-import java.awt.Color;
+import java.awt.*;
 
 public class JMonetRunner {
     
@@ -29,26 +29,58 @@ public class JMonetRunner {
         return currentCanvas;
     }
     
-    void switchTools(PaintToolType tooltype, Color col) {
+    void switchToolType(PaintToolType tooltype) {
         
-        // If a tool is already active, deactivate it
+        // Check whether or not a tool is already active
         if (activeTool != null) {
+            
+            // Store the current tool's attributes
+            Stroke currentStroke = activeTool.getStroke();
+            Paint currentColor = activeTool.getStrokePaint();
+            
+            // Deactivate the current tool
             activeTool.deactivate();
+                    
+            // Switch the tool's type
+            activeTool = PaintToolBuilder.create(tooltype)
+                .withStroke(currentStroke)
+                .withFillPaint(currentColor)
+                .makeActiveOnCanvas(currentCanvas)
+                .build();
         }
+    }
+    
+    void switchToolColor(Color col) {
         
-        // Switch tools (placeholder for now; definitely needs more logic, TBD)
-        activeTool = PaintToolBuilder.create(tooltype)
-            .withStroke(BasicBrush.ROUND_8X8.stroke)
-            .withFillPaint(col)
-            .makeActiveOnCanvas(currentCanvas)
-            .build(); 
+        // Check whether or not a tool is already active
+        if (activeTool != null) {
+            
+            // Store the current tool's attributes
+            Stroke currentStroke = activeTool.getStroke();
+            PaintToolType currentToolType = activeTool.getToolType();
+            
+            // Deactivate the current tool
+            activeTool.deactivate();
+        
+            // Switch the tool's color
+            activeTool = PaintToolBuilder.create(currentToolType)
+                .withStroke(currentStroke)
+                .withFillPaint(col)
+                .makeActiveOnCanvas(currentCanvas)
+                .build();
+        }  
     }
     
     PaintTool getActiveTool() {
         return activeTool;
     }
     
+    //Sets the active tool to a black paintbrush. Default when the program starts
     void setDefaultTool() {
-        switchTools(PaintToolType.PAINTBRUSH, Color.BLACK);
+        activeTool = PaintToolBuilder.create(PaintToolType.PAINTBRUSH)
+            .withStroke(BasicBrush.ROUND_8X8.stroke)
+            .withFillPaint(Color.BLACK)
+            .makeActiveOnCanvas(currentCanvas)
+            .build();
     }
 }
