@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgb(232, 240, 255)rgb(232, 240, 255);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgb(232, 240, 255)rgb(232, 240, 255);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLController">
    <children>
       <HBox alignment="TOP_CENTER" layoutX="147.0" layoutY="1.0" prefHeight="57.0" prefWidth="996.0" spacing="10.0">
          <children>
-            <Button fx:id="text" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Text">
+            <Button fx:id="text" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Text">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -23,47 +23,47 @@
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="brush" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Brush">
+            <Button fx:id="brush" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickBrush" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Brush">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="curve" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Curve">
+            <Button fx:id="curve" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickCurve" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Curve">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Image">
+            <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Image">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Line">
+            <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickLine" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Line">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="group" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Group">
+            <Button fx:id="group" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickGroup" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Group">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="zoomin" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Zoom In">
+            <Button fx:id="zoomin" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Zoom In">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="zoomout" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Zoom Out">
+            <Button fx:id="zoomout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomOut" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Zoom Out">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Select">
+            <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Select">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="print" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Print">
+            <Button fx:id="print" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickPrint" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Print">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -86,47 +86,47 @@
                   <Insets left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="red" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(235,38,31); -fx-border-color: rgb(0,0,0);">
+            <Button fx:id="red" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorRed" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(235,38,31); -fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="orange" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(253,146,38); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="orange" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorOrange" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(253,146,38); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="yellow" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(254,249,55); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="yellow" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorYellow" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(254,249,55); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="green" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(40,247,45); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="green" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorGreen" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(40,247,45); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="blue" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(16,63,251); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="blue" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlue" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(16,63,251); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="purple" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(146,40,144);">
+            <Button fx:id="purple" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorPurple" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(146,40,144); -fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="white" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(0,0,0);">
+            <Button fx:id="white" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorWhite" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(255,255,255); -fx-border-color: rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="black" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(0,0,0); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="black" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlack" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: rgb(0,0,0); -fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="fill" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0)rgb(0,0,0);" text="Fill">
+            <Button fx:id="fill" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorFill" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0)rgb(0,0,0);" text="Fill">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
@@ -143,7 +143,7 @@
                   <Insets left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="rect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Rectangle">
+            <Button fx:id="rect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickRect" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Rectangle">
                <VBox.margin>
                   <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
@@ -151,7 +151,7 @@
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="cir" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Circle">
+            <Button fx:id="circle" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickCircle" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Circle">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
@@ -159,7 +159,7 @@
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="poly" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Polygon">
+            <Button fx:id="poly" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickPoly" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Polygon">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
@@ -175,7 +175,7 @@
                   <Insets left="5.0" right="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="eyedrop" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Eye">
+            <Button fx:id="eyedrop" mnemonicParsing="false" onAction="#clickEye" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Eye">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
@@ -183,7 +183,7 @@
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="comment" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Comment">
+            <Button fx:id="comment" mnemonicParsing="false" onAction="#clickComment" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0);" text="Comment">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>

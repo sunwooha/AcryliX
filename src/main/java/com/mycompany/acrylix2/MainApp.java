@@ -1,42 +1,27 @@
 package com.mycompany.acrylix2;
 
-import com.defano.jmonet.canvas.JFXPaintCanvasNode;
-import com.defano.jmonet.canvas.JMonetCanvas;
-import com.defano.jmonet.model.PaintToolType;
-import com.defano.jmonet.tools.brushes.BasicBrush;
-import com.defano.jmonet.tools.builder.PaintTool;
-import com.defano.jmonet.tools.builder.PaintToolBuilder;
-import java.awt.Color;
+import java.io.IOException;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 
 public class MainApp extends Application {
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws IOException {
 
-        // Create a JFX node for our paint canvas
-        JFXPaintCanvasNode myCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
-
-        // Create a pane for it
-        StackPane pane = new StackPane();
-        pane.getChildren().add(myCanvas);
-
-        // And add it to our stage
-        stage.setScene(new Scene(pane, 640, 480));
-        stage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
         
-        PaintTool activeTool = PaintToolBuilder.create(PaintToolType.PAINTBRUSH)
-        .withStroke(BasicBrush.ROUND_8X8.stroke)
-        .withFillPaint(Color.RED)
-        .makeActiveOnCanvas(myCanvas)
-        .build();
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        stage.setTitle("AcryliX");
+        stage.setScene(scene);
+        stage.show();
     }
 
 
