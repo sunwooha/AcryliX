@@ -194,6 +194,16 @@ public class FXMLController implements Initializable {
         System.out.println("You clicked the comment button!");
     }
     
+    @FXML
+    private void clickShowComment(ActionEvent event){
+        System.out.println("You clicked the comment button!");
+    }
+    
+    @FXML
+    private void clickHelp(ActionEvent event){
+        System.out.println("You clicked the comment button!");
+    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
