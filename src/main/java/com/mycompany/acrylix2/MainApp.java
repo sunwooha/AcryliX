@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 
 
 public class MainApp extends Application {
+    
+    JMonetRunner runner;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -18,6 +20,9 @@ public class MainApp extends Application {
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
+        
+        runner = new JMonetRunner();
+        runner.startJMonet();
         
         stage.setTitle("AcryliX");
         stage.setScene(scene);
