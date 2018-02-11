@@ -81,21 +81,25 @@ public class FXMLController implements Initializable {
     @FXML
     private void colorFill(ActionEvent event){
         System.out.println("You clicked fill!");
+        runner.switchToolType(PaintToolType.FILL);
     }
     
     @FXML
     private void clickText(ActionEvent event){
         System.out.println("You clicked the text button!");
+        runner.switchToolType(PaintToolType.TEXT);
     }
     
     @FXML
     private void clickBrush(ActionEvent event){
         System.out.println("You clicked the brush button!");
+        runner.switchToolType(PaintToolType.PAINTBRUSH);
     }
     
     @FXML
     private void clickCurve(ActionEvent event){
         System.out.println("You clicked the curve button!");
+        runner.switchToolType(PaintToolType.CURVE);
     }
     
     @FXML
@@ -106,6 +110,7 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickLine(ActionEvent event){
         System.out.println("You clicked the line button!");
+        runner.switchToolType(PaintToolType.LINE);
     }
     
     @FXML
@@ -136,16 +141,19 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickRect(ActionEvent event){
         System.out.println("You clicked the rectangle button!");
+        runner.switchToolType(PaintToolType.RECTANGLE);
     }
     
     @FXML
     private void clickCircle(ActionEvent event){
         System.out.println("You clicked the circle button!");
+        runner.switchToolType(PaintToolType.OVAL);
     }
     
     @FXML
     private void clickPoly(ActionEvent event){
         System.out.println("You clicked the polygon button!");
+        runner.switchToolType(PaintToolType.POLYGON);
     }
     
     @FXML
