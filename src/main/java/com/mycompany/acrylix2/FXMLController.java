@@ -154,7 +154,6 @@ public class FXMLController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-<<<<<<< HEAD
         // TODO
          JFXPaintCanvasNode myCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
          aPane.getChildren().add(myCanvas);
@@ -165,8 +164,6 @@ public class FXMLController implements Initializable {
         .withFillPaint(Color.RED)
         .makeActiveOnCanvas(myCanvas)
         .build();
-         
-=======
         
         runner = new JMonetRunner();
         runner.startJMonet();
@@ -175,6 +172,5 @@ public class FXMLController implements Initializable {
         
         aPane.getChildren().add(myCanvas);
         myCanvas.getCanvas().setSize(1025, 595);
->>>>>>> a2b18c48c37a9c4aad45f1aae9c4a6d0fbaea70c
     }    
 }
