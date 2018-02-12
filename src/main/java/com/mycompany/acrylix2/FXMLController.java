@@ -32,6 +32,8 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void clickExport(ActionEvent event){
+        System.out.println("You clicked export!");
+        runner.exportImage("image.png", "png");
     }
     
     @FXML
@@ -52,6 +54,9 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void clickOnReset(ActionEvent event){
+        System.out.println("You clicked reset!");
+        myCanvas = runner.getCurrentCanvas();
+        myCanvas.getCanvas().clearCanvas();
     }
     
     @FXML
@@ -129,6 +134,7 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickImage(ActionEvent event){
         System.out.println("You clicked the image button!");
+        runner.insertImage("strawberry.png");
     }
     
     @FXML
