@@ -7,14 +7,19 @@ import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import java.awt.Color;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class FXMLController implements Initializable {
     
@@ -173,21 +178,72 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
-    private void clickRect(ActionEvent event){
+    private void clickRect(ActionEvent event) throws IOException {
         System.out.println("You clicked the rectangle button!");
         runner.switchToolType(PaintToolType.RECTANGLE);
+        
+        //now, we will create a pop-up window
+        
+        //first, get the XML file
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        
+        //then, set the scene from that file
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //set attributes of the window.
+        stage.setTitle("Rectangle Attributes");
+        stage.setScene(scene);
+        stage.show();
     }
     
     @FXML
-    private void clickCircle(ActionEvent event){
-        System.out.println("You clicked the circle button!");
+    private void clickOval(ActionEvent event) throws IOException{
+        System.out.println("You clicked the oval button!");
         runner.switchToolType(PaintToolType.OVAL);
+        
+        //now, we will create a pop-up window
+        
+        //first, get the XML file 
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        
+        //then, set the scene from that file
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //set attributes of the window.
+        stage.setTitle("Oval Attributes");
+        stage.setScene(scene);
+        stage.show();
     }
     
     @FXML
-    private void clickPoly(ActionEvent event){
+    private void clickPoly(ActionEvent event) throws IOException{
         System.out.println("You clicked the polygon button!");
         runner.switchToolType(PaintToolType.POLYGON);
+        
+        //now, we will create a pop-up window
+        
+        //first, get the XML file 
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        
+        //then, set the scene from that file
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //set attributes of the window.
+        stage.setTitle("Polygon Attributes");
+        stage.setScene(scene);
+        stage.show();
     }
     
     @FXML
