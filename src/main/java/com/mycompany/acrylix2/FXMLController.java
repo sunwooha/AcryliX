@@ -54,7 +54,25 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
-    private void clickAcrylix(ActionEvent event){
+    private void clickAcrylix(ActionEvent event) throws IOException{
+        
+        //now, we will create a pop-up window
+        
+        //first, get the XML file
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/LogoAttributes.fxml"));
+        
+        //then, set the scene from that file
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //set attributes of the window.
+        stage.setTitle("Acrylix");
+        stage.setScene(scene);
+        stage.show();
+        
     }
     
     @FXML
