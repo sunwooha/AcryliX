@@ -25,11 +25,37 @@ import javafx.scene.layout.Pane;
  *
  * @author Parankush
  */
-public class FXMLShapes implements Initializable {
+public class FXMLText implements Initializable {
     
     @FXML
     private void writeComment(ActionEvent event){
         System.out.println("Comment");
+    }
+    
+    
+    @FXML
+    private void selectFont(ActionEvent event){
+        System.out.println("Font");
+    }
+    
+    @FXML
+    private void writeSize(ActionEvent event){
+        System.out.println("Size");
+    }
+    
+    @FXML
+    private void clickBold(ActionEvent event){
+        System.out.println("Bold");
+    }
+    
+    @FXML
+    private void clickRegular(ActionEvent event){
+        System.out.println("reg");
+    }
+    
+    @FXML
+    private void clickItalic(ActionEvent event){
+        System.out.println("italic");
     }
     
     @FXML
@@ -43,37 +69,24 @@ public class FXMLShapes implements Initializable {
     }
     
     @FXML
-    private void writeWidth(ActionEvent event){
-        System.out.println("Width");
-    }
-    
-    @FXML
-    private void writeHeight(ActionEvent event){
-        System.out.println("Height");
-    }
-    
-    @FXML
     private void clickFlipHorizontally(ActionEvent event){
-        System.out.println("Horizontal");
+        System.out.println("horizontal");
     }
     
     @FXML
     private void clickFlipVertically(ActionEvent event){
-        System.out.println("Vertical");
+        System.out.println("vertical");
     }
     
     @FXML
     private void clickUngroup(ActionEvent event){
-        System.out.println("Ungroup");
+        System.out.println("ungroup");
     }
     
     @FXML
     private void clickDelete(ActionEvent event){
-        System.out.println("Delete");
+        System.out.println("italic");
     }
-    
-    
-    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -82,13 +95,3 @@ public class FXMLShapes implements Initializable {
     
     
 }
-
-
-
-
-
-
-
-
-
-

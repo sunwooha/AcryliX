@@ -119,9 +119,26 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
-    private void clickText(ActionEvent event){
+    private void clickText(ActionEvent event) throws IOException{
         System.out.println("You clicked the text button!");
         runner.switchToolType(PaintToolType.TEXT);
+        
+        //now, we will create a pop-up window
+        
+        //first, get the XML file
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/TextAttributes.fxml"));
+        
+        //then, set the scene from that file
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //set attributes of the window.
+        stage.setTitle("Text Attributes");
+        stage.setScene(scene);
+        stage.show();
     }
     
     @FXML
