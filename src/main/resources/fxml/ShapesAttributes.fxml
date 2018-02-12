@@ -13,15 +13,6 @@
    <children>
       <VBox alignment="TOP_CENTER" layoutX="1.0" layoutY="1.0" prefHeight="621.0" prefWidth="320.0" spacing="25.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="150.0" prefWidth="310.0" spacing="30.0">
-               <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="Comments" textAlignment="CENTER" />
-                  <TextArea fx:id="commentTextView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0" />
-               </children>
-               <padding>
-                  <Insets left="10.0" right="10.0" top="20.0" />
-               </padding>
-            </HBox>
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="320.0" spacing="60.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="70.0" text="X-Position" />
@@ -65,6 +56,15 @@
                </children>
                <padding>
                   <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="150.0" prefWidth="310.0" spacing="30.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Comments" textAlignment="CENTER" />
+                  <TextArea fx:id="commentTextView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
                </padding>
             </HBox>
             <HBox alignment="CENTER" prefHeight="72.0" prefWidth="320.0" spacing="30.0">
