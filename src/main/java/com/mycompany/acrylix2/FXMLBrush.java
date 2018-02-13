@@ -47,12 +47,13 @@ public class FXMLBrush implements Initializable {
     @FXML
     private void clickPaint(ActionEvent event){
         System.out.println("Paint");
-        
+        runner.switchToolType(PaintToolType.PAINTBRUSH);
     }
 
     @FXML
     private void clickPencil(ActionEvent event){
         System.out.println("Pencil");
+        runner.switchToolType(PaintToolType.PENCIL);
     }
 
     @FXML
@@ -62,7 +63,7 @@ public class FXMLBrush implements Initializable {
     
     @FXML
     private void setSize(ActionEvent event){
-        System.out.println("Comment");
+        System.out.println("Size");
     }
 
     
