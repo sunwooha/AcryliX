@@ -40,7 +40,7 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickExport(ActionEvent event){
         System.out.println("You clicked export!");
-        runner.exportImage("image.png", "png");
+        runner.exportImage("image.png", "png"); 
     }
     
     @FXML
@@ -368,17 +368,22 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void clickComment(ActionEvent event){
-        System.out.println("You clicked the comment button!");
+        System.out.println("You clicked the click comment button!");
     }
     
     @FXML
     private void clickShowComments(ActionEvent event){
-        System.out.println("You clicked the comment button!");
+        System.out.println("You clicked the show comment button!");
     }
     
     @FXML
     private void clickHelp(ActionEvent event){
-        System.out.println("You clicked the comment button!");
+        System.out.println("You clicked the help button!");
+    }
+    
+    @FXML
+    private void writeFileName(ActionEvent event){
+        System.out.println("You clicked the file name button!");
     }
     
     
