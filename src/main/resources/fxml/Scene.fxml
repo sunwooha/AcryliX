@@ -15,276 +15,9 @@
 
 <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1440.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLController">
    <children>
-      <HBox alignment="TOP_CENTER" layoutX="218.0" layoutY="46.0" prefHeight="57.0" prefWidth="996.0" spacing="10.0" style="-fx-border-color: black;">
+      <VBox alignment="TOP_CENTER" layoutY="52.0" prefHeight="668.0" prefWidth="124.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
          <children>
-            <Button fx:id="text" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="50.0" prefWidth="90.0" textAlignment="CENTER" textOverrun="CLIP">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="10.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/text.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="brush" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickBrush" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView accessibleRole="BUTTON" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/paintbrush.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="curve" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickCurve" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/curve.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/file.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="export" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickExport" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0">
-                     <image>
-                        <Image url="@../icons/export.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickLine" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/line.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="group" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickGroup" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/selection.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="zoomin" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/zoomin.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="zoomin1" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0">
-                     <image>
-                        <Image url="@../icons/zoomout.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/arrow.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="print" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickPrint" prefHeight="50.0" prefWidth="90.0">
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/save.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="eraser" mnemonicParsing="false" onAction="#clickErase" prefHeight="50.0" prefWidth="90.0">
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0">
-                     <image>
-                        <Image url="@../icons/eraser.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="rotate" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickRotate" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0">
-                     <image>
-                        <Image url="@../icons/rotate.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="comment" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickComment" prefHeight="50.0" prefWidth="90.0" text="Com">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="5.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="help" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickHelp" prefHeight="50.0" prefWidth="90.0">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/help.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets bottom="5.0" right="10.0" />
-               </HBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-         </children>
-         <padding>
-            <Insets top="5.0" />
-         </padding>
-      </HBox>
-      <VBox alignment="TOP_CENTER" layoutX="4.0" layoutY="56.0" prefHeight="651.0" prefWidth="120.0" style="-fx-border-color: black;">
-         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: black; -fx-border-color: rgb(0,0,0);" text="Colors" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);" text="Colors" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
@@ -292,87 +25,392 @@
                   <Insets left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="red" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorRed" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: rgb(235,38,31);">
+            <HBox prefHeight="34.0" prefWidth="125.0">
+               <children>
+                  <Button fx:id="red" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorRed" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(235,38,31);">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="orange" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorOrange" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(253,146,38);">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="yellow" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorYellow" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(254,249,55);">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="green" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorGreen" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(40,247,45);">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="29.0" prefWidth="123.0">
+               <children>
+                  <Button fx:id="blue" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlue" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(16,63,251);">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="purple" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorPurple" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(146,40,144);">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="white" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorWhite" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(255,255,255);">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="black" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlack" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(0,0,0);">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);" text="Tools" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
                <VBox.margin>
-                  <Insets bottom="5.0" top="5.0" />
+                  <Insets top="5.0" />
                </VBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="orange" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorOrange" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: rgb(253,146,38);">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="yellow" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorYellow" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: rgb(254,249,55);">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="green" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorGreen" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: rgb(40,247,45);">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="blue" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlue" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: rgb(16,63,251);">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="purple" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorPurple" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: rgb(146,40,144);">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="white" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorWhite" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: rgb(255,255,255);">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="black" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlack" prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: rgb(0,0,0); -fx-border-color: white;">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button fx:id="fill" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorFill" prefHeight="50.0" prefWidth="65.0">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-               <graphic>
-                  <ImageView accessibleRole="BUTTON" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/fill.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="124.0">
+               <children>
+                  <Button fx:id="fill" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorFill" prefHeight="45.0" prefWidth="45.0">
+                     <graphic>
+                        <ImageView accessibleRole="BUTTON" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/fill.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="13.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="text" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="45.0" prefWidth="45.0" textAlignment="CENTER" textOverrun="CLIP">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/text.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="49.0" prefWidth="124.0">
+               <children>
+                  <Button fx:id="brush" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickBrush" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView accessibleRole="BUTTON" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/paintbrush.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets left="13.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="curve" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickCurve" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/curve.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="130.0">
+               <children>
+                  <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets left="13.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="export" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickExport" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../icons/export.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="130.0">
+               <children>
+                  <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickLine" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/line.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="group" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickGroup" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/selection.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="130.0">
+               <children>
+                  <Button fx:id="zoomin" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/zoomin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="zoomin1" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../icons/zoomout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="130.0">
+               <children>
+                  <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="print" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickPrint" prefHeight="45.0" prefWidth="45.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="130.0">
+               <children>
+                  <Button fx:id="eraser" mnemonicParsing="false" onAction="#clickErase" prefHeight="45.0" prefWidth="45.0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../icons/eraser.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="rotate" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickRotate" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../icons/rotate.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="comment" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickComment" prefHeight="45.0" prefWidth="45.0" text="Com">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="help" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickHelp" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/help.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </VBox>
-      <VBox alignment="TOP_CENTER" layoutX="1309.0" layoutY="58.0" prefHeight="649.0" prefWidth="124.0" style="-fx-border-color: black;">
+      <VBox alignment="TOP_CENTER" layoutX="1309.0" layoutY="52.0" prefHeight="668.0" prefWidth="131.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
          <children>
-            <Label alignment="CENTER" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: black;" text="Shapes" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);" text="Shapes" textFill="WHITE">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
@@ -434,7 +472,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Label alignment="CENTER" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: black;" text="Attributes" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: blacrgb(51,51,51)rgb(51,51,51)k;" text="Attributes" textFill="WHITE">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
@@ -478,7 +516,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Pane prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: black;">
+            <Pane prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
                <VBox.margin>
                   <Insets left="5.0" right="5.0" top="15.0" />
                </VBox.margin>
@@ -521,26 +559,29 @@
             </Pane>
          </children>
       </VBox>
-      <AnchorPane fx:id="aPane" layoutX="149.0" layoutY="112.0" prefHeight="595.0" prefWidth="1140.0" style="-fx-border-color: black; -fx-background-color: white;">
+      <AnchorPane fx:id="aPane" layoutX="150.0" layoutY="85.0" prefHeight="595.0" prefWidth="1140.0" style="-fx-border-color: black; -fx-background-color: white;">
       </AnchorPane>
-      <HBox alignment="TOP_CENTER" layoutX="7.0" layoutY="5.0" prefHeight="50.0" prefWidth="1426.0" spacing="550.0">
+      <HBox alignment="TOP_CENTER" layoutY="-2.0" prefHeight="57.0" prefWidth="1440.0" spacing="550.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
          <children>
             <Button mnemonicParsing="false" onAction="#clickAcrylix" prefHeight="45.0" prefWidth="80.0" text="Acrylix">
                <HBox.margin>
-                  <Insets />
+                  <Insets left="5.0" top="5.0" />
                </HBox.margin>
                <effect>
                   <Glow />
                </effect></Button>
             <TextField fx:id="fileName" alignment="CENTER" text="Untitled">
                <HBox.margin>
-                  <Insets top="5.0" />
+                  <Insets top="15.0" />
                </HBox.margin>
             </TextField>
             <Button fx:id="reset" mnemonicParsing="false" onAction="#clickOnReset" prefHeight="45.0" prefWidth="80.0" text="Reset">
                <effect>
                   <Glow />
-               </effect></Button>
+               </effect>
+               <HBox.margin>
+                  <Insets right="5.0" top="5.0" />
+               </HBox.margin></Button>
          </children>
       </HBox>
    </children>
