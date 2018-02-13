@@ -7,6 +7,7 @@ import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import java.awt.Color;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
 public class FXMLController implements Initializable {
@@ -58,11 +60,14 @@ public class FXMLController implements Initializable {
         
         //now, we will create a pop-up window
         
-        //first, get the XML file
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/LogoAttributes.fxml"));
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/LogoAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
@@ -73,6 +78,9 @@ public class FXMLController implements Initializable {
         stage.setScene(scene);
         stage.show();
         
+        // pass the JMonetRunner
+        FXMLLogo controller = loader.getController();
+        controller.setJMonetRunner(runner);
     }
     
     @FXML
@@ -140,14 +148,16 @@ public class FXMLController implements Initializable {
     private void clickText(ActionEvent event) throws IOException{
         System.out.println("You clicked the text button!");
         runner.switchToolType(PaintToolType.TEXT);
-        
         //now, we will create a pop-up window
         
-        //first, get the XML file
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/TextAttributes.fxml"));
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/TextAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
@@ -157,12 +167,15 @@ public class FXMLController implements Initializable {
         stage.setTitle("Text Attributes");
         stage.setScene(scene);
         stage.show();
+        
+        // pass the JMonetRunner
+        FXMLText controller = loader.getController();
+        controller.setJMonetRunner(runner);
     }
     
     @FXML
     private void clickBrush(ActionEvent event) throws IOException{
         System.out.println("You clicked the brush button!");
-        runner.switchToolType(PaintToolType.PAINTBRUSH);
         
         //now, we will create a pop-up window
         
@@ -184,6 +197,7 @@ public class FXMLController implements Initializable {
         stage.setScene(scene);
         stage.show();
         
+        // pass the JMonetRunner
         FXMLBrush controller = loader.getController();
         controller.setJMonetRunner(runner);
     }
@@ -197,7 +211,16 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickImage(ActionEvent event){
         System.out.println("You clicked the image button!");
-        runner.insertImage("strawberry.png");
+        Stage stage = new Stage(); 
+        DirectoryChooser directoryChooser = new DirectoryChooser(); 
+        File selectedDirectory = directoryChooser.showDialog(stage); 
+        if(selectedDirectory == null){ 
+             //No Directory selected 
+        } 
+        else{ 
+            runner.insertImage(selectedDirectory.getAbsolutePath()); 
+             System.out.println(selectedDirectory.getAbsolutePath()); 
+        }
     }
     
     @FXML

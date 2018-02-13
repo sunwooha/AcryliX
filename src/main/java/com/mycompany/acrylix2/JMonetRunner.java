@@ -27,6 +27,8 @@ public class JMonetRunner {
     
     void newCanvas() {
         currentCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
+        setDefaultTool();
+        System.out.println("New canvas created.");
     }
     
     JFXPaintCanvasNode getCurrentCanvas() {

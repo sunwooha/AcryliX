@@ -27,11 +27,16 @@ import javafx.scene.layout.Pane;
  */
 public class FXMLText implements Initializable {
     
+    JMonetRunner runner;
+    
+    public void setJMonetRunner(JMonetRunner run) {
+        this.runner = run;
+    }
+    
     @FXML
     private void writeComment(ActionEvent event){
         System.out.println("Comment");
     }
-    
     
     @FXML
     private void selectFont(ActionEvent event){
@@ -85,7 +90,7 @@ public class FXMLText implements Initializable {
     
     @FXML
     private void clickDelete(ActionEvent event){
-        System.out.println("italic");
+        System.out.println("delete");
     }
     
     @Override
