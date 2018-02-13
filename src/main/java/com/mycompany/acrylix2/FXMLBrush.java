@@ -27,6 +27,12 @@ import javafx.scene.layout.Pane;
  */
 public class FXMLBrush implements Initializable {
     
+    JMonetRunner runner;
+    
+    public void setJMonetRunner(JMonetRunner run) {
+        this.runner = run;
+    }
+    
     @FXML
     private void writeComment(ActionEvent event){
         System.out.println("Comment");
@@ -35,11 +41,13 @@ public class FXMLBrush implements Initializable {
     @FXML
     private void clickSpray(ActionEvent event){
         System.out.println("Spray");
+        runner.switchToolType(PaintToolType.AIRBRUSH);
     }
     
     @FXML
     private void clickPaint(ActionEvent event){
         System.out.println("Paint");
+        
     }
 
     @FXML
@@ -69,6 +77,7 @@ public class FXMLBrush implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-    }  
+    }
+    
 
 }

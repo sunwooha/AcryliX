@@ -166,11 +166,14 @@ public class FXMLController implements Initializable {
         
         //now, we will create a pop-up window
         
-        //first, get the XML file
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/BrushAttributes.fxml"));
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/BrushAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
@@ -180,6 +183,9 @@ public class FXMLController implements Initializable {
         stage.setTitle("Brush Attributes");
         stage.setScene(scene);
         stage.show();
+        
+        FXMLBrush controller = loader.getController();
+        controller.setJMonetRunner(runner);
     }
     
     @FXML
