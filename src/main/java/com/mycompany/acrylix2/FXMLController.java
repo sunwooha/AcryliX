@@ -7,6 +7,7 @@ import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import java.awt.Color;
+import javafx.scene.control.TextField;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -38,21 +39,20 @@ public class FXMLController implements Initializable {
     @FXML
     private AnchorPane aPane;
     
+    @FXML 
+    private TextField fileName;
     
     @FXML
     private void clickExport(ActionEvent event){
         System.out.println("You clicked export!");
-<<<<<<< HEAD
         Stage stage = new Stage();
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Image");
         File file = fileChooser.showSaveDialog(stage);
+        
         if (file != null) {
-            runner.exportImage("image.png", "png");
+            runner.exportImage(fileName.getText(), "png", file);
         }
-=======
-        runner.exportImage("image.png", "png"); 
->>>>>>> 6b86db750ac02d94b539b1f6063da43519ab544b
     }
     
     @FXML

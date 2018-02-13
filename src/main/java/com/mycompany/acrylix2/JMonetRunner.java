@@ -107,11 +107,11 @@ public class JMonetRunner {
         }
     }
     
-    void exportImage(String filename, String imagetype) {
+    void exportImage(String filename, String imagetype, File file) {
         BufferedImage img = currentCanvas.getCanvas().getCanvasImage();
-        File outputfile = new File(filename);
+
         try {
-            ImageIO.write(img, imagetype, outputfile);
+            ImageIO.write(img, imagetype, file);
         } catch (IOException e) {
             System.err.println("An error occurred. File not saved.");
         }

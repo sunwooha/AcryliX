@@ -399,13 +399,11 @@
          </children>
       </VBox>
       <AnchorPane fx:id="aPane" layoutX="120.0" layoutY="120.0" prefHeight="595.0" prefWidth="1184.0" style="-fx-background-color: white;">
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor></AnchorPane>
+      </AnchorPane>
       <HBox alignment="TOP_CENTER" layoutX="7.0" layoutY="5.0" prefHeight="50.0" prefWidth="1421.0" spacing="550.0">
          <children>
             <Button mnemonicParsing="false" onAction="#clickAcrylix" prefHeight="45.0" prefWidth="80.0" text="Acrylix" />
-            <TextField fx:id="fileName" alignment="CENTER" onAction="#writeFileName" text="Untitled">
+            <TextField fx:id="fileName" alignment="CENTER" text="Untitled">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
