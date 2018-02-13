@@ -92,6 +92,7 @@ public class JMonetRunner {
     // Inserts an image (from a file) into the canvas
     void insertImage(String imagefile) {
         
+        
         BufferedImage img = null;
         try {
             img = ImageIO.read(new File(imagefile));

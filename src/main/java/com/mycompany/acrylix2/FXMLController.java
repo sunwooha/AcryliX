@@ -7,6 +7,7 @@ import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import java.awt.Color;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
 public class FXMLController implements Initializable {
@@ -197,7 +199,17 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickImage(ActionEvent event){
         System.out.println("You clicked the image button!");
-        runner.insertImage("strawberry.png");
+        Stage stage = new Stage();
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        File selectedDirectory = directoryChooser.showDialog(stage);
+        if(selectedDirectory == null){
+             //No Directory selected
+        }
+        else{
+            runner.insertImage(selectedDirectory.getAbsolutePath());
+             System.out.println(selectedDirectory.getAbsolutePath());
+        }
+        
     }
     
     @FXML
