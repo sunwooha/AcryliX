@@ -38,10 +38,17 @@ public class FXMLController implements Initializable {
     @FXML
     private AnchorPane aPane;
     
+    
     @FXML
     private void clickExport(ActionEvent event){
         System.out.println("You clicked export!");
-        runner.exportImage("image.png", "png");
+        Stage stage = new Stage();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save Image");
+        File file = fileChooser.showSaveDialog(stage);
+        if (file != null) {
+            runner.exportImage("image.png", "png");
+        }
     }
     
     @FXML
