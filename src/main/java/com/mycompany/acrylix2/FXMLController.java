@@ -60,11 +60,14 @@ public class FXMLController implements Initializable {
         
         //now, we will create a pop-up window
         
-        //first, get the XML file
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/LogoAttributes.fxml"));
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/LogoAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
@@ -75,6 +78,9 @@ public class FXMLController implements Initializable {
         stage.setScene(scene);
         stage.show();
         
+        // pass the JMonetRunner
+        FXMLLogo controller = loader.getController();
+        controller.setJMonetRunner(runner);
     }
     
     @FXML
@@ -205,17 +211,16 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickImage(ActionEvent event){
         System.out.println("You clicked the image button!");
-        Stage stage = new Stage();
-        DirectoryChooser directoryChooser = new DirectoryChooser();
-        File selectedDirectory = directoryChooser.showDialog(stage);
-        if(selectedDirectory == null){
-             //No Directory selected
+        Stage stage = new Stage(); 
+        DirectoryChooser directoryChooser = new DirectoryChooser(); 
+        File selectedDirectory = directoryChooser.showDialog(stage); 
+        if(selectedDirectory == null){ 
+             //No Directory selected 
+        } 
+        else{ 
+            runner.insertImage(selectedDirectory.getAbsolutePath()); 
+             System.out.println(selectedDirectory.getAbsolutePath()); 
         }
-        else{
-            runner.insertImage(selectedDirectory.getAbsolutePath());
-             System.out.println(selectedDirectory.getAbsolutePath());
-        }
-        
     }
     
     @FXML

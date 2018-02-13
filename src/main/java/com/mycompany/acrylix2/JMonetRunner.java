@@ -27,6 +27,8 @@ public class JMonetRunner {
     
     void newCanvas() {
         currentCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
+        setDefaultTool();
+        System.out.println("New canvas created.");
     }
     
     JFXPaintCanvasNode getCurrentCanvas() {
@@ -91,7 +93,6 @@ public class JMonetRunner {
     
     // Inserts an image (from a file) into the canvas
     void insertImage(String imagefile) {
-        
         
         BufferedImage img = null;
         try {
