@@ -224,9 +224,26 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
-    private void clickGroup(ActionEvent event){
+    private void clickGroup(ActionEvent event) throws IOException{
         System.out.println("You clicked the group button!");
         runner.switchToolType(PaintToolType.SELECTION);
+        
+        //now, we will create a pop-up window
+        
+        //first, get the XML file 
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        
+        //then, set the scene from that file
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //set attributes of the window.
+        stage.setTitle("Group Attributes");
+        stage.setScene(scene);
+        stage.show();
     }
     
     @FXML
@@ -244,7 +261,7 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickSelect(ActionEvent event){
         System.out.println("You clicked the select button!");
-        runner.switchToolType(PaintToolType.ARROW);
+        runner.switchToolType(PaintToolType.ARROW);   
     }
     
     @FXML
@@ -353,5 +370,7 @@ public class FXMLController implements Initializable {
         myCanvas = runner.currentCanvas;
         aPane.getChildren().add(myCanvas);
         myCanvas.getCanvas().setSize(1184, 595);
+        
+        
     }    
 }

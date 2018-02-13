@@ -33,10 +33,6 @@ public class FXMLBrush implements Initializable {
         this.runner = run;
     }
     
-    @FXML
-    private void writeComment(ActionEvent event){
-        System.out.println("Comment");
-    }
     
     @FXML
     private void clickSpray(ActionEvent event){
