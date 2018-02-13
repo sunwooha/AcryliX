@@ -563,24 +563,31 @@
       </AnchorPane>
       <HBox alignment="TOP_CENTER" layoutY="-2.0" prefHeight="57.0" prefWidth="1440.0" spacing="550.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
          <children>
-            <Button mnemonicParsing="false" onAction="#clickAcrylix" prefHeight="45.0" prefWidth="80.0" text="Acrylix">
+            <Button mnemonicParsing="false" onAction="#clickAcrylix" prefHeight="44.0" prefWidth="86.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);">
                <HBox.margin>
-                  <Insets left="5.0" top="5.0" />
+                  <Insets left="15.0" top="10.0" />
                </HBox.margin>
                <effect>
                   <Glow />
-               </effect></Button>
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <TextField fx:id="fileName" alignment="CENTER" text="Untitled">
                <HBox.margin>
                   <Insets top="15.0" />
                </HBox.margin>
             </TextField>
-            <Button fx:id="reset" mnemonicParsing="false" onAction="#clickOnReset" prefHeight="45.0" prefWidth="80.0" text="Reset">
+            <Button fx:id="reset" mnemonicParsing="false" onAction="#clickOnReset" prefHeight="45.0" prefWidth="100.0" text="Reset">
                <effect>
                   <Glow />
                </effect>
                <HBox.margin>
-                  <Insets right="5.0" top="5.0" />
+                  <Insets right="31.0" top="10.0" />
                </HBox.margin></Button>
          </children>
       </HBox>
