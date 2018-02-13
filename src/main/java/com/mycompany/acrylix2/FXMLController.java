@@ -142,14 +142,16 @@ public class FXMLController implements Initializable {
     private void clickText(ActionEvent event) throws IOException{
         System.out.println("You clicked the text button!");
         runner.switchToolType(PaintToolType.TEXT);
-        
         //now, we will create a pop-up window
         
-        //first, get the XML file
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/TextAttributes.fxml"));
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/TextAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
@@ -159,6 +161,10 @@ public class FXMLController implements Initializable {
         stage.setTitle("Text Attributes");
         stage.setScene(scene);
         stage.show();
+        
+        // pass the JMonetRunner
+        FXMLText controller = loader.getController();
+        controller.setJMonetRunner(runner);
     }
     
     @FXML

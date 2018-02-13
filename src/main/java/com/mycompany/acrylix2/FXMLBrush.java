@@ -21,10 +21,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-/**
- *
- * @author Parankush
- */
 public class FXMLBrush implements Initializable {
     
     JMonetRunner runner;
@@ -66,19 +62,13 @@ public class FXMLBrush implements Initializable {
         System.out.println("Size");
     }
 
-    
     @FXML
     private void clickDelete(ActionEvent event){
         System.out.println("Delete");
     }
     
-    
-    
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
     }
-    
-
 }
