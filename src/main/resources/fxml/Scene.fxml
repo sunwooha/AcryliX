@@ -565,13 +565,13 @@
          <children>
             <Button mnemonicParsing="false" onAction="#clickAcrylix" prefHeight="44.0" prefWidth="86.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);">
                <HBox.margin>
-                  <Insets left="15.0" top="10.0" />
+                  <Insets left="10.0" top="10.0" />
                </HBox.margin>
                <effect>
                   <Glow />
                </effect>
                <graphic>
-                  <ImageView fitHeight="45.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="39.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/logo.png" />
                      </image>
