@@ -472,7 +472,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Label alignment="CENTER" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: blacrgb(51,51,51)rgb(51,51,51)k;" text="Attributes" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: rgb(51,51,51);" text="Attributes" textFill="WHITE">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
