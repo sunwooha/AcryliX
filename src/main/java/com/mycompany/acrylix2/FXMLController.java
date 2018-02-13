@@ -42,6 +42,7 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickExport(ActionEvent event){
         System.out.println("You clicked export!");
+<<<<<<< HEAD
         Stage stage = new Stage();
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Image");
@@ -49,6 +50,9 @@ public class FXMLController implements Initializable {
         if (file != null) {
             runner.exportImage("image.png", "png");
         }
+=======
+        runner.exportImage("image.png", "png"); 
+>>>>>>> 6b86db750ac02d94b539b1f6063da43519ab544b
     }
     
     @FXML
@@ -378,17 +382,22 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void clickComment(ActionEvent event){
-        System.out.println("You clicked the comment button!");
+        System.out.println("You clicked the click comment button!");
     }
     
     @FXML
     private void clickShowComments(ActionEvent event){
-        System.out.println("You clicked the comment button!");
+        System.out.println("You clicked the show comment button!");
     }
     
     @FXML
     private void clickHelp(ActionEvent event){
-        System.out.println("You clicked the comment button!");
+        System.out.println("You clicked the help button!");
+    }
+    
+    @FXML
+    private void writeFileName(ActionEvent event){
+        System.out.println("You clicked the file name button!");
     }
     
     

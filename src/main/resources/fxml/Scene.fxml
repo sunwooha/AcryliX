@@ -17,7 +17,7 @@
    <children>
       <HBox alignment="TOP_CENTER" layoutX="147.0" layoutY="55.0" prefHeight="57.0" prefWidth="996.0" spacing="10.0" style="-fx-border-color: gray;">
          <children>
-            <Button fx:id="text" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
+            <Button fx:id="text" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" textAlignment="CENTER" textOverrun="CLIP">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -405,7 +405,7 @@
       <HBox alignment="TOP_CENTER" layoutX="7.0" layoutY="5.0" prefHeight="50.0" prefWidth="1421.0" spacing="550.0">
          <children>
             <Button mnemonicParsing="false" onAction="#clickAcrylix" prefHeight="45.0" prefWidth="80.0" text="Acrylix" />
-            <TextField alignment="CENTER" text="Untitled">
+            <TextField fx:id="fileName" alignment="CENTER" onAction="#writeFileName" text="Untitled">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
