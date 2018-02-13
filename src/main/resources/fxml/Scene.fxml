@@ -8,6 +8,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -559,7 +560,7 @@
             </Pane>
          </children>
       </VBox>
-      <AnchorPane fx:id="aPane" layoutX="150.0" layoutY="85.0" prefHeight="595.0" prefWidth="1140.0" style="-fx-border-color: black; -fx-background-color: white;">
+      <AnchorPane fx:id="aPane" layoutX="150.0" layoutY="81.0" prefHeight="595.0" prefWidth="1140.0" style="-fx-border-color: black; -fx-background-color: white;">
       </AnchorPane>
       <HBox alignment="TOP_CENTER" layoutY="-2.0" prefHeight="57.0" prefWidth="1440.0" spacing="550.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
          <children>
@@ -591,5 +592,7 @@
                </HBox.margin></Button>
          </children>
       </HBox>
+      <BorderPane layoutX="515.0" layoutY="633.0" prefHeight="200.0" prefWidth="875.0" />
+      <Pane layoutX="121.0" layoutY="699.0" prefHeight="21.0" prefWidth="1190.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);" />
    </children>
 </Pane>
