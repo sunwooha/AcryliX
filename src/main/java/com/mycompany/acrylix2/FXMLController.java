@@ -13,12 +13,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
@@ -29,6 +31,12 @@ public class FXMLController implements Initializable {
     
     JMonetRunner runner;
     JFXPaintCanvasNode myCanvas;
+    
+    @FXML
+    private TextField currX;
+    
+    @FXML
+    private TextField currY;
     
     @FXML
     private Label label;
@@ -411,8 +419,16 @@ public class FXMLController implements Initializable {
         
         myCanvas = runner.currentCanvas;
         aPane.getChildren().add(myCanvas);
-        myCanvas.getCanvas().setSize(1184, 595);
+        myCanvas.getCanvas().setSize(1140, 595);
+        myCanvas.getCanvas().getCursor();
         
-        
+        //getting canvas coordinates of mouse
+        myCanvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                currX.setText(Integer.toString((int) Math.round(event.getX())));
+                currY.setText(Integer.toString((int) Math.round(event.getY())));
+            }
+        });  
     }    
 }

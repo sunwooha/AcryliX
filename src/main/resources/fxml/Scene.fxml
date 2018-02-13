@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -15,11 +14,11 @@
 
 <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLController">
    <children>
-      <HBox alignment="TOP_CENTER" layoutX="147.0" layoutY="55.0" prefHeight="57.0" prefWidth="996.0" spacing="10.0" style="-fx-border-color: gray;">
+      <HBox alignment="TOP_CENTER" layoutX="218.0" layoutY="46.0" prefHeight="57.0" prefWidth="996.0" spacing="10.0" style="-fx-border-color: gray;">
          <children>
             <Button fx:id="text" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" textAlignment="CENTER" textOverrun="CLIP">
                <HBox.margin>
-                  <Insets />
+                  <Insets bottom="5.0" left="5.0" />
                </HBox.margin>
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
@@ -43,6 +42,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="curve" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickCurve" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
@@ -55,6 +57,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
@@ -67,6 +72,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="export" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickExport" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
@@ -79,6 +87,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickLine" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
@@ -91,6 +102,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="group" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickGroup" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
@@ -103,18 +117,9 @@
                      </image>
                   </ImageView>
                </graphic>
-            </Button>
-            <Button fx:id="zoomin1" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0">
-                     <image>
-                        <Image url="@../icons/zoomout.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="zoomin" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
@@ -127,6 +132,24 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="zoomin1" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../icons/zoomout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
@@ -139,10 +162,13 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="print" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickPrint" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <HBox.margin>
-                  <Insets />
+                  <Insets bottom="5.0" />
                </HBox.margin>
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
@@ -157,29 +183,38 @@
             </Button>
             <Button fx:id="eraser" mnemonicParsing="false" onAction="#clickErase" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214) rgb(214,214,214); -fx-border-color: rgb(0,0,0) rgb(0,0,0);">
                <graphic>
-                  <ImageView fitHeight="37.0" fitWidth="47.0">
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
                      <image>
                         <Image url="@../icons/eraser.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="rotate" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickRotate" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="37.0" fitWidth="44.0">
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
                      <image>
                         <Image url="@../icons/rotate.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="comment" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickComment" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);" text="Com">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="help" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickHelp" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: rgb(214,214,214); -fx-border-color: rgb(0,0,0);">
                <font>
@@ -192,13 +227,16 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" />
+               </HBox.margin>
             </Button>
          </children>
          <padding>
             <Insets top="5.0" />
          </padding>
       </HBox>
-      <VBox alignment="TOP_CENTER" layoutY="58.0" prefHeight="654.0" prefWidth="120.0" style="-fx-border-color: gray;">
+      <VBox alignment="TOP_CENTER" layoutX="4.0" layoutY="56.0" prefHeight="654.0" prefWidth="120.0" style="-fx-border-color: gray;">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="110.0" style="-fx-background-color: rgb(140,140,140); -fx-border-color: rgb(0,0,0);" text="Colors" textAlignment="CENTER" textFill="WHITE">
                <font>
@@ -248,7 +286,7 @@
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="fill" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorFill" prefHeight="70.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0)rgb(0,0,0);">
+            <Button fx:id="fill" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorFill" prefHeight="50.0" prefWidth="70.0" style="-fx-border-color: rgb(0,0,0)rgb(0,0,0);">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
@@ -370,8 +408,8 @@
                         <Font name="Helvetica Neue" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="goToX" layoutX="57.0" layoutY="128.0" prefHeight="27.0" prefWidth="38.0" />
-                  <TextField fx:id="goToY" layoutX="57.0" layoutY="163.0" prefHeight="27.0" prefWidth="38.0" />
+                  <TextField fx:id="goToX" layoutX="47.0" layoutY="129.0" prefHeight="27.0" prefWidth="50.0" />
+                  <TextField fx:id="goToY" layoutX="47.0" layoutY="164.0" prefHeight="27.0" prefWidth="50.0" />
                   <Label layoutX="22.0" layoutY="129.0" text="x:" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="20.0" />
@@ -382,8 +420,8 @@
                         <Font name="Helvetica Neue" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="currX" editable="false" layoutX="57.0" layoutY="34.0" prefHeight="27.0" prefWidth="38.0" />
-                  <TextField fx:id="currY" editable="false" layoutX="57.0" layoutY="70.0" prefHeight="27.0" prefWidth="38.0" />
+                  <TextField fx:id="currX" editable="false" layoutX="47.0" layoutY="35.0" prefHeight="27.0" prefWidth="50.0" />
+                  <TextField fx:id="currY" editable="false" layoutX="47.0" layoutY="71.0" prefHeight="27.0" prefWidth="50.0" />
                   <Label layoutX="22.0" layoutY="34.0" text="x:" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="20.0" />
@@ -398,7 +436,7 @@
             </Pane>
          </children>
       </VBox>
-      <AnchorPane fx:id="aPane" layoutX="120.0" layoutY="120.0" prefHeight="595.0" prefWidth="1184.0" style="-fx-background-color: white;">
+      <AnchorPane fx:id="aPane" layoutX="149.0" layoutY="112.0" prefHeight="595.0" prefWidth="1140.0" style="-fx-background-color: white;">
       </AnchorPane>
       <HBox alignment="TOP_CENTER" layoutX="7.0" layoutY="5.0" prefHeight="50.0" prefWidth="1421.0" spacing="550.0">
          <children>
