@@ -21,6 +21,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class FXMLController implements Initializable {
@@ -212,8 +213,10 @@ public class FXMLController implements Initializable {
     private void clickImage(ActionEvent event){
         System.out.println("You clicked the image button!");
         Stage stage = new Stage(); 
-        DirectoryChooser directoryChooser = new DirectoryChooser(); 
-        File selectedDirectory = directoryChooser.showDialog(stage); 
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Image File");
+        File selectedDirectory = fileChooser.showOpenDialog(stage);
+
         if(selectedDirectory == null){ 
              //No Directory selected 
         } 
