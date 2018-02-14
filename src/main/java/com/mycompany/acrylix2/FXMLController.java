@@ -93,6 +93,10 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
         //set attributes of the window.
         stage.setTitle("Acrylix");
         stage.setScene(scene);
@@ -183,6 +187,10 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
         //set attributes of the window.
         stage.setTitle("Text Attributes");
         stage.setScene(scene);
@@ -211,6 +219,10 @@ public class FXMLController implements Initializable {
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
         
         //set attributes of the window.
         stage.setTitle("Brush Attributes");
@@ -262,6 +274,10 @@ public class FXMLController implements Initializable {
                 //put the scene in a stage (new window)
                 Stage stage2 = new Stage();
         
+                //move window to leftmost side
+                stage2.setX(1);
+                stage2.setY(1);
+                
                 //set attributes of the window.
                 stage2.setTitle("Selection Attributes");
                 stage2.setScene(scene);
@@ -291,6 +307,10 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
         //set attributes of the window.
         stage.setTitle("Line Attributes");
         stage.setScene(scene);
@@ -314,6 +334,10 @@ public class FXMLController implements Initializable {
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
         
         //set attributes of the window.
         stage.setTitle("Selection Attributes");
@@ -368,6 +392,10 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
         stage.setScene(scene);
@@ -398,6 +426,10 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
         stage.setScene(scene);
@@ -427,6 +459,10 @@ public class FXMLController implements Initializable {
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
         
         //set attributes of the window.
         stage.setTitle("Shape Attributes");

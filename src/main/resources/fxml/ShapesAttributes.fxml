@@ -51,9 +51,9 @@
                   <Insets left="10.0" right="10.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="320.0" spacing="30.0">
+            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="320.0" spacing="5.0">
                <children>
-                  <Button fx:id="flipHorizontally" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipHorizontally" prefHeight="70.0" prefWidth="80.0">
+                  <Button fx:id="flipHorizontally" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipHorizontally" prefHeight="70.0" prefWidth="70.0">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="50.0">
                            <image>
@@ -61,7 +61,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="flipVertically" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipVertically" prefHeight="70.0" prefWidth="80.0">
+                  <Button fx:id="flipVertically" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipVertically" prefHeight="70.0" prefWidth="70.0">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="50.0">
                            <image>
@@ -69,7 +69,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="rotateButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickRotate" prefHeight="70.0" prefWidth="80.0">
+                  <Button fx:id="rotateButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickRotate" prefHeight="70.0" prefWidth="70.0">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="50.0">
                            <image>
@@ -78,7 +78,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="scaleButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickScale" prefHeight="70.0" prefWidth="80.0">
+                  <Button fx:id="scaleButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickScale" prefHeight="70.0" prefWidth="70.0">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="50.0">
                            <image>
