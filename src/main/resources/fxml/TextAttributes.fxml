@@ -13,17 +13,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="325.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLText">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="280.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLText">
    <children>
-      <VBox layoutX="-7.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="325.0" spacing="20.0">
+      <VBox alignment="CENTER" layoutX="-22.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="325.0" spacing="20.0">
          <children>
-            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="324.0" spacing="120.0">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="324.0" spacing="80.0">
                <children>
                   <Label text="Font" textFill="WHITE" />
-                  <ChoiceBox fx:id="dropDown" prefWidth="150.0" />
+                  <ChoiceBox fx:id="dropDown" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="324.0" spacing="150.0">
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="324.0" spacing="60.0">
                <children>
                   <Label text="Font Size:" textFill="WHITE" />
                   <TextField fx:id="fontSize" onAction="#writeSize" prefHeight="26.0" prefWidth="86.0" />
@@ -36,7 +36,7 @@
                         <Label text="Font Style" textFill="WHITE" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="324.0" spacing="60.0">
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="324.0" spacing="20.0">
                      <children>
                         <Button fx:id="bold" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#clickBold" text="Bold" textAlignment="CENTER">
                            <font>
@@ -77,25 +77,25 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="72.0" prefWidth="320.0" spacing="30.0">
                <children>
-                  <Button fx:id="flipHorizontally" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipHorizontally" prefHeight="70.0" prefWidth="80.0">
+                  <Button fx:id="flipHorizontally" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipHorizontally" prefHeight="55.0" prefWidth="55.0">
                      <graphic>
-                        <ImageView fitHeight="50.0" fitWidth="50.0">
+                        <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@../icons/Horizontal.png" />
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="flipVertically" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipVertically" prefHeight="70.0" prefWidth="80.0">
+                  <Button fx:id="flipVertically" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipVertically" prefHeight="55.0" prefWidth="55.0">
                      <graphic>
-                        <ImageView fitHeight="50.0" fitWidth="50.0">
+                        <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@../icons/Vertical.png" />
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0">
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0">
                      <graphic>
-                        <ImageView fitHeight="50.0" fitWidth="50.0">
+                        <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@../icons/rotate.png" />
                            </image>
@@ -107,25 +107,22 @@
                   <Insets left="10.0" right="10.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
                   <Label text="Comments" textFill="WHITE" />
-                  <TextArea fx:id="comment" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0" />
+                  <TextArea fx:id="comment" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="150.0" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="72.0" prefWidth="320.0" spacing="30.0">
                <children>
-                  <Button fx:id="ungroupButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickUngroup" prefHeight="70.0" prefWidth="130.0" text="Ungroup" />
-                  <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickDelete" prefHeight="70.0" prefWidth="130.0" text="Delete" />
+                  <Button fx:id="ungroupButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickUngroup" prefHeight="50.0" prefWidth="90.0" text="Ungroup" />
+                  <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickDelete" prefHeight="50.0" prefWidth="90.0" text="Delete" />
                </children>
                <padding>
                   <Insets left="10.0" right="10.0" />
                </padding>
             </HBox>
          </children>
-         <padding>
-            <Insets top="10.0" />
-         </padding>
       </VBox>
    </children>
 </AnchorPane>
