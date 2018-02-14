@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -23,15 +24,23 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToolBar;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+<<<<<<< HEAD
 import java.awt.Graphics2D;
 import java.awt.Paint;
+=======
+import javafx.stage.StageStyle;
+>>>>>>> 37ebe3e5543cd6dbe9a875dd69668102d07562b1
 
 public class FXMLController implements Initializable {
     
@@ -107,7 +116,11 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
-        //set attributes of the window.
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
+        
         stage.setTitle("Acrylix");
         stage.setScene(scene);
         stage.show();
@@ -197,6 +210,10 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
         //set attributes of the window.
         stage.setTitle("Text Attributes");
         stage.setScene(scene);
@@ -225,6 +242,10 @@ public class FXMLController implements Initializable {
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
         
         //set attributes of the window.
         stage.setTitle("Brush Attributes");
@@ -276,6 +297,10 @@ public class FXMLController implements Initializable {
                 //put the scene in a stage (new window)
                 Stage stage2 = new Stage();
         
+                //move window to leftmost side
+                stage2.setX(1);
+                stage2.setY(1);
+                
                 //set attributes of the window.
                 stage2.setTitle("Selection Attributes");
                 stage2.setScene(scene);
@@ -308,6 +333,10 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
         //set attributes of the window.
         stage.setTitle("Line Attributes");
         stage.setScene(scene);
@@ -335,6 +364,10 @@ public class FXMLController implements Initializable {
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
         
         //set attributes of the window.
         stage.setTitle("Selection Attributes");
@@ -389,6 +422,10 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
         stage.setScene(scene);
@@ -423,6 +460,10 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
         stage.setScene(scene);
@@ -452,6 +493,10 @@ public class FXMLController implements Initializable {
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
         
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
@@ -488,6 +533,16 @@ public class FXMLController implements Initializable {
         System.out.println("You clicked the file name button!");
     }
     
+    @FXML
+    private void clickUndo(ActionEvent event){
+        System.out.println("Undo");
+    }
+    
+    @FXML
+    private void clickRedo(ActionEvent event){
+        System.out.println("Redo");
+    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -510,6 +565,11 @@ public class FXMLController implements Initializable {
                 currX.setText(Integer.toString((int) Math.round(event.getX())));
                 currY.setText(Integer.toString((int) Math.round(event.getY())));
             }
+<<<<<<< HEAD
         });
     }    
+=======
+        });  
+    } 
+>>>>>>> 37ebe3e5543cd6dbe9a875dd69668102d07562b1
 }

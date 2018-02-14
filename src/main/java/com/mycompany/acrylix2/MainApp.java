@@ -1,6 +1,11 @@
 package com.mycompany.acrylix2;
 
+import java.awt.Graphics;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
+import javafx.scene.image.Image;
 import java.io.IOException;
+import java.net.URL;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.application.Platform;
@@ -14,6 +19,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import javax.swing.ImageIcon;
+import sun.applet.Main;
 
 
 public class MainApp extends Application {
@@ -34,7 +41,10 @@ public class MainApp extends Application {
         Scene scene = new Scene(realRoot);
         scene.getStylesheets().add("/styles/Styles.css");
         stage.setTitle("AcryliX");
-        stage.setScene(scene);        
+        stage.setScene(scene);   
+        
+        Image img = new Image(getClass().getResourceAsStream("/icons/logo.png"));
+        stage.getIcons().add(img);
         stage.show();
         
         
@@ -49,7 +59,7 @@ public class MainApp extends Application {
         });
     }
 
-
+    
 
     /**
      * The main() method is ignored in correctly deployed JavaFX application.
@@ -60,6 +70,15 @@ public class MainApp extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        try {
+            URL iconURL = Main.class.getResource("/icons/logo.png");
+            java.awt.Image image = new ImageIcon(iconURL).getImage();
+            com.apple.eawt.Application.getApplication().setDockIconImage(image);
+        } catch (Exception e) {
+        // Won't work on Windows or Linux.
+        }
+        
         launch(args);
     }
 
