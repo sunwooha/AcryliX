@@ -229,6 +229,7 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickBrush(ActionEvent event) throws IOException{
         System.out.println("You clicked the brush button!");
+        runner.switchToolType(PaintToolType.PAINTBRUSH);
         
         //now, we will create a pop-up window
         
