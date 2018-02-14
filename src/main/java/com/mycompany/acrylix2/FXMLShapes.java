@@ -12,8 +12,14 @@ import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import com.defano.jmonet.tools.SelectionTool;
+import com.defano.jmonet.tools.RotateTool;
+import com.defano.jmonet.tools.base.AbstractSelectionTool;
+import com.defano.jmonet.tools.ProjectionTool;
+import com.defano.jmonet.tools.util.Geometry;
 import java.awt.Color;
 import java.net.URL;
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -98,11 +104,33 @@ public class FXMLShapes implements Initializable {
     @FXML
     private void clickRotate(ActionEvent event){
         System.out.println("Rotate");
+        BufferedImage img;
+        Point p;
+        
+        PaintTool currentTool = runner.getActiveTool();
+        if (currentTool instanceof SelectionTool) {
+            SelectionTool newTool = (SelectionTool)currentTool;
+            if (newTool.hasSelection()) {
+                img = newTool.getSelectedImage();
+                p = newTool.getSelectionOutline().getBounds().getLocation();
+                newTool.deleteSelection();
+                
+                runner.switchToolType(PaintToolType.ROTATE);
+                if (runner.getActiveTool().getToolType() == PaintToolType.ROTATE) {
+                    RotateTool rotateTool = (RotateTool)runner.getActiveTool();
+                    rotateTool.createSelection(img, p);
+                    runner.setActiveTool(rotateTool);
+                }
+            }
+        }
+        else {
+            System.out.println("Nothing is selected.");
+        }
     }
     
     @FXML
     private void clickScale(ActionEvent event){
-        System.out.println("Rotate");
+        System.out.println("Scale");
     }
     
     

@@ -82,6 +82,10 @@ public class JMonetRunner {
         }  
     }
     
+    void setActiveTool(PaintTool p) {
+        activeTool = p;
+    }
+    
     PaintTool getActiveTool() {
         return activeTool;
     }
