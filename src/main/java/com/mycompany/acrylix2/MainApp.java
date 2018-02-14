@@ -71,15 +71,20 @@ public class MainApp extends Application {
      */
     public static void main(String[] args) {
         
-        try {
-            URL iconURL = Main.class.getResource("/icons/logo.png");
-            java.awt.Image image = new ImageIcon(iconURL).getImage();
-            com.apple.eawt.Application.getApplication().setDockIconImage(image);
-        } catch (Exception e) {
-        // Won't work on Windows or Linux.
+        String osName = System.getProperty("os.name").toLowerCase();
+        boolean isMacOs = osName.startsWith("mac");    
+        
+        if (isMacOs) {
+            try {
+                URL iconURL = Main.class.getResource("/icons/logo.png");
+                java.awt.Image image = new ImageIcon(iconURL).getImage();
+                com.apple.eawt.Application.getApplication().setDockIconImage(image);
+            } catch (Exception e) {
+            // Won't work on Windows or Linux.
+            }
         }
         
         launch(args);
     }
-
+    
 }
