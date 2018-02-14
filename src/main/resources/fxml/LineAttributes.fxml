@@ -18,7 +18,7 @@
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="320.0" spacing="60.0">
                <children>
                   <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="120.0" text="Starting X-Position" textFill="#fffafa" />
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeStartXPosition" prefHeight="30.0" prefWidth="70.0" fx:id="xPositionTextField" />
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeStartXPosition" prefHeight="30.0" prefWidth="70.0" fx:id="xStart" />
                </children>
                <padding>
                   <Insets left="10.0" right="10.0" />
@@ -27,7 +27,7 @@
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="320.0" spacing="60.0">
                <children>
                   <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="120.0" text="Starting Y-Position" textFill="WHITE" />
-                  <TextField fx:id="yPositionTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeStartYPosition" prefHeight="30.0" prefWidth="70.0" />
+                  <TextField fx:id="yStart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeStartYPosition" prefHeight="30.0" prefWidth="70.0" />
                </children>
                <padding>
                   <Insets left="10.0" right="10.0" />
@@ -36,7 +36,7 @@
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="320.0" spacing="60.0">
                <children>
                   <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="120.0" text="Ending X-Position" textFill="WHITE" />
-                  <TextField fx:id="widthTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeEndXPosition" prefHeight="30.0" prefWidth="70.0" />
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeEndXPosition" prefHeight="30.0" prefWidth="70.0" fx:id="xEnd" />
                </children>
                <padding>
                   <Insets left="10.0" right="10.0" />
@@ -45,7 +45,7 @@
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="320.0" spacing="60.0">
                <children>
                   <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="120.0" text="Ending Y-Position" textFill="WHITE" />
-                  <TextField fx:id="heightTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeEndYPosition" prefHeight="30.0" prefWidth="70.0" />
+                  <TextField fx:id="yEnd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeEndYPosition" prefHeight="30.0" prefWidth="70.0" />
                </children>
                <padding>
                   <Insets left="10.0" right="10.0" />

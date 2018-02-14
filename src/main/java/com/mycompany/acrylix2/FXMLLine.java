@@ -12,6 +12,7 @@ import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import java.awt.Color;
+import java.awt.Graphics2D;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +23,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -31,6 +33,32 @@ import javafx.stage.Stage;
  */
 public class FXMLLine implements Initializable {
     
+    JMonetRunner runner;
+    
+    @FXML
+    private TextField xStart;
+   
+    @FXML
+    private TextField yStart;
+    
+    @FXML
+    private TextField xEnd;
+    
+    @FXML
+    private TextField yEnd;
+    
+    public int x1 = -1;
+    
+    public int y1 = -1;
+    
+    public int x2 = -1;
+    
+    public int y2 = -1;
+    
+    public void setJMonetRunner(JMonetRunner run) {
+        this.runner = run;
+    }
+    
     @FXML
     private void writeComment(ActionEvent event){
         System.out.println("Comment");
@@ -38,22 +66,50 @@ public class FXMLLine implements Initializable {
     
     @FXML
     private void writeStartXPosition(ActionEvent event){
-        System.out.println("X-Pos");
+        if(!(xStart.getText().equals(""))){
+            x1 = Integer.parseInt(xStart.getText());
+            if(x1 >= 0 && y1 >= 0 && x2 >= 0 && y2 >= 0){
+                System.out.println("("+ x1 + ", " + y2 + "), (" + x1 + ", " + y2 + ")");
+                draw((Graphics2D) runner.currentCanvas.getCanvas().getScratchImage().getGraphics());
+            }
+        }
+        System.out.println("X-Pos1: " + x1);
     }
     
     @FXML
     private void writeStartYPosition(ActionEvent event){
-        System.out.println("Y-Pos");
+        if(!(yStart.getText().equals(""))){
+            y1 = Integer.parseInt(yStart.getText());
+            if(x1 >= 0 && y1 >= 0 && x2 >= 0 && y2 >= 0){
+                System.out.println("("+ x1 + ", " + y2 + "), (" + x1 + ", " + y2 + ")");
+                draw((Graphics2D) runner.currentCanvas.getCanvas().getScratchImage().getGraphics());
+            }
+        }
+        System.out.println("Y-Pos1: " + y1);
     }
     
      @FXML
     private void writeEndXPosition(ActionEvent event){
-        System.out.println("Y-Pos");
+        if(!(xEnd.getText().equals(""))){
+            x2 = Integer.parseInt(xEnd.getText());
+            if(x1 >= 0 && y1 >= 0 && x2 >= 0 && y2 >= 0){
+                System.out.println("("+ x1 + ", " + y2 + "), (" + x1 + ", " + y2 + ")");
+                draw((Graphics2D) runner.currentCanvas.getCanvas().getScratchImage().getGraphics());
+            }
+        }
+        System.out.println("Y-Pos2: " + x2);
     }
     
      @FXML
     private void writeEndYPosition(ActionEvent event){
-        System.out.println("Y-Pos");
+        if(!(yEnd.getText().equals(""))){
+            y2 = Integer.parseInt(yEnd.getText());
+            if(x1 >= 0 && y1 >= 0 && x2 >= 0 && y2 >= 0){
+                System.out.println("("+ x1 + ", " + y2 + "), (" + x1 + ", " + y2 + ")");
+                draw((Graphics2D) runner.currentCanvas.getCanvas().getScratchImage().getGraphics());
+            }
+        }
+        System.out.println("Y-Pos: " + y2);
     }
     
    
@@ -82,6 +138,14 @@ public class FXMLLine implements Initializable {
         System.out.println("rotate");
     } 
     
+    public void draw(Graphics2D g){
+        g.setPaint(runner.getActiveTool().getStrokePaint());
+        g.setStroke(runner.getActiveTool().getStroke());
+        g.drawLine(x1, y1, x2, y2);
+        g.dispose();
+        runner.currentCanvas.getCanvas().invalidateCanvas();
+        runner.currentCanvas.getCanvas().commit();
+    }
     
     
     @Override

@@ -3,10 +3,14 @@ package com.mycompany.acrylix2;
 import com.defano.jmonet.canvas.JFXPaintCanvasNode;
 import com.defano.jmonet.canvas.JMonetCanvas;
 import com.defano.jmonet.model.PaintToolType;
+import com.defano.jmonet.tools.RectangleTool;
 import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import javafx.scene.control.TextField;
 import java.io.File;
 import java.io.IOException;
@@ -26,6 +30,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import java.awt.Graphics2D;
+import java.awt.Paint;
 
 public class FXMLController implements Initializable {
     
@@ -49,6 +55,14 @@ public class FXMLController implements Initializable {
     
     @FXML 
     private TextField fileName;
+    
+    public int width;
+    
+    public int height;
+    
+    public int xCoordinate;
+    
+    public int yCoordinate;
     
     @FXML
     private void clickExport(ActionEvent event){
@@ -281,11 +295,14 @@ public class FXMLController implements Initializable {
         
         //now, we will create a pop-up window
         
-        //first, get the XML file
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/LineAttributes.fxml"));
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/LineAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
@@ -295,6 +312,10 @@ public class FXMLController implements Initializable {
         stage.setTitle("Line Attributes");
         stage.setScene(scene);
         stage.show();
+        
+        // pass the JMonetRunner
+        FXMLLine controller = loader.getController();
+        controller.setJMonetRunner(runner); 
     }
     
     @FXML
@@ -375,7 +396,11 @@ public class FXMLController implements Initializable {
         
         // pass the JMonetRunner
         FXMLShapes controller = loader.getController();
-        controller.setJMonetRunner(runner); 
+        controller.setJMonetRunner(runner);
+        width = controller.w;
+        height = controller.h;
+        xCoordinate = controller.x;
+        yCoordinate = controller.y;
     }
     
     @FXML
@@ -471,6 +496,7 @@ public class FXMLController implements Initializable {
         
         runner = new JMonetRunner();
         runner.startJMonet();
+        runner.setDefaultTool();
         
         myCanvas = runner.currentCanvas;
         aPane.getChildren().add(myCanvas);
@@ -484,6 +510,6 @@ public class FXMLController implements Initializable {
                 currX.setText(Integer.toString((int) Math.round(event.getX())));
                 currY.setText(Integer.toString((int) Math.round(event.getY())));
             }
-        });  
+        });
     }    
 }
