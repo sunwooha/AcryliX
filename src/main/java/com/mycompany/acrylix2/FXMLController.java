@@ -35,12 +35,9 @@ import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-<<<<<<< HEAD
 import java.awt.Graphics2D;
 import java.awt.Paint;
-=======
 import javafx.stage.StageStyle;
->>>>>>> 37ebe3e5543cd6dbe9a875dd69668102d07562b1
 
 public class FXMLController implements Initializable {
     
@@ -565,11 +562,6 @@ public class FXMLController implements Initializable {
                 currX.setText(Integer.toString((int) Math.round(event.getX())));
                 currY.setText(Integer.toString((int) Math.round(event.getY())));
             }
-<<<<<<< HEAD
         });
     }    
-=======
-        });  
-    } 
->>>>>>> 37ebe3e5543cd6dbe9a875dd69668102d07562b1
 }

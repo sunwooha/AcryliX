@@ -13,15 +13,12 @@ import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import com.defano.jmonet.tools.SelectionTool;
-<<<<<<< HEAD
 import com.defano.jmonet.tools.RectangleTool;
-=======
 import com.defano.jmonet.tools.RotateTool;
 import com.defano.jmonet.tools.ScaleTool;
 import com.defano.jmonet.tools.base.AbstractSelectionTool;
 import com.defano.jmonet.tools.ProjectionTool;
 import com.defano.jmonet.tools.util.Geometry;
->>>>>>> 37ebe3e5543cd6dbe9a875dd69668102d07562b1
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
