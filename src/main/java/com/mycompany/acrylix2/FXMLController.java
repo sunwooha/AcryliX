@@ -117,6 +117,8 @@ public class FXMLController implements Initializable {
         stage.setX(1);
         stage.setY(1);
         
+        //set transparency
+        stage.setOpacity(0.85);
         
         stage.setTitle("Acrylix");
         stage.setScene(scene);
@@ -207,6 +209,9 @@ public class FXMLController implements Initializable {
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
+        //set transparency
+        stage.setOpacity(0.85);
+        
         //move window to leftmost side
         stage.setX(1);
         stage.setY(1);
@@ -236,9 +241,13 @@ public class FXMLController implements Initializable {
         //then, set the scene from that file
         Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
-        
+                
         //put the scene in a stage (new window)
         Stage stage = new Stage();
+        
+        //set transparency
+        stage.setOpacity(0.85);
+
         
         //move window to leftmost side
         stage.setX(1);
@@ -298,6 +307,9 @@ public class FXMLController implements Initializable {
                 stage2.setX(1);
                 stage2.setY(1);
                 
+                //set transparency
+                stage.setOpacity(0.85);
+                
                 //set attributes of the window.
                 stage2.setTitle("Selection Attributes");
                 stage2.setScene(scene);
@@ -334,6 +346,9 @@ public class FXMLController implements Initializable {
         stage.setX(1);
         stage.setY(1);
         
+        //set transparency
+        stage.setOpacity(0.85);
+        
         //set attributes of the window.
         stage.setTitle("Line Attributes");
         stage.setScene(scene);
@@ -365,6 +380,9 @@ public class FXMLController implements Initializable {
         //move window to leftmost side
         stage.setX(1);
         stage.setY(1);
+        
+        //set transparency
+        stage.setOpacity(0.85);
         
         //set attributes of the window.
         stage.setTitle("Selection Attributes");
@@ -423,6 +441,9 @@ public class FXMLController implements Initializable {
         stage.setX(1);
         stage.setY(1);
         
+        //set transparency
+        stage.setOpacity(0.85);
+        
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
         stage.setScene(scene);
@@ -461,6 +482,9 @@ public class FXMLController implements Initializable {
         stage.setX(1);
         stage.setY(1);
         
+        //set transparency
+        stage.setOpacity(0.85);
+        
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
         stage.setScene(scene);
@@ -494,6 +518,9 @@ public class FXMLController implements Initializable {
         //move window to leftmost side
         stage.setX(1);
         stage.setY(1);
+        
+        //set transparency
+        stage.setOpacity(0.85);
         
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
