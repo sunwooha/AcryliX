@@ -22,6 +22,7 @@ public class MainApp extends Application {
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
         StackPane realRoot = new StackPane(root);
+        realRoot.setPrefSize(1440.0, 720.0);
         realRoot.setStyle("-fx-background: rgb(51,51,51)rgb(51,51,51);");
 
         NumberBinding maxScale = Bindings.min(realRoot.widthProperty().divide(1500), realRoot.heightProperty().divide(500));

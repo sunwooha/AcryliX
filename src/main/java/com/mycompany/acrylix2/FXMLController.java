@@ -113,37 +113,37 @@ public class FXMLController implements Initializable {
     @FXML
     private void colorRed(ActionEvent event){
         System.out.println("You clicked red!");
-        runner.switchToolColor(Color.RED);
+        runner.switchToolColor(new Color(235,38,31));
     }
     
     @FXML
     private void colorOrange(ActionEvent event){
         System.out.println("You clicked orange!");
-        runner.switchToolColor(Color.ORANGE);
+        runner.switchToolColor(new Color(253,146,38));
     }
     
     @FXML
     private void colorYellow(ActionEvent event){
         System.out.println("You clicked yellow!");
-        runner.switchToolColor(Color.YELLOW);
+        runner.switchToolColor(new Color(254,249,55));
     }
     
     @FXML
     private void colorGreen(ActionEvent event){
         System.out.println("You clicked green!");
-        runner.switchToolColor(Color.GREEN);
+        runner.switchToolColor(new Color(40,247,45));
     }
     
     @FXML
     private void colorBlue(ActionEvent event){
         System.out.println("You clicked blue!");
-        runner.switchToolColor(Color.BLUE);
+        runner.switchToolColor(new Color(16,63,251));
     }
     
     @FXML
     private void colorPurple(ActionEvent event){
         System.out.println("You clicked purple!");
-        runner.switchToolColor(Color.MAGENTA);
+        runner.switchToolColor(new Color(146,40,144));
     }
     
     @FXML
@@ -240,8 +240,37 @@ public class FXMLController implements Initializable {
              //No Directory selected 
         } 
         else{ 
-            runner.insertImage(selectedDirectory.getAbsolutePath()); 
-             System.out.println(selectedDirectory.getAbsolutePath()); 
+            boolean imageSuccessful = runner.insertImage(selectedDirectory.getAbsolutePath());
+            System.out.println(selectedDirectory.getAbsolutePath());
+            
+            if (imageSuccessful == true) {
+                //first get the XML file
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+                try {
+                    loader.load();
+                } catch (IOException e) {
+                    System.err.println("An error occurred.");
+                    return;
+                }
+                Parent p = loader.getRoot();
+        
+                //then, set the scene from that file
+                Scene scene = new Scene(p);
+                scene.getStylesheets().add("/styles/Styles.css");
+        
+                //put the scene in a stage (new window)
+                Stage stage2 = new Stage();
+        
+                //set attributes of the window.
+                stage2.setTitle("Selection Attributes");
+                stage2.setScene(scene);
+                stage2.show();
+        
+                // pass the JMonetRunner
+                FXMLShapes controller = loader.getController();
+                controller.setJMonetRunner(runner);
+            }
         }
     }
     
