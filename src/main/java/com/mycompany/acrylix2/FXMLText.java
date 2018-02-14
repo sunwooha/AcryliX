@@ -98,6 +98,21 @@ public class FXMLText implements Initializable {
         System.out.println("rotate");
     }
     
+    @FXML
+    private void clickFirstFont(ActionEvent event){
+        System.out.println("first font");
+    }
+    
+    @FXML
+    private void clickSecondFont(ActionEvent event){
+        System.out.println("second font");
+    }
+    
+    @FXML
+    private void clickThirdFont(ActionEvent event){
+        System.out.println("third font");
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
