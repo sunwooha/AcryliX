@@ -13,6 +13,7 @@ import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import com.defano.jmonet.tools.SelectionTool;
 import com.defano.jmonet.tools.RotateTool;
+import com.defano.jmonet.tools.ScaleTool;
 import com.defano.jmonet.tools.base.AbstractSelectionTool;
 import com.defano.jmonet.tools.ProjectionTool;
 import com.defano.jmonet.tools.util.Geometry;
@@ -131,6 +132,28 @@ public class FXMLShapes implements Initializable {
     @FXML
     private void clickScale(ActionEvent event){
         System.out.println("Scale");
+        BufferedImage img;
+        Point p;
+        
+        PaintTool currentTool = runner.getActiveTool();
+        if (currentTool instanceof SelectionTool) {
+            SelectionTool newTool = (SelectionTool)currentTool;
+            if (newTool.hasSelection()) {
+                img = newTool.getSelectedImage();
+                p = newTool.getSelectionOutline().getBounds().getLocation();
+                newTool.deleteSelection();
+                
+                runner.switchToolType(PaintToolType.SCALE);
+                if (runner.getActiveTool().getToolType() == PaintToolType.SCALE) {
+                    ScaleTool scaleTool = (ScaleTool)runner.getActiveTool();
+                    scaleTool.createSelection(img, p);
+                    runner.setActiveTool(scaleTool);
+                }
+            }
+        }
+        else {
+            System.out.println("Nothing is selected.");
+        }
     }
     
     
