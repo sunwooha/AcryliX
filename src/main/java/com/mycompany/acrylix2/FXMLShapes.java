@@ -21,11 +21,13 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-/**
- *
- * @author Parankush
- */
 public class FXMLShapes implements Initializable {
+    
+    JMonetRunner runner;
+    
+    public void setJMonetRunner(JMonetRunner run) {
+        this.runner = run;
+    }
     
     @FXML
     private void writeComment(ActionEvent event){
