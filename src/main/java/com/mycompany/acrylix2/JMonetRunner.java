@@ -54,7 +54,8 @@ public class JMonetRunner {
             // Switch the tool's type
             activeTool = PaintToolBuilder.create(tooltype)
                 .withStroke(currentStroke)
-                .withFillPaint(Color.BLACK)
+                .withFillPaint(activeTool.getStrokePaint())
+                .withStrokePaint(activeTool.getStrokePaint())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
         }
