@@ -3,6 +3,7 @@ package com.mycompany.acrylix2;
 import java.io.IOException;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.NumberBinding;
 import javafx.event.EventHandler;
@@ -12,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 
 public class MainApp extends Application {
@@ -34,6 +36,17 @@ public class MainApp extends Application {
         stage.setTitle("AcryliX");
         stage.setScene(scene);        
         stage.show();
+        
+        
+        //below code is used to properly close the window.
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            
+            @Override
+            public void handle(WindowEvent event) {
+                Platform.exit();
+                System.exit(0);
+            }
+        });
     }
 
 
