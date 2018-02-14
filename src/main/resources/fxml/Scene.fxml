@@ -263,14 +263,14 @@
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="130.0">
                      <children>
-                        <Button fx:id="zoomin" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
+                        <Button fx:id="zoomout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomOut" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
                            <font>
                               <Font name="Helvetica Neue" size="15.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
                                  <image>
-                                    <Image url="@../icons/zoomin.png" />
+                                    <Image url="@../icons/zoomout.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -281,14 +281,14 @@
                               <Glow />
                            </effect>
                         </Button>
-                        <Button fx:id="zoomout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomOut" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
+                        <Button fx:id="zoomin" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
                            <font>
                               <Font name="Helvetica Neue" size="15.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../icons/zoomout.png" />
+                                    <Image url="@../icons/zoomin.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -608,9 +608,9 @@
       </AnchorPane>
       <HBox alignment="TOP_CENTER" layoutY="-2.0" prefHeight="57.0" prefWidth="1440.0" spacing="550.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
          <children>
-            <Button mnemonicParsing="false" onAction="#clickAcrylix" prefHeight="44.0" prefWidth="86.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);">
+            <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickAcrylix" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);">
                <HBox.margin>
-                  <Insets left="10.0" top="10.0" />
+                  <Insets left="40.0" top="5.0" />
                </HBox.margin>
                <effect>
                   <Glow />
