@@ -4,12 +4,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="144.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLLogo">
+<AnchorPane id="AnchorPane" prefHeight="144.0" prefWidth="376.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLLogo">
    <children>
       <HBox alignment="CENTER" layoutY="21.0" prefHeight="105.0" prefWidth="376.0" spacing="50.0">
          <children>
-            <Button fx:id="newFile" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickNewFile" prefHeight="30.0" prefWidth="150.0" text="New File" />
-            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickSelectPrevious" prefHeight="30.0" prefWidth="150.0" text="Select Previous" />
+            <Button fx:id="newFile" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickNewFile" prefHeight="50.0" prefWidth="150.0" text="New Project" />
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickSelectPrevious" prefHeight="50.0" prefWidth="150.0" text="Select Previous" />
          </children>
       </HBox>
    </children>

@@ -270,25 +270,30 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void clickGroup(ActionEvent event) throws IOException{
-        System.out.println("You clicked the group button!");
+        System.out.println("You clicked the select button!");
         runner.switchToolType(PaintToolType.SELECTION);
         
-        //now, we will create a pop-up window
-        
-        //first, get the XML file 
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
         //set attributes of the window.
-        stage.setTitle("Group Attributes");
+        stage.setTitle("Selection Attributes");
         stage.setScene(scene);
         stage.show();
+        
+        // pass the JMonetRunner
+        FXMLShapes controller = loader.getController();
+        controller.setJMonetRunner(runner); 
     }
     
     @FXML
@@ -321,20 +326,27 @@ public class FXMLController implements Initializable {
         
         //now, we will create a pop-up window
         
-        //first, get the XML file
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+         //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
         //set attributes of the window.
-        stage.setTitle("Rectangle Attributes");
+        stage.setTitle("Shape Attributes");
         stage.setScene(scene);
         stage.show();
+        
+        // pass the JMonetRunner
+        FXMLShapes controller = loader.getController();
+        controller.setJMonetRunner(runner); 
     }
     
     @FXML
@@ -344,20 +356,27 @@ public class FXMLController implements Initializable {
         
         //now, we will create a pop-up window
         
-        //first, get the XML file 
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+         //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
         //set attributes of the window.
-        stage.setTitle("Oval Attributes");
+        stage.setTitle("Shape Attributes");
         stage.setScene(scene);
         stage.show();
+        
+        // pass the JMonetRunner
+        FXMLShapes controller = loader.getController();
+        controller.setJMonetRunner(runner); 
     }
     
     @FXML
@@ -367,20 +386,27 @@ public class FXMLController implements Initializable {
         
         //now, we will create a pop-up window
         
-        //first, get the XML file 
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+         //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
         //then, set the scene from that file
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(p);
         scene.getStylesheets().add("/styles/Styles.css");
         
         //put the scene in a stage (new window)
         Stage stage = new Stage();
         
         //set attributes of the window.
-        stage.setTitle("Polygon Attributes");
+        stage.setTitle("Shape Attributes");
         stage.setScene(scene);
         stage.show();
+        
+        // pass the JMonetRunner
+        FXMLShapes controller = loader.getController();
+        controller.setJMonetRunner(runner);
     }
     
     @FXML

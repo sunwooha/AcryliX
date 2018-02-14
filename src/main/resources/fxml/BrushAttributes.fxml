@@ -9,32 +9,34 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="287.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLBrush">
+<AnchorPane id="AnchorPane" prefHeight="287.0" prefWidth="360.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLBrush">
    <children>
-      <VBox alignment="CENTER" layoutX="-1.0" prefHeight="285.0" prefWidth="357.0" spacing="30.0">
+      <VBox alignment="CENTER" layoutX="2.0" layoutY="1.0" prefHeight="277.0" prefWidth="357.0" spacing="10.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="65.0" prefWidth="221.0">
+            <VBox alignment="CENTER" prefHeight="102.0" prefWidth="357.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="111.0" text="Brush Type" textAlignment="CENTER">
-                     <font>
-                        <Font size="17.0" />
-                     </font></Label>
                   <HBox alignment="CENTER" prefHeight="49.0" prefWidth="220.0" spacing="30.0">
                      <children>
-                        <Button fx:id="spray" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickSpray" prefHeight="35.0" prefWidth="70.0" text="Spray" />
-                        <Button fx:id="paint" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickPaint" prefHeight="35.0" prefWidth="70.0" text="Paint" />
-                        <Button fx:id="pencil" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickPencil" prefHeight="35.0" prefWidth="70.0" text="Pencil" />
+                        <Button fx:id="spray" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickSpray" prefHeight="30.0" prefWidth="90.0" text="Spray" />
+                        <Button fx:id="paint" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickPaint" prefHeight="30.0" prefWidth="90.0" text="Paint" />
+                        <Button fx:id="pencil" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickPencil" prefHeight="30.0" prefWidth="90.0" text="Pencil" />
                      </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
                   </HBox>
                </children>
             </VBox>
-            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="358.0" spacing="120.0">
+            <HBox alignment="CENTER" prefHeight="69.0" prefWidth="357.0" spacing="10.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="28.0" text="Size" textAlignment="CENTER" />
-                  <Slider fx:id="size" prefHeight="16.0" prefWidth="145.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="112.0" text="Size" textAlignment="CENTER" textFill="#fffafa">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Slider fx:id="size" prefHeight="16.0" prefWidth="125.0" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="320.0" spacing="30.0">
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="357.0" spacing="30.0">
                <children>
                   <Button fx:id="ungroupButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickUngroup" prefHeight="40.0" prefWidth="80.0" text="Ungroup" />
                   <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickDelete" prefHeight="40.0" prefWidth="80.0" text="Delete" />
