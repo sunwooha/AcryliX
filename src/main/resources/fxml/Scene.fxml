@@ -604,7 +604,7 @@
             </Pane>
          </children>
       </VBox>
-      <AnchorPane fx:id="aPane" layoutX="150.0" layoutY="98.0" prefHeight="595.0" prefWidth="1140.0" style="-fx-border-color: black; -fx-background-color: white;">
+      <AnchorPane fx:id="aPane" layoutX="147.0" layoutY="78.0" prefHeight="595.0" prefWidth="1140.0" style="-fx-border-color: black; -fx-background-color: white;">
       </AnchorPane>
       <HBox alignment="TOP_CENTER" layoutY="-2.0" prefHeight="57.0" prefWidth="1440.0" spacing="550.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
          <children>
