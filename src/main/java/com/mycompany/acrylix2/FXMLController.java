@@ -463,6 +463,16 @@ public class FXMLController implements Initializable {
         System.out.println("You clicked the file name button!");
     }
     
+    @FXML
+    private void clickUndo(ActionEvent event){
+        System.out.println("Undo");
+    }
+    
+    @FXML
+    private void clickRedo(ActionEvent event){
+        System.out.println("Redo");
+    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

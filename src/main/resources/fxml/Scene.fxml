@@ -120,25 +120,6 @@
                         <Insets left="13.0" right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="text" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="45.0" prefWidth="45.0" textAlignment="CENTER" textOverrun="CLIP">
-                     <font>
-                        <Font name="Helvetica Neue" size="15.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../icons/text.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <effect>
-                        <Glow />
-                     </effect>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox prefHeight="49.0" prefWidth="124.0">
-               <children>
                   <Button fx:id="brush" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickBrush" prefHeight="45.0" prefWidth="45.0">
                      <font>
                         <Font name="Helvetica Neue" size="15.0" />
@@ -154,8 +135,30 @@
                         <Glow />
                      </effect>
                      <HBox.margin>
-                        <Insets left="13.0" right="10.0" />
+                        <Insets right="10.0" />
                      </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="49.0" prefWidth="124.0">
+               <children>
+                  <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickLine" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/line.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
                   </Button>
                   <Button fx:id="curve" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickCurve" prefHeight="45.0" prefWidth="45.0">
                      <font>
@@ -179,54 +182,14 @@
             </HBox>
             <HBox prefHeight="50.0" prefWidth="130.0">
                <children>
-                  <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="45.0" prefWidth="45.0">
+                  <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="45.0" prefWidth="45.0">
                      <font>
                         <Font name="Helvetica Neue" size="15.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/file.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets left="13.0" right="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="export" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickExport" prefHeight="45.0" prefWidth="45.0">
-                     <font>
-                        <Font name="Helvetica Neue" size="15.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0">
-                           <image>
-                              <Image url="@../icons/export.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <HBox.margin>
-                        <Insets bottom="5.0" />
-                     </HBox.margin>
-                     <effect>
-                        <Glow />
-                     </effect>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox prefHeight="50.0" prefWidth="130.0">
-               <children>
-                  <Button fx:id="line" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickLine" prefHeight="45.0" prefWidth="45.0">
-                     <font>
-                        <Font name="Helvetica Neue" size="15.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../icons/line.png" />
+                              <Image url="@../icons/arrow.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -245,6 +208,46 @@
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/selection.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fillHeight="false" prefHeight="50.0" prefWidth="130.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="text" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickText" prefHeight="45.0" prefWidth="45.0" textAlignment="CENTER" textOverrun="CLIP">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/text.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="eraser" mnemonicParsing="false" onAction="#clickErase" prefHeight="45.0" prefWidth="45.0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../icons/eraser.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -277,7 +280,7 @@
                         <Glow />
                      </effect>
                   </Button>
-                  <Button fx:id="zoomin1" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomIn" prefHeight="45.0" prefWidth="45.0">
+                  <Button fx:id="zoomout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickZoomOut" prefHeight="45.0" prefWidth="45.0">
                      <font>
                         <Font name="Helvetica Neue" size="15.0" />
                      </font>
@@ -299,60 +302,23 @@
             </HBox>
             <HBox prefHeight="50.0" prefWidth="130.0">
                <children>
-                  <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="45.0" prefWidth="45.0">
+                  <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="45.0" prefWidth="45.0">
                      <font>
                         <Font name="Helvetica Neue" size="15.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="13.0" right="10.0" />
-                     </HBox.margin>
-                     <effect>
-                        <Glow />
-                     </effect>
-                  </Button>
-                  <Button fx:id="print" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickPrint" prefHeight="45.0" prefWidth="45.0">
-                     <HBox.margin>
-                        <Insets bottom="5.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font name="Helvetica Neue" size="15.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../icons/save.png" />
+                              <Image url="@../icons/file.png" />
                            </image>
                         </ImageView>
                      </graphic>
                      <effect>
                         <Glow />
                      </effect>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox prefHeight="46.0" prefWidth="130.0">
-               <children>
-                  <Button fx:id="eraser" mnemonicParsing="false" onAction="#clickErase" prefHeight="45.0" prefWidth="45.0">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0">
-                           <image>
-                              <Image url="@../icons/eraser.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
                      <HBox.margin>
-                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                        <Insets left="13.0" right="10.0" />
                      </HBox.margin>
-                     <effect>
-                        <Glow />
-                     </effect>
                   </Button>
                   <Button fx:id="rotate" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickRotate" prefHeight="45.0" prefWidth="45.0">
                      <font>
@@ -374,7 +340,75 @@
                   </Button>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="50.0" prefWidth="130.0">
+               <children>
+                  <Button fx:id="print" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickPrint" prefHeight="45.0" prefWidth="45.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="export" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickExport" prefHeight="45.0" prefWidth="45.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../icons/export.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="130.0">
+               <children>
+                  <Button fx:id="undo" mnemonicParsing="false" onAction="#clickUndo" prefHeight="45.0" prefWidth="45.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" right="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../icons/undo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="redo" mnemonicParsing="false" onAction="#clickRedo" prefHeight="45.0" prefWidth="45.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../icons/redo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="200.0">
                <children>
                   <Button fx:id="comment" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickComment" prefHeight="45.0" prefWidth="45.0">
                      <font>
