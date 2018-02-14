@@ -10,6 +10,10 @@ import com.defano.jmonet.tools.SelectionTool;
 import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import javax.imageio.*;
 
 public class JMonetRunner {
@@ -92,7 +96,7 @@ public class JMonetRunner {
     }
     
     // Inserts an image (from a file) into the canvas
-    void insertImage(String imagefile) {
+    boolean insertImage(String imagefile) {
         
         BufferedImage img = null;
         try {
@@ -102,9 +106,18 @@ public class JMonetRunner {
         }
         
         if (img != null){
-            System.out.println("test");
-            currentCanvas.getCanvas().setScratchImage(img); currentCanvas.getCanvas().commit();
+            switchToolType(PaintToolType.SELECTION);
+            if (activeTool.getToolType() == PaintToolType.SELECTION) {
+                SelectionTool newTool = (SelectionTool)activeTool;
+                newTool.createSelection(img, new Point(0,0));
+                activeTool = newTool;
+                return true;
+            }
+            else {
+                System.out.println("Error. Image not imported.");
+            }
         }
+        return false;
     }
     
     void exportImage(String filename, String imagetype, File file) {

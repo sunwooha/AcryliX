@@ -240,8 +240,37 @@ public class FXMLController implements Initializable {
              //No Directory selected 
         } 
         else{ 
-            runner.insertImage(selectedDirectory.getAbsolutePath()); 
-             System.out.println(selectedDirectory.getAbsolutePath()); 
+            boolean imageSuccessful = runner.insertImage(selectedDirectory.getAbsolutePath());
+            System.out.println(selectedDirectory.getAbsolutePath());
+            
+            if (imageSuccessful == true) {
+                //first get the XML file
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+                try {
+                    loader.load();
+                } catch (IOException e) {
+                    System.err.println("An error occurred.");
+                    return;
+                }
+                Parent p = loader.getRoot();
+        
+                //then, set the scene from that file
+                Scene scene = new Scene(p);
+                scene.getStylesheets().add("/styles/Styles.css");
+        
+                //put the scene in a stage (new window)
+                Stage stage2 = new Stage();
+        
+                //set attributes of the window.
+                stage2.setTitle("Selection Attributes");
+                stage2.setScene(scene);
+                stage2.show();
+        
+                // pass the JMonetRunner
+                FXMLShapes controller = loader.getController();
+                controller.setJMonetRunner(runner);
+            }
         }
     }
     
