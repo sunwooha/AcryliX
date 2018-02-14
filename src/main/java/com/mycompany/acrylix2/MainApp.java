@@ -1,6 +1,7 @@
 package com.mycompany.acrylix2;
 
 import java.awt.Graphics;
+import java.awt.SplashScreen;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
 import javafx.scene.image.Image;
@@ -27,8 +28,19 @@ public class MainApp extends Application {
     
     JMonetRunner runner;
 
+    final SplashScreen splash = SplashScreen.getSplashScreen();
+
     @Override
     public void start(Stage stage) throws IOException {
+                
+        //first, remove splash screen
+        //Close splashscreen
+        if (splash != null) {
+            System.out.println("Closing splashscreen...");
+            splash.close();
+        }
+        
+        
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
         StackPane realRoot = new StackPane(root);
         realRoot.setPrefSize(1440.0, 720.0);
@@ -70,6 +82,7 @@ public class MainApp extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       
         
         String osName = System.getProperty("os.name").toLowerCase();
         boolean isMacOs = osName.startsWith("mac");    
