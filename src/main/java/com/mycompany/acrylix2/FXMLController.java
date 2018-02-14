@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -19,13 +20,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToolBar;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class FXMLController implements Initializable {
     
@@ -97,7 +103,7 @@ public class FXMLController implements Initializable {
         stage.setX(1);
         stage.setY(1);
         
-        //set attributes of the window.
+        
         stage.setTitle("Acrylix");
         stage.setScene(scene);
         stage.show();
@@ -531,5 +537,5 @@ public class FXMLController implements Initializable {
                 currY.setText(Integer.toString((int) Math.round(event.getY())));
             }
         });  
-    }    
+    } 
 }
