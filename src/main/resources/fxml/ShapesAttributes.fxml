@@ -78,6 +78,15 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Button fx:id="scaleButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickScale" prefHeight="70.0" prefWidth="80.0">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0">
+                           <image>
+                              <Image url="@../icons/scale.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
                <padding>
                   <Insets left="10.0" right="10.0" />

@@ -96,6 +96,10 @@ public class FXMLShapes implements Initializable {
         System.out.println("Rotate");
     }
     
+    @FXML
+    private void clickScale(ActionEvent event){
+        System.out.println("Rotate");
+    }
     
     
     @Override
