@@ -575,7 +575,6 @@ public class FXMLController implements Initializable {
         
         runner = new JMonetRunner();
         runner.startJMonet();
-        runner.setDefaultTool();
         
         myCanvas = runner.currentCanvas;
         aPane.getChildren().add(myCanvas);
