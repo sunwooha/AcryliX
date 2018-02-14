@@ -10,6 +10,7 @@ import com.defano.jmonet.tools.SelectionTool;
 import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
+import java.util.Optional;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -82,6 +83,28 @@ public class JMonetRunner {
         }  
     }
     
+    void switchToolSize(Double size) {
+        
+        // Check whether or not a tool is already active
+        if (activeTool != null) {
+
+            PaintToolType currentToolType = activeTool.getToolType();
+            Paint currentStokePaint = activeTool.getStrokePaint();
+            
+            
+            // Deactivate the current tool
+            activeTool.deactivate();
+            Double s = new Double(size);
+            // Switch the tool's color
+            activeTool = PaintToolBuilder.create(currentToolType)
+                .withStroke(new BasicStroke(s.floatValue(), BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL))
+                .withStrokePaint(currentStokePaint)
+                .withFillPaint(currentStokePaint)
+                .makeActiveOnCanvas(currentCanvas)
+                .build();
+        }  
+    }
+    
     void setActiveTool(PaintTool p) {
         activeTool = p;
     }
@@ -93,7 +116,7 @@ public class JMonetRunner {
     // Sets the active tool to a black paintbrush. Default when the program starts
     void setDefaultTool() {
         activeTool = PaintToolBuilder.create(PaintToolType.PAINTBRUSH)
-            .withStroke(BasicBrush.ROUND_8X8.stroke)
+            .withStroke(new BasicStroke(8, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL))
             .withFillPaint(Color.BLACK)
             .makeActiveOnCanvas(currentCanvas)
             .build();

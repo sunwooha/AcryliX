@@ -11,13 +11,18 @@ import com.defano.jmonet.model.PaintToolType;
 import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
+import javafx.scene.input.DragEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
@@ -28,6 +33,9 @@ public class FXMLBrush implements Initializable {
     public void setJMonetRunner(JMonetRunner run) {
         this.runner = run;
     }
+    
+    @FXML
+    private Slider size;
     
     
     @FXML
@@ -54,17 +62,27 @@ public class FXMLBrush implements Initializable {
     }
     
     @FXML
-    private void setSize(ActionEvent event){
-        System.out.println("Size");
+    private void setSize(DragEvent event){
+        System.out.println("Size: " + size.getValue());
+        double newSize = size.getValue();
+        runner.switchToolSize(newSize);
     }
 
     @FXML
     private void clickDelete(ActionEvent event){
         System.out.println("Delete");
     }
+
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        
+        size.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                System.out.println("Slider Value Changed (newValue: " + newValue.intValue() + ")\n");
+                runner.switchToolSize((double) newValue.intValue());
+            }
+        });
     }
 }

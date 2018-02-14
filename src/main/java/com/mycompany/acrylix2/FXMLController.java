@@ -398,13 +398,24 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickZoomIn(ActionEvent event){
         System.out.println("You clicked the zoom in button!");
-        runner.switchToolType(PaintToolType.MAGNIFIER);
+        double scale = runner.getCurrentCanvas().getCanvas().getScale();
+        runner.getCurrentCanvas().getCanvas().setScale(scale*2);
+        
+        //runner.switchToolType(PaintToolType.MAGNIFIER);
     }
     
     @FXML
     private void clickZoomOut(ActionEvent event){
         System.out.println("You clicked the zoom out button!");
-        runner.switchToolType(PaintToolType.MAGNIFIER);
+        double scale = runner.getCurrentCanvas().getCanvas().getScale();
+        if (scale == 1){
+            //nothing
+        }
+        else{
+            runner.getCurrentCanvas().getCanvas().setScale(scale/2);
+        }
+        
+        //runner.switchToolType(PaintToolType.MAGNIFIER);
     }
     
     @FXML
