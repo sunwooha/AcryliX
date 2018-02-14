@@ -11,6 +11,7 @@ import com.defano.jmonet.model.PaintToolType;
 import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
+import com.defano.jmonet.tools.SelectionTool;
 import java.awt.Color;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -57,11 +58,27 @@ public class FXMLShapes implements Initializable {
     @FXML
     private void clickFlipHorizontally(ActionEvent event){
         System.out.println("Horizontal");
+        PaintTool currentTool = runner.getActiveTool();
+        if (currentTool.getToolType() == PaintToolType.SELECTION){
+            SelectionTool newTool = (SelectionTool)currentTool;
+            newTool.flipHorizontal();
+        }
+        else {
+            System.out.println("Nothing is selected.");
+        }
     }
     
     @FXML
     private void clickFlipVertically(ActionEvent event){
         System.out.println("Vertical");
+        PaintTool currentTool = runner.getActiveTool();
+        if (currentTool.getToolType() == PaintToolType.SELECTION){
+            SelectionTool newTool = (SelectionTool)currentTool;
+            newTool.flipVertical();
+        }
+        else {
+            System.out.println("Nothing is selected.");
+        }
     }
     
     @FXML
