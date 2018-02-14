@@ -77,6 +77,10 @@ public class FXMLLine implements Initializable {
         System.out.println("Delete");
     }
     
+    @FXML
+    private void clickRotate(ActionEvent event){
+        System.out.println("rotate");
+    } 
     
     
     

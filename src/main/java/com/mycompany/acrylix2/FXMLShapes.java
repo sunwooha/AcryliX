@@ -72,6 +72,10 @@ public class FXMLShapes implements Initializable {
         System.out.println("Delete");
     }
     
+    @FXML
+    private void clickRotate(ActionEvent event){
+        System.out.println("Rotate");
+    }
     
     
     

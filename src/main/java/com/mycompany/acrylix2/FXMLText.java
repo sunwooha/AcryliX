@@ -93,6 +93,11 @@ public class FXMLText implements Initializable {
         System.out.println("delete");
     }
     
+    @FXML
+    private void clickRotate(ActionEvent event){
+        System.out.println("rotate");
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
