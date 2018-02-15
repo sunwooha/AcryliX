@@ -138,7 +138,19 @@ public class FXMLSelection implements Initializable {
     
     @FXML
     private void clickTrash(ActionEvent event) {
-        
+        BufferedImage img; 
+        Point p; 
+         
+        PaintTool currentTool = runner.getActiveTool(); 
+        if (currentTool instanceof SelectionTool) { 
+            SelectionTool newTool = (SelectionTool)currentTool; 
+            if (newTool.hasSelection()) { 
+                img = newTool.getSelectedImage(); 
+                p = newTool.getSelectionOutline().getBounds().getLocation(); 
+                newTool.deleteSelection(); 
+            } 
+        } 
+        System.out.println("Delete"); 
     }
     
     @Override
