@@ -182,6 +182,36 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
+    private void colorGradient(ActionEvent event) throws IOException {
+        System.out.println("You clicked gradient!");
+        
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/GradientAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
+        
+        //then, set the scene from that file
+        Scene scene = new Scene(p);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(1);
+        stage.setY(1);
+        
+        //set transparency
+        stage.setOpacity(0.85);
+        
+        //set attributes of the window.
+        stage.setTitle("Gradient Attributes");
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    @FXML
     private void clickText(ActionEvent event) throws IOException{
         System.out.println("You clicked the text button!");
         runner.switchToolType(PaintToolType.TEXT);
@@ -204,8 +234,8 @@ public class FXMLController implements Initializable {
         stage.setOpacity(0.85);
         
         //move window to leftmost side
-        stage.setX(1);
-        stage.setY(1);
+        stage.setX(0);
+        stage.setY(0);
         
         //set attributes of the window.
         stage.setTitle("Text Attributes");
@@ -242,8 +272,8 @@ public class FXMLController implements Initializable {
 
         
         //move window to leftmost side
-        stage.setX(1);
-        stage.setY(1);
+        stage.setX(0);
+        stage.setY(0);
         
         //set attributes of the window.
         stage.setTitle("Brush Attributes");
@@ -297,11 +327,11 @@ public class FXMLController implements Initializable {
                 Stage stage2 = new Stage();
         
                 //move window to leftmost side
-                stage2.setX(1);
-                stage2.setY(1);
+                stage2.setX(0);
+                stage2.setY(0);
                 
                 //set transparency
-                stage.setOpacity(0.85);
+                stage2.setOpacity(0.85);
                 
                 //set attributes of the window.
                 stage2.setTitle("Selection Attributes");
@@ -336,8 +366,8 @@ public class FXMLController implements Initializable {
         Stage stage = new Stage();
         
         //move window to leftmost side
-        stage.setX(1);
-        stage.setY(1);
+        stage.setX(0);
+        stage.setY(0);
         
         //set transparency
         stage.setOpacity(0.85);
@@ -371,8 +401,8 @@ public class FXMLController implements Initializable {
         Stage stage = new Stage();
         
         //move window to leftmost side
-        stage.setX(1);
-        stage.setY(1);
+        stage.setX(0);
+        stage.setY(0);
         
         //set transparency
         stage.setOpacity(0.85);
@@ -463,8 +493,8 @@ public class FXMLController implements Initializable {
         Stage stage = new Stage();
         
         //move window to leftmost side
-        stage.setX(1);
-        stage.setY(1);
+        stage.setX(0);
+        stage.setY(0);
         
         //set transparency
         stage.setOpacity(0.85);
@@ -504,8 +534,8 @@ public class FXMLController implements Initializable {
         Stage stage = new Stage();
         
         //move window to leftmost side
-        stage.setX(1);
-        stage.setY(1);
+        stage.setX(0);
+        stage.setY(0);
         
         //set transparency
         stage.setOpacity(0.85);
@@ -541,8 +571,8 @@ public class FXMLController implements Initializable {
         Stage stage = new Stage();
         
         //move window to leftmost side
-        stage.setX(1);
-        stage.setY(1);
+        stage.setX(0);
+        stage.setY(0);
         
         //set transparency
         stage.setOpacity(0.85);

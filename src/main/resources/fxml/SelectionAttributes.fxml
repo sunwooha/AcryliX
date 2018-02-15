@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="298.0" style="-fx-background-color: rgb(51, 51, 51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLSelection">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="238.0" style="-fx-background-color: rgb(51, 51, 51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLSelection">
    <children>
-      <VBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="331.0" prefWidth="236.0">
+      <VBox alignment="CENTER" layoutY="17.0" prefHeight="254.0" prefWidth="250.0">
          <children>
             <HBox alignment="CENTER" prefHeight="72.0" prefWidth="208.0" spacing="30.0">
                <children>
@@ -57,6 +57,13 @@
                         </ImageView>
                      </graphic>
                   </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="338.0" spacing="30.0">
+               <children>
                   <Button fx:id="duplicate" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickDuplicate" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 15;">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
@@ -66,13 +73,6 @@
                         </ImageView>
                      </graphic>
                   </Button>
-               </children>
-               <padding>
-                  <Insets left="10.0" right="10.0" />
-               </padding>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="338.0" spacing="30.0">
-               <children>
                   <Button fx:id="trash" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickTrash" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 15;">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0">

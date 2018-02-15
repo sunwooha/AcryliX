@@ -113,7 +113,24 @@ public class FXMLSelection implements Initializable {
     
     @FXML
     private void clickDuplicate(ActionEvent event) {
-    
+        System.out.println("Duplicate");
+        BufferedImage img;
+        Point p;
+        PaintTool currentTool = runner.getActiveTool();
+        if (currentTool instanceof SelectionTool) {
+            SelectionTool newTool = (SelectionTool)currentTool;
+            if (newTool.hasSelection()) {
+                img = newTool.getSelectedImage();
+                p = newTool.getSelectionOutline().getBounds().getLocation();
+                newTool.clearSelection();
+                SelectionTool secondTool = (SelectionTool)runner.getActiveTool();
+                secondTool.createSelection(img, p);
+                runner.setActiveTool(secondTool);
+            }
+        }
+        else {
+            System.out.println("Nothing is selected.");
+        }
     }
     
     @FXML
