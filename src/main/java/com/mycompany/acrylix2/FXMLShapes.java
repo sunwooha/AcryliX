@@ -5,38 +5,15 @@
  */
 package com.mycompany.acrylix2;
 
-import com.defano.jmonet.canvas.JFXPaintCanvasNode;
-import com.defano.jmonet.canvas.JMonetCanvas;
 import com.defano.jmonet.model.PaintToolType;
-import com.defano.jmonet.tools.RectangleTool;
-import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
-import com.defano.jmonet.tools.builder.PaintToolBuilder;
-import com.defano.jmonet.tools.SelectionTool;
-import com.defano.jmonet.tools.RectangleTool;
-import com.defano.jmonet.tools.RotateTool;
-import com.defano.jmonet.tools.ScaleTool;
-import com.defano.jmonet.tools.base.AbstractSelectionTool;
-import com.defano.jmonet.tools.ProjectionTool;
-import com.defano.jmonet.tools.util.Geometry;
-import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.net.URL;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.util.ResourceBundle;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 
 public class FXMLShapes implements Initializable {
     

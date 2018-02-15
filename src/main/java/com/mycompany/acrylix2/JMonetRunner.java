@@ -5,16 +5,10 @@ import com.defano.jmonet.canvas.JMonetCanvas;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import com.defano.jmonet.model.PaintToolType;
-import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.SelectionTool;
 import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
-import java.util.Optional;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javax.imageio.*;
 
 public class JMonetRunner {
