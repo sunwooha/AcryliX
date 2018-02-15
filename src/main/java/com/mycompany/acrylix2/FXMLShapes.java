@@ -62,7 +62,6 @@ public class FXMLShapes implements Initializable {
     
     public int h = 0;
    
-    
     public void setJMonetRunner(JMonetRunner run) {
         this.runner = run;
     }
@@ -134,109 +133,6 @@ public class FXMLShapes implements Initializable {
         }
     }
     
-    @FXML
-    private void clickFlipHorizontally(ActionEvent event){
-        System.out.println("Horizontal");
-        PaintTool currentTool = runner.getActiveTool();
-        if (currentTool.getToolType() == PaintToolType.SELECTION){
-            SelectionTool newTool = (SelectionTool)currentTool;
-            newTool.flipHorizontal();
-        }
-        else {
-            System.out.println("Nothing is selected.");
-        }
-    }
-    
-    @FXML
-    private void clickFlipVertically(ActionEvent event){
-        System.out.println("Vertical");
-        PaintTool currentTool = runner.getActiveTool();
-        if (currentTool.getToolType() == PaintToolType.SELECTION){
-            SelectionTool newTool = (SelectionTool)currentTool;
-            newTool.flipVertical();
-        }
-        else {
-            System.out.println("Nothing is selected.");
-        }
-    }
-    
-    @FXML
-    private void clickUngroup(ActionEvent event){
-        System.out.println("Ungroup");
-    }
-    
-    @FXML
-    private void clickDelete(ActionEvent event){
-        BufferedImage img;
-        Point p;
-        
-        PaintTool currentTool = runner.getActiveTool();
-        if (currentTool instanceof SelectionTool) {
-            SelectionTool newTool = (SelectionTool)currentTool;
-            if (newTool.hasSelection()) {
-                img = newTool.getSelectedImage();
-                p = newTool.getSelectionOutline().getBounds().getLocation();
-                newTool.deleteSelection();
-            }
-        }
-        System.out.println("Delete");
-    }
-    
-    @FXML
-    private void clickRotate(ActionEvent event){
-        System.out.println("Rotate");
-        BufferedImage img;
-        Point p;
-        
-        PaintTool currentTool = runner.getActiveTool();
-        if (currentTool instanceof SelectionTool) {
-            SelectionTool newTool = (SelectionTool)currentTool;
-            if (newTool.hasSelection()) {
-                img = newTool.getSelectedImage();
-                p = newTool.getSelectionOutline().getBounds().getLocation();
-                newTool.deleteSelection();
-                
-                runner.switchToolType(PaintToolType.ROTATE);
-                if (runner.getActiveTool().getToolType() == PaintToolType.ROTATE) {
-                    RotateTool rotateTool = (RotateTool)runner.getActiveTool();
-                    rotateTool.createSelection(img, p);
-                    runner.setActiveTool(rotateTool);
-                }
-            }
-        }
-        else {
-            System.out.println("Nothing is selected.");
-            
-        }
-    }
-    
-    @FXML
-    private void clickScale(ActionEvent event){
-        System.out.println("Scale");
-        BufferedImage img;
-        Point p;
-        
-        PaintTool currentTool = runner.getActiveTool();
-        if (currentTool instanceof SelectionTool) {
-            SelectionTool newTool = (SelectionTool)currentTool;
-            if (newTool.hasSelection()) {
-                img = newTool.getSelectedImage();
-                p = newTool.getSelectionOutline().getBounds().getLocation();
-                newTool.deleteSelection();
-                
-                runner.switchToolType(PaintToolType.SCALE);
-                if (runner.getActiveTool().getToolType() == PaintToolType.SCALE) {
-                    ScaleTool scaleTool = (ScaleTool)runner.getActiveTool();
-                    scaleTool.createSelection(img, p);
-                    runner.setActiveTool(scaleTool);
-                }
-            }
-        }
-        else {
-            System.out.println("Nothing is selected.");
-        }
-    }
-    
     public void draw(Graphics2D g){
         g.setStroke(runner.getActiveTool().getStroke());
         g.setPaint(runner.getActiveTool().getStrokePaint());
@@ -260,13 +156,3 @@ public class FXMLShapes implements Initializable {
         
     }  
 }
-
-
-
-
-
-
-
-
-
-
