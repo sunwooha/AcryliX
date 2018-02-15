@@ -59,10 +59,10 @@ public class FXMLLine implements Initializable {
         this.runner = run;
     }
     
-    @FXML
-    private void writeComment(ActionEvent event){
-        System.out.println("Comment");
-    }
+
+    
+    
+    
     
     @FXML
     private void writeStartXPosition(ActionEvent event){
@@ -113,30 +113,15 @@ public class FXMLLine implements Initializable {
     }
     
    
-    @FXML
-    private void clickFlipHorizontally(ActionEvent event){
-        System.out.println("Horizontal");
-    }
+
     
-    @FXML
-    private void clickFlipVertically(ActionEvent event){
-        System.out.println("Vertical");
-    }
     
-    @FXML
-    private void clickUngroup(ActionEvent event){
-        System.out.println("Ungroup");
-    }
     
-    @FXML
-    private void clickDelete(ActionEvent event){
-        System.out.println("Delete");
-    }
     
-    @FXML
-    private void clickRotate(ActionEvent event){
-        System.out.println("rotate");
-    } 
+    
+    
+    
+    
     
     public void draw(Graphics2D g){
         g.setPaint(runner.getActiveTool().getStrokePaint());

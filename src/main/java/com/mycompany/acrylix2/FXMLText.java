@@ -73,25 +73,13 @@ public class FXMLText implements Initializable {
         System.out.println("Y-Pos");
     }
     
-    @FXML
-    private void clickFlipHorizontally(ActionEvent event){
-        System.out.println("horizontal");
-    }
+
     
-    @FXML
-    private void clickFlipVertically(ActionEvent event){
-        System.out.println("vertical");
-    }
     
-    @FXML
-    private void clickUngroup(ActionEvent event){
-        System.out.println("ungroup");
-    }
     
-    @FXML
-    private void clickDelete(ActionEvent event){
-        System.out.println("delete");
-    }
+
+    
+    
     
     @FXML
     private void clickRotate(ActionEvent event){
