@@ -1,9 +1,6 @@
 package com.mycompany.acrylix2;
 
-import java.awt.Graphics;
 import java.awt.SplashScreen;
-import java.awt.image.ImageObserver;
-import java.awt.image.ImageProducer;
 import javafx.scene.image.Image;
 import java.io.IOException;
 import java.net.URL;
@@ -16,7 +13,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;

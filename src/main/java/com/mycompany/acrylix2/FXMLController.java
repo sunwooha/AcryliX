@@ -3,20 +3,12 @@ package com.mycompany.acrylix2;
 import com.defano.jmonet.canvas.JFXPaintCanvasNode;
 import com.defano.jmonet.canvas.JMonetCanvas;
 import com.defano.jmonet.model.PaintToolType;
-import com.defano.jmonet.tools.RectangleTool;
-import com.defano.jmonet.tools.brushes.BasicBrush;
-import com.defano.jmonet.tools.builder.PaintTool;
-import com.defano.jmonet.tools.builder.PaintToolBuilder;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import javafx.scene.control.TextField;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -24,21 +16,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ToolBar;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+<<<<<<< HEAD
 import java.awt.Graphics2D;
 import java.awt.Paint;
 import javafx.stage.Modality;
 import javafx.stage.StageStyle;
+=======
+import javafx.print.PageLayout;
+import javafx.print.PageOrientation;
+import javafx.print.Paper;
+import javafx.print.Printer;
+import javafx.print.PrinterJob;
+import javafx.scene.Node;
+import javafx.scene.transform.Scale;
+>>>>>>> fed202660d00f868dc5322e8a7254b9fbcd2e460
 
 public class FXMLController implements Initializable {
     
@@ -479,6 +476,27 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickPrint(ActionEvent event){
         System.out.println("You clicked the print button!");
+        Printer defaultPrinter = Printer.getDefaultPrinter();
+        if(defaultPrinter != null){
+            Node node = runner.getCurrentCanvas();
+            String name = defaultPrinter.getName();
+            System.out.println("Default printer name: " + name);
+            
+            PrinterJob job = PrinterJob.createPrinterJob();
+            if(job != null){
+                boolean printed = job.printPage(node);
+                if(printed){
+                    System.out.println("yay! printing works!");
+                    job.endJob();
+                }
+                else{
+                    System.out.println("Printing failed");
+                }
+            } 
+        }
+        else{
+            System.out.println("No printers installed!");
+        }
     }
     
     @FXML
