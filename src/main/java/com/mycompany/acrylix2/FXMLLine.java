@@ -115,16 +115,7 @@ public class FXMLLine implements Initializable {
         }
         System.out.println("Y-Pos: " + y2);
     }
-    
-   
-<<<<<<< HEAD
 
-    
-    
-    
-    
-    
-=======
     @FXML
     private void clickFlipHorizontally(ActionEvent event){
         System.out.println("Horizontal");
@@ -149,13 +140,8 @@ public class FXMLLine implements Initializable {
         else {
             System.out.println("Nothing is selected.");
         }
-    }
->>>>>>> 29085e590c1a6751ce4e8d43f6f148a85a740516
+    }    
     
-    
-<<<<<<< HEAD
-    
-=======
     @FXML
     private void clickDelete(ActionEvent event){
         BufferedImage img;
@@ -200,7 +186,6 @@ public class FXMLLine implements Initializable {
             
         }
     } 
->>>>>>> 29085e590c1a6751ce4e8d43f6f148a85a740516
     
     public void draw(Graphics2D g){
         g.setPaint(runner.getActiveTool().getStrokePaint());
