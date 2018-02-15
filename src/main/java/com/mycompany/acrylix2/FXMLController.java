@@ -5,14 +5,12 @@ import com.defano.jmonet.canvas.JMonetCanvas;
 import com.defano.jmonet.model.PaintToolType;
 import java.awt.AWTException;
 import java.awt.Color;
-import java.awt.Cursor;
 import java.awt.Robot;
 import javafx.scene.control.TextField;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -26,34 +24,25 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.Paint;
+import java.awt.Point;
 import java.awt.image.BufferedImage;
-import javafx.stage.Modality;
-import javafx.stage.StageStyle;
 import javafx.print.PageLayout;
 import javafx.print.PageOrientation;
 import javafx.print.Paper;
 import javafx.print.Printer;
 import javafx.print.PrinterJob;
 import javafx.scene.Node;
-import javafx.scene.transform.Scale;
-import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.print.PrintResolution;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
-import javax.print.DocFlavor;
-import javax.print.DocPrintJob;
+import com.sun.javafx.robot.FXRobot;
 import javax.print.PrintException;
-import javax.print.PrintService;
-import javax.print.PrintServiceLookup;
-import javax.print.SimpleDoc;
 
 public class FXMLController implements Initializable {
     
     JMonetRunner runner;
+    
     JFXPaintCanvasNode myCanvas;
     
     @FXML
@@ -88,9 +77,15 @@ public class FXMLController implements Initializable {
     
     public int yCoordinate;
     
+    public Button goButton;
+    
     public int gotox = -1;
     
     public int gotoy = -1;
+    
+    public int currentX;
+    
+    public int currentY;
     
     @FXML
     private void clickExport(ActionEvent event){
@@ -662,6 +657,21 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickEye(ActionEvent event){
         System.out.println("You clicked the eye dropper button!");
+        runner.getCurrentCanvas().setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                System.out.println(event.getX() + ", " + event.getY());
+                Point point = new Point((int)event.getX(), (int)event.getY());
+                try {
+                Robot robot = new Robot();
+                Color color = robot.getPixelColor((380 + (int) point.getX()), (217 + (int) point.getY()));
+                System.out.println(color.getRed() + ", " + color.getGreen() + ", " +color.getGreen());
+                }
+                catch (AWTException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
         Color col = runner.getEyeDropperColor();
         runner.switchToolColor(col);
     }
@@ -712,31 +722,32 @@ public class FXMLController implements Initializable {
     @FXML
     private void goToXCoordinate(ActionEvent event){
         gotox = Integer.parseInt(goToX.getText());
-        if(gotox >= 0 && gotoy >= 0){
-            moveCursor(gotox, gotoy);
-        }
-        
     }
     
     @FXML
     private void goToYCoordinate(ActionEvent event){
         gotoy = Integer.parseInt(goToY.getText());
+    }
+    
+    @FXML
+    private void goToCoords(ActionEvent event){
         if(gotox >= 0 && gotoy >= 0){
-            moveCursor(gotox, gotoy);
-        }
-    }
-    
-    public void moveCursor(int screenX, int screenY) {
-        try {
-            Robot robot = new Robot();
-            robot.mouseMove(290 + screenX, 229+screenY);
-        } catch (AWTException e) {
-            // TODO Auto-generated catch block
+            Point p = new Point(currentX, currentY);
+            p.move(gotox, gotoy);
+            System.out.println("moving to " + gotox + ", " + gotoy);
+            try {           
+                Robot robot = new Robot();
+                robot.mouseMove((381 + (int) p.getX()), (217 +(int) p.getY()));
+            }
+            catch (AWTException e) {
             e.printStackTrace();
+            }
+        }
+        else{
+            System.out.println("Please put in correct coordinates!");
         }
     }
     
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -748,14 +759,15 @@ public class FXMLController implements Initializable {
         myCanvas = runner.currentCanvas;
         aPane.getChildren().add(myCanvas);
         myCanvas.getCanvas().setSize(1140, 595);
-        myCanvas.getCanvas().getCursor();
         
         //getting canvas coordinates of mouse
         myCanvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                currX.setText(Integer.toString((int) Math.round(event.getX())));
-                currY.setText(Integer.toString((int) Math.round(event.getY())));
+                currentX = (int) Math.round(event.getX());
+                currentY = (int) Math.round(event.getY());
+                currX.setText(Integer.toString(currentX));
+                currY.setText(Integer.toString(currentY));
             }
         });
     }    

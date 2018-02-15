@@ -601,6 +601,7 @@
                         <Font name="Helvetica Neue" size="15.0" />
                      </font>
                   </Label>
+                  <Button fx:id="goButton" layoutX="52.0" layoutY="221.0" mnemonicParsing="false" onAction="#goToCoords" text="Go!" />
                </children>
             </Pane>
          </children>

@@ -50,12 +50,7 @@ public class FXMLLine implements Initializable {
     public void setJMonetRunner(JMonetRunner run) {
         this.runner = run;
     }
-    
 
-    
-    
-    
-    
     @FXML
     private void writeStartXPosition(ActionEvent event){
         if(!(xStart.getText().equals(""))){
