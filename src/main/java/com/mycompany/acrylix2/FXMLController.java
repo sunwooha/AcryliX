@@ -571,12 +571,25 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void clickUndo(ActionEvent event){
-        System.out.println("Undo");
+        JMonetCanvas canvas = (JMonetCanvas) runner.getCurrentCanvas().getCanvas();
+        if(canvas.undo()){
+            System.out.println("Undo works!");
+        }
+        else{
+            System.out.println("Theres nothing to undo");
+        }
     }
     
     @FXML
     private void clickRedo(ActionEvent event){
-        System.out.println("Redo");
+        JMonetCanvas canvas = (JMonetCanvas) runner.getCurrentCanvas().getCanvas();
+        if(canvas.redo()){
+            System.out.println("Redo");
+        }
+        else{
+            System.out.println("Theres nothing to redo");
+        }
+        
     }
     
     
