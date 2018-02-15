@@ -191,6 +191,11 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
+    private void colorGradient(ActionEvent event) {
+        System.out.println("You clicked gradient!");
+    }
+    
+    @FXML
     private void clickText(ActionEvent event) throws IOException{
         System.out.println("You clicked the text button!");
         runner.switchToolType(PaintToolType.TEXT);

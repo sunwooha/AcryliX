@@ -25,88 +25,111 @@
                   <Insets left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </Label>
-            <HBox prefHeight="34.0" prefWidth="125.0">
+            <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="124.0" spacing="2.0">
                <children>
-                  <Button fx:id="red" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorRed" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(235,38,31); -fx-background-radius: 5;">
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="orange" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorOrange" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(253,146,38); -fx-background-radius: 5;">
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="yellow" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorYellow" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(254,249,55); -fx-background-radius: 5;">
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="green" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorGreen" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(40,247,45); -fx-background-radius: 5;">
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin>
-                  </Button>
+                  <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="125.0">
+                     <children>
+                        <Button fx:id="red" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorRed" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(235,38,31); -fx-background-radius: 5;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="orange" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorOrange" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(253,146,38); -fx-background-radius: 5;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="yellow" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorYellow" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(254,249,55); -fx-background-radius: 5;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="125.0">
+                     <children>
+                        <Button fx:id="blue" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorBlue" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(16,63,251); -fx-background-radius: 5;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="purple" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorPurple" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(146,40,144); -fx-background-radius: 5;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="green" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorGreen" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(40,247,45); -fx-background-radius: 5;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="125.0">
+                     <children>
+                        <Button fx:id="white" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorWhite" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(255,255,255); -fx-background-radius: 5;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="black" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorBlack" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(0,0,0); -fx-background-radius: 5;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="gradient" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorGradient" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 5; -fx-background-color: white;" textFill="WHITE">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../icons/Gradient.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
                </children>
-            </HBox>
-            <HBox prefHeight="29.0" prefWidth="123.0">
-               <children>
-                  <Button fx:id="blue" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlue" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(16,63,251); -fx-background-radius: 5;">
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="purple" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorPurple" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(146,40,144); -fx-background-radius: 5;">
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="white" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorWhite" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(255,255,255); -fx-background-radius: 5;">
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="black" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorBlack" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgb(0,0,0); -fx-background-radius: 5;">
-                     <effect>
-                        <Glow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);" text="Tools" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Helvetica Neue" size="15.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="5.0" />
-               </VBox.margin>
-            </Label>
+            </VBox>
             <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="124.0" spacing="5.0">
                <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="110.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);" text="Tools" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
                   <HBox prefHeight="50.0" prefWidth="124.0">
                      <children>
                         <Button fx:id="fill" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#colorFill" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
@@ -181,7 +204,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox prefHeight="50.0" prefWidth="130.0">
+                  <HBox prefHeight="50.0" prefWidth="130.0" style="-fx-background-color: rgb(51, 51, 51);">
                      <children>
                         <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
                            <font>
@@ -303,6 +326,34 @@
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="130.0">
                      <children>
+                        <Button fx:id="undo" mnemonicParsing="false" onAction="#clickUndo" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="13.0" right="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../icons/undo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="redo" mnemonicParsing="false" onAction="#clickRedo" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../icons/redo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="130.0">
+                     <children>
                         <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
                            <font>
                               <Font name="Helvetica Neue" size="15.0" />
@@ -378,34 +429,6 @@
                            <effect>
                               <Glow />
                            </effect>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="50.0" prefWidth="130.0">
-                     <children>
-                        <Button fx:id="undo" mnemonicParsing="false" onAction="#clickUndo" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
-                           <HBox.margin>
-                              <Insets bottom="5.0" left="13.0" right="10.0" />
-                           </HBox.margin>
-                           <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../icons/undo.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Button fx:id="redo" mnemonicParsing="false" onAction="#clickRedo" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
-                           <HBox.margin>
-                              <Insets bottom="5.0" />
-                           </HBox.margin>
-                           <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../icons/redo.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
                         </Button>
                      </children>
                   </HBox>
