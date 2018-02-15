@@ -278,6 +278,7 @@ public class FXMLController implements Initializable {
         fileChooser.setTitle("Open Image File");
         File selectedDirectory = fileChooser.showOpenDialog(stage);
 
+        
         if(selectedDirectory == null){ 
              //No Directory selected 
         } 
@@ -592,7 +593,7 @@ public class FXMLController implements Initializable {
         
     }
     
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
