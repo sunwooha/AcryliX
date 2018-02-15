@@ -18,119 +18,167 @@ import javafx.scene.layout.Pane;
 
 public class FXMLGradient implements Initializable {
     
-   JMonetRunner runner;
+    JMonetRunner runner;
+    double r1, g1, b1;
+    double r2, g2, b2;
+    double r3, g3, b3;
+    long r4, g4, b4;
+    
+    public void setJMonetRunner(JMonetRunner run) {
+        this.runner = run;
+    }
 
     //first create first color actions
     @FXML
     private void firstColorRed(ActionEvent event){
-        System.out.println("You clicked red!");
-        runner.switchToolColor(new Color(235,38,31));
+        System.out.println("First color set to red.");
+        r1 = 235;
+        g1 = 38;
+        b1 = 31;
     }
     
     @FXML
     private void firstColorOrange(ActionEvent event){
-        System.out.println("You clicked orange!");
-        runner.switchToolColor(new Color(253,146,38));
+        System.out.println("First color set to orange.");
+        r1 = 253;
+        g1 = 146;
+        b1 = 38;
     }
     
     @FXML
     private void firstColorYellow(ActionEvent event){
-        System.out.println("You clicked yellow!");
-        runner.switchToolColor(new Color(254,249,55));
+        System.out.println("First color set to yellow.");
+        r1 = 254;
+        g1 = 249;
+        b1 = 55;
     }
     
     @FXML
     private void firstColorGreen(ActionEvent event){
-        System.out.println("You clicked green!");
-        runner.switchToolColor(new Color(40,247,45));
+        System.out.println("First color set to green.");
+        r1 = 40;
+        g1 = 247;
+        b1 = 45;
     }
     
     @FXML
     private void firstColorBlue(ActionEvent event){
-        System.out.println("You clicked blue!");
-        runner.switchToolColor(new Color(16,63,251));
+        System.out.println("First color set to blue.");
+        r1 = 16;
+        g1 = 63;
+        b1 = 251;
     }
     
     @FXML
     private void firstColorPurple(ActionEvent event){
-        System.out.println("You clicked purple!");
-        runner.switchToolColor(new Color(146,40,144));
+        System.out.println("First color set to purple.");
+        r1 = 146;
+        g1 = 40;
+        b1 = 144;
     }
     
     @FXML
     private void firstColorBlack(ActionEvent event){
-        System.out.println("You clicked black!");
-        runner.switchToolColor(Color.BLACK);
+        System.out.println("First color set to black.");
+        r1 = 0;
+        g1 = 0;
+        b1 = 0;
     }
     
     @FXML
     private void firstColorWhite(ActionEvent event){
-        System.out.println("You clicked white!");
-        runner.switchToolColor(Color.WHITE);
+        System.out.println("First color set to white.");
+        r1 = 255;
+        g1 = 255;
+        b1 = 255;
     }
     
     
     //next, create second color option actions
         @FXML
     private void secondColorRed(ActionEvent event){
-        System.out.println("You clicked red!");
-        runner.switchToolColor(new Color(235,38,31));
+        System.out.println("Second color set to red.");
+        r2 = 235;
+        g2 = 38;
+        b2 = 31;
     }
     
     @FXML
     private void secondColorOrange(ActionEvent event){
-        System.out.println("You clicked orange!");
-        runner.switchToolColor(new Color(253,146,38));
+        System.out.println("Second color set to orange.");
+        r2 = 253;
+        g2 = 146;
+        b2 = 38;
     }
     
     @FXML
     private void secondColorYellow(ActionEvent event){
-        System.out.println("You clicked yellow!");
-        runner.switchToolColor(new Color(254,249,55));
+        System.out.println("Second color set to yellow.");
+        r2 = 254;
+        g2 = 249;
+        b2 = 55;
     }
     
     @FXML
     private void secondColorGreen(ActionEvent event){
-        System.out.println("You clicked green!");
-        runner.switchToolColor(new Color(40,247,45));
+        System.out.println("Second color set to green.");
+        r2 = 40;
+        g2 = 247;
+        b2 = 45;
     }
     
     @FXML
     private void secondColorBlue(ActionEvent event){
-        System.out.println("You clicked blue!");
-        runner.switchToolColor(new Color(16,63,251));
+        System.out.println("Second color set to blue.");
+        r2 = 16;
+        g2 = 63;
+        b2 = 251;
     }
     
     @FXML
     private void secondColorPurple(ActionEvent event){
-        System.out.println("You clicked purple!");
-        runner.switchToolColor(new Color(146,40,144));
+        System.out.println("Second color set to purple.");
+        r2 = 146;
+        g2 = 40;
+        b2 = 144;
     }
     
     @FXML
     private void secondColorBlack(ActionEvent event){
-        System.out.println("You clicked black!");
-        runner.switchToolColor(Color.BLACK);
+        System.out.println("Second color set to black.");
+        r2 = 0;
+        g2 = 0;
+        b2 = 0;
     }
     
     @FXML
     private void secondColorWhite(ActionEvent event){
-        System.out.println("You clicked white!");
-        runner.switchToolColor(Color.WHITE);
+        System.out.println("Second color set to white.");
+        r2 = 255;
+        g2 = 255;
+        b2 = 255;
     }
-    
-
     
     //below button is what sets the new gradient!
     @FXML
     private void clickGradient(ActionEvent event){
         System.out.println("You clicked gradient!");
+        r3 = Math.sqrt((Math.pow(r1,2)+(Math.pow(r2,2)))/2);
+        g3 = Math.sqrt((Math.pow(g1,2)+(Math.pow(g2,2)))/2);
+        b3 = Math.sqrt((Math.pow(b1,2)+(Math.pow(b2,2)))/2);
+        
+        r4 = Math.round(r3);
+        g4 = Math.round(g3);
+        b4 = Math.round(b3);
+        
+        Color col = new Color((int)r4, (int)g4, (int)b4);
+        runner.setGradientColor(col);
+        runner.switchToolColor(col);
     }
     
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-    } 
-    
+    }
 }
