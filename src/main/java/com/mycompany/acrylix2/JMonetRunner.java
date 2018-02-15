@@ -91,16 +91,69 @@ public class JMonetRunner {
 
             PaintToolType currentToolType = activeTool.getToolType();
             Paint currentStokePaint = activeTool.getStrokePaint();
+            Font currentFont = activeTool.getFont();
             
             
             // Deactivate the current tool
             activeTool.deactivate();
-            Double s = new Double(size);
+
             // Switch the tool's color
             activeTool = PaintToolBuilder.create(currentToolType)
-                .withStroke(new BasicStroke(s.floatValue(), BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL))
+                .withStroke(new BasicStroke(size.floatValue(), BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL))
                 .withStrokePaint(currentStokePaint)
                 .withFillPaint(currentStokePaint)
+                .withFont(new Font(currentFont.getName(), currentFont.getStyle(), size.intValue()))
+                .withFontColor(activeTool.getFontColor())
+                .makeActiveOnCanvas(currentCanvas)
+                .build();
+        }  
+    }
+    
+    void switchFontStyle(int style) {
+        
+        // Check whether or not a tool is already active
+        if (activeTool != null) {
+
+            PaintToolType currentToolType = activeTool.getToolType();
+            Paint currentStokePaint = activeTool.getStrokePaint();
+            Font currentFont = activeTool.getFont();
+            
+            
+            // Deactivate the current tool
+            activeTool.deactivate();
+
+            // Switch the tool's color
+            activeTool = PaintToolBuilder.create(currentToolType)
+                .withStroke(activeTool.getStroke())
+                .withStrokePaint(currentStokePaint)
+                .withFillPaint(currentStokePaint)
+                .withFont(new Font(currentFont.getName(), style, currentFont.getSize()))
+                .withFontColor(activeTool.getFontColor())
+                .makeActiveOnCanvas(currentCanvas)
+                .build();
+        }  
+    }
+    
+    void switchFont(String font) {
+        
+        // Check whether or not a tool is already active
+        if (activeTool != null) {
+
+            PaintToolType currentToolType = activeTool.getToolType();
+            Paint currentStokePaint = activeTool.getStrokePaint();
+            Font currentFont = activeTool.getFont();
+            
+            
+            // Deactivate the current tool
+            activeTool.deactivate();
+
+            // Switch the tool's color
+            activeTool = PaintToolBuilder.create(currentToolType)
+                .withStroke(activeTool.getStroke())
+                .withStrokePaint(currentStokePaint)
+                .withFillPaint(currentStokePaint)
+                .withFont(new Font(font, currentFont.getStyle(), currentFont.getSize()))
+                .withFontColor(activeTool.getFontColor())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
         }  
@@ -119,6 +172,8 @@ public class JMonetRunner {
         activeTool = PaintToolBuilder.create(PaintToolType.PAINTBRUSH)
             .withStroke(new BasicStroke(8, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL))
             .withFillPaint(Color.BLACK)
+            .withFont(new Font("Courier New", Font.PLAIN, 15))
+            .withFontColor(Color.BLACK)
             .makeActiveOnCanvas(currentCanvas)
             .build();
     }
