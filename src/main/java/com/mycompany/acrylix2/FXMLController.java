@@ -278,6 +278,7 @@ public class FXMLController implements Initializable {
         fileChooser.setTitle("Open Image File");
         File selectedDirectory = fileChooser.showOpenDialog(stage);
 
+        
         if(selectedDirectory == null){ 
              //No Directory selected 
         } 
@@ -288,7 +289,7 @@ public class FXMLController implements Initializable {
             if (imageSuccessful == true) {
                 //first get the XML file
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+                loader.setLocation(getClass().getResource("/fxml/SelectionAttributes.fxml"));
                 try {
                     loader.load();
                 } catch (IOException e) {
@@ -317,7 +318,7 @@ public class FXMLController implements Initializable {
                 stage2.show();
         
                 // pass the JMonetRunner
-                FXMLShapes controller = loader.getController();
+                FXMLSelection controller = loader.getController();
                 controller.setJMonetRunner(runner);
             }
         }
@@ -367,7 +368,7 @@ public class FXMLController implements Initializable {
         
         //fist get the XML file
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        loader.setLocation(getClass().getResource("/fxml/SelectionAttributes.fxml"));
         loader.load();
         Parent p = loader.getRoot();
         
@@ -391,7 +392,7 @@ public class FXMLController implements Initializable {
         stage.show();
         
         // pass the JMonetRunner
-        FXMLShapes controller = loader.getController();
+        FXMLSelection controller = loader.getController();
         controller.setJMonetRunner(runner); 
     }
     
@@ -592,7 +593,7 @@ public class FXMLController implements Initializable {
         
     }
     
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
