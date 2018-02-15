@@ -516,7 +516,7 @@ public class FXMLController implements Initializable {
         
          //fist get the XML file
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/ShapesAttributes.fxml"));
+        loader.setLocation(getClass().getResource("/fxml/PolygonAttributes.fxml"));
         loader.load();
         Parent p = loader.getRoot();
         
@@ -535,12 +535,12 @@ public class FXMLController implements Initializable {
         stage.setOpacity(0.85);
         
         //set attributes of the window.
-        stage.setTitle("Shape Attributes");
+        stage.setTitle("Polygon Attributes");
         stage.setScene(scene);
         stage.show();
         
         // pass the JMonetRunner
-        FXMLShapes controller = loader.getController();
+        FXMLPolygon controller = loader.getController();
         controller.setJMonetRunner(runner);
     }
     
