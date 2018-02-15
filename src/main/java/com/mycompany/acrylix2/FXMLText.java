@@ -12,12 +12,14 @@ import com.defano.jmonet.tools.brushes.BasicBrush;
 import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import java.awt.Color;
+import java.awt.Font;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
@@ -29,76 +31,76 @@ public class FXMLText implements Initializable {
     
     JMonetRunner runner;
     
+    @FXML
+    private TextField fontSize;
+    
+    
     public void setJMonetRunner(JMonetRunner run) {
         this.runner = run;
     }
     
     @FXML
-    private void writeComment(ActionEvent event){
-        System.out.println("Comment");
-    }
-    
-    @FXML
-    private void selectFont(ActionEvent event){
-        System.out.println("Font");
-    }
-    
-    @FXML
     private void writeSize(ActionEvent event){
-        System.out.println("Size");
+        int size = Integer.parseInt(fontSize.getText());
+        PaintTool currentTool = runner.getActiveTool();
+        if(currentTool.getToolType() == PaintToolType.TEXT){
+            runner.switchToolSize((double) size);
+        }
+        System.out.println("Size: " + size);
     }
     
     @FXML
     private void clickBold(ActionEvent event){
-        System.out.println("Bold");
+        int bold = Font.BOLD;
+        PaintTool currentTool = runner.getActiveTool();
+        if(currentTool.getToolType() == PaintToolType.TEXT){
+            runner.switchFontStyle(bold);
+        }
     }
     
     @FXML
     private void clickRegular(ActionEvent event){
-        System.out.println("reg");
+        int bold = Font.PLAIN;
+        PaintTool currentTool = runner.getActiveTool();
+        if(currentTool.getToolType() == PaintToolType.TEXT){
+            runner.switchFontStyle(bold);
+        }
     }
     
     @FXML
     private void clickItalic(ActionEvent event){
-        System.out.println("italic");
+        int bold = Font.ITALIC;
+        PaintTool currentTool = runner.getActiveTool();
+        if(currentTool.getToolType() == PaintToolType.TEXT){
+            runner.switchFontStyle(bold);
+        }
     }
     
     @FXML
-    private void writeXPosition(ActionEvent event){
-        System.out.println("X-Pos");
+    private void clickCourierFont(ActionEvent event){
+        String courier = "Courier New";
+        PaintTool currentTool = runner.getActiveTool();
+        if(currentTool.getToolType() == PaintToolType.TEXT){
+            runner.switchFont(courier);
+        }
     }
     
     @FXML
-    private void writeYPosition(ActionEvent event){
-        System.out.println("Y-Pos");
-    }
-    
-
-    
-    
-    
-
-    
-    
-    
-    @FXML
-    private void clickRotate(ActionEvent event){
-        System.out.println("rotate");
+    private void clickGothicFont(ActionEvent event){
+        String gothic = "Baskerville";
+        PaintTool currentTool = runner.getActiveTool();
+        if(currentTool.getToolType() == PaintToolType.TEXT){
+            runner.switchFont(gothic);
+        }
     }
     
     @FXML
-    private void clickFirstFont(ActionEvent event){
-        System.out.println("first font");
-    }
-    
-    @FXML
-    private void clickSecondFont(ActionEvent event){
-        System.out.println("second font");
-    }
-    
-    @FXML
-    private void clickThirdFont(ActionEvent event){
-        System.out.println("third font");
+    private void clickWingdingsFont(ActionEvent event){
+        String wingdings = "Wingdings";
+        PaintTool currentTool = runner.getActiveTool();
+        if(currentTool.getToolType() == PaintToolType.TEXT){
+            runner.switchFont(wingdings);
+        }
     }
     
     @Override

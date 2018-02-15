@@ -18,9 +18,18 @@
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="333.0" text="Fonts" textAlignment="CENTER" textFill="WHITE" />
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="282.0" spacing="5.0">
                      <children>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFirstFont" prefHeight="30.0" prefWidth="60.0" style="-fx-background-radius: 10;" text="Times" />
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickSecondFont" prefHeight="30.0" prefWidth="59.0" style="-fx-background-radius: 10;" text="Hand" />
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickThirdFont" prefHeight="30.0" prefWidth="60.0" style="-fx-background-radius: 10;" text="Arial" />
+                        <Button fx:id="courier" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickCourierFont" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 10;" text="Courier">
+                           <font>
+                              <Font name="Courier New" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="gothic" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickGothicFont" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 10;" text="Gothic">
+                           <font>
+                              <Font name="Baskerville" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="wingdings" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickWingdingsFont" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 10;" text="Wingdings">
+                           <font>
+                              <Font name="Wingdings" size="13.0" />
+                           </font></Button>
                      </children>
                   </HBox>
                </children>
@@ -43,15 +52,18 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="51.0" prefWidth="324.0" spacing="20.0">
                      <children>
-                        <Button fx:id="bold" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#clickBold" style="-fx-background-radius: 10;" text="Bold" textAlignment="CENTER">
+                        <Button fx:id="bold" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#clickBold" prefHeight="30.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-font-weight: bold;" text="Bold" textAlignment="CENTER">
                            <font>
-                              <Font name="System Bold" size="13.0" />
+                              <Font name="Helvetica Neue" size="13.0" />
                            </font>
                         </Button>
-                        <Button fx:id="regular" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#clickRegular" style="-fx-background-radius: 10;" text="Regular" textAlignment="CENTER" />
-                        <Button fx:id="italic" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#clickItalic" style="-fx-background-radius: 10;" text="Italic" textAlignment="CENTER">
+                        <Button fx:id="regular" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#clickRegular" prefHeight="30.0" prefWidth="65.0" style="-fx-background-radius: 10;" text="Regular" textAlignment="CENTER">
                            <font>
-                              <Font name="System Italic" size="13.0" />
+                              <Font name="Helvetica Neue" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="italic" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#clickItalic" prefHeight="30.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-font-style: italic;" text="Italic" textAlignment="CENTER">
+                           <font>
+                              <Font name="Helvetica Neue" size="13.0" />
                            </font>
                         </Button>
                      </children>
