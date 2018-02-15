@@ -206,23 +206,23 @@
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="130.0" style="-fx-background-color: rgb(51, 51, 51);">
                      <children>
-                        <Button fx:id="select" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickSelect" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
+                        <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
                            <font>
                               <Font name="Helvetica Neue" size="15.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../icons/arrow.png" />
+                                    <Image url="@../icons/file.png" />
                                  </image>
                               </ImageView>
                            </graphic>
-                           <HBox.margin>
-                              <Insets bottom="5.0" left="13.0" right="10.0" />
-                           </HBox.margin>
                            <effect>
                               <Glow />
                            </effect>
+                           <HBox.margin>
+                              <Insets left="13.0" right="10.0" />
+                           </HBox.margin>
                         </Button>
                         <Button fx:id="group" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickGroup" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
                            <font>
@@ -349,46 +349,6 @@
                                  </image>
                               </ImageView>
                            </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="50.0" prefWidth="130.0">
-                     <children>
-                        <Button fx:id="image" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickImage" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
-                           <font>
-                              <Font name="Helvetica Neue" size="15.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../icons/file.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <effect>
-                              <Glow />
-                           </effect>
-                           <HBox.margin>
-                              <Insets left="13.0" right="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="rotate" graphicTextGap="10.0" mnemonicParsing="false" onAction="#clickRotate" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 20;">
-                           <font>
-                              <Font name="Helvetica Neue" size="15.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0">
-                                 <image>
-                                    <Image url="@../icons/rotate.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <HBox.margin>
-                              <Insets bottom="5.0" />
-                           </HBox.margin>
-                           <effect>
-                              <Glow />
-                           </effect>
                         </Button>
                      </children>
                   </HBox>
@@ -584,32 +544,47 @@
                   <Glow />
                </effect>
             </Button>
-            <Pane prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
+            <Pane prefHeight="248.0" prefWidth="121.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
                <VBox.margin>
                   <Insets left="5.0" right="5.0" top="15.0" />
                </VBox.margin>
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="8.0" text="Current:" textFill="WHITE">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="8.0" prefHeight="19.0" prefWidth="76.0" text="Current:" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="15.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="104.0" text="Go to:" textFill="WHITE">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="110.0" prefHeight="23.0" prefWidth="76.0" text="Go to:" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="15.0" />
                      </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </Label>
-                  <TextField fx:id="goToX" layoutX="47.0" layoutY="129.0" prefHeight="27.0" prefWidth="50.0" />
-                  <TextField fx:id="goToY" layoutX="47.0" layoutY="164.0" prefHeight="27.0" prefWidth="50.0" />
-                  <Label layoutX="22.0" layoutY="129.0" text="x:" textFill="WHITE">
+                  <TextField fx:id="goToX" layoutX="47.0" layoutY="145.0" prefHeight="27.0" prefWidth="50.0">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding></TextField>
+                  <TextField fx:id="goToY" layoutX="47.0" layoutY="184.0" prefHeight="27.0" prefWidth="50.0">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding></TextField>
+                  <Label layoutX="22.0" layoutY="144.0" text="x:" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="15.0" />
                      </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </Label>
-                  <Label layoutX="22.0" layoutY="161.0" text="y:" textFill="WHITE">
+                  <Label layoutX="22.0" layoutY="169.0" text="y:" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="15.0" />
                      </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </Label>
                   <TextField fx:id="currX" editable="false" layoutX="47.0" layoutY="35.0" prefHeight="27.0" prefWidth="50.0" />
                   <TextField fx:id="currY" editable="false" layoutX="47.0" layoutY="71.0" prefHeight="27.0" prefWidth="50.0" />
