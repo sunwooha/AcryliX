@@ -17,7 +17,7 @@
    <children>
       <VBox alignment="TOP_CENTER" layoutY="52.0" prefHeight="668.0" prefWidth="124.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);" text="Colors" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="110.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);" text="Colors" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Helvetica Neue" size="15.0" />
                </font>
@@ -120,9 +120,9 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="124.0" spacing="5.0">
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="124.0" spacing="5.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="110.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);" text="Tools" textAlignment="CENTER" textFill="WHITE">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="124.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51);" text="Tools" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Helvetica Neue" size="15.0" />
                      </font>
@@ -433,6 +433,9 @@
                      </children>
                   </HBox>
                </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
             </VBox>
          </children>
       </VBox>
