@@ -628,6 +628,8 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickEye(ActionEvent event){
         System.out.println("You clicked the eye dropper button!");
+        Color col = runner.getEyeDropperColor();
+        runner.switchToolColor(col);
     }
     
     @FXML
