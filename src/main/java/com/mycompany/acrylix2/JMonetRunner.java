@@ -15,6 +15,7 @@ public class JMonetRunner {
     
     JFXPaintCanvasNode currentCanvas;
     PaintTool activeTool;
+    Color gradientColor;
     
     JMonetRunner() {
     }
@@ -22,6 +23,7 @@ public class JMonetRunner {
     void startJMonet() {
         currentCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
         setDefaultTool();
+        gradientColor = new Color(0, 0, 0);
     }
     
     void newCanvas() {
@@ -205,5 +207,13 @@ public class JMonetRunner {
         } catch (IOException e) {
             System.err.println("An error occurred. File not saved.");
         }
+    }
+    
+    void setGradientColor(Color col) {
+        gradientColor = col;
+    }
+    
+    Color getGradientColor() {
+        return gradientColor;
     }
 }

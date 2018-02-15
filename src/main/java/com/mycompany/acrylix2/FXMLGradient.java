@@ -171,7 +171,9 @@ public class FXMLGradient implements Initializable {
         g4 = Math.round(g3);
         b4 = Math.round(b3);
         
-        runner.switchToolColor(new Color((int)r4, (int)g4, (int)b4));
+        Color col = new Color((int)r4, (int)g4, (int)b4);
+        runner.setGradientColor(col);
+        runner.switchToolColor(col);
     }
     
     

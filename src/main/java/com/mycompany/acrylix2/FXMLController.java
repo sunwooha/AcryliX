@@ -191,6 +191,7 @@ public class FXMLController implements Initializable {
     @FXML
     private void colorGradient(ActionEvent event) throws IOException {
         System.out.println("You clicked gradient!");
+        runner.switchToolColor(runner.getGradientColor());
         
         //fist get the XML file
         FXMLLoader loader = new FXMLLoader();
