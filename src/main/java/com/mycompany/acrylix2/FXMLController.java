@@ -22,12 +22,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-<<<<<<< HEAD
 import java.awt.Graphics2D;
 import java.awt.Paint;
 import javafx.stage.Modality;
 import javafx.stage.StageStyle;
-=======
 import javafx.print.PageLayout;
 import javafx.print.PageOrientation;
 import javafx.print.Paper;
@@ -35,7 +33,6 @@ import javafx.print.Printer;
 import javafx.print.PrinterJob;
 import javafx.scene.Node;
 import javafx.scene.transform.Scale;
->>>>>>> fed202660d00f868dc5322e8a7254b9fbcd2e460
 
 public class FXMLController implements Initializable {
     
@@ -222,6 +219,10 @@ public class FXMLController implements Initializable {
         stage.setTitle("Gradient Attributes");
         stage.setScene(scene);
         stage.show();
+        
+        // pass the JMonetRunner 
+        FXMLGradient controller = loader.getController(); 
+        controller.setJMonetRunner(runner);
     }
     
     @FXML
