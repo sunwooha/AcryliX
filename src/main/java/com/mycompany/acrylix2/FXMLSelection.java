@@ -42,10 +42,13 @@ import javafx.scene.layout.Pane;
  *
  * @author Parankush
  */
-public class FXMLSelection {
+public class FXMLSelection implements Initializable {
     
     JMonetRunner runner;
-  
+    
+    public void setJMonetRunner(JMonetRunner run) {
+        this.runner = run;
+    }
     
     @FXML
     private void clickFlipHorizontally(ActionEvent event){
@@ -133,7 +136,15 @@ public class FXMLSelection {
     
     }
     
+    @FXML
+    private void clickTrash(ActionEvent event) {
+        
+    }
     
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        
+    }
     
 }
 
