@@ -27,7 +27,9 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Paint;
+import java.awt.image.BufferedImage;
 import javafx.stage.Modality;
 import javafx.stage.StageStyle;
 import javafx.print.PageLayout;
@@ -38,6 +40,16 @@ import javafx.print.PrinterJob;
 import javafx.scene.Node;
 import javafx.scene.transform.Scale;
 import javafx.application.Platform;
+import javafx.embed.swing.SwingFXUtils;
+import javafx.print.PrintResolution;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
+import javax.print.DocFlavor;
+import javax.print.DocPrintJob;
+import javax.print.PrintException;
+import javax.print.PrintService;
+import javax.print.PrintServiceLookup;
+import javax.print.SimpleDoc;
 
 public class FXMLController implements Initializable {
     
@@ -491,19 +503,25 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
-    private void clickPrint(ActionEvent event){
+    private void clickPrint(ActionEvent event) throws PrintException{
         System.out.println("You clicked the print button!");
         Printer defaultPrinter = Printer.getDefaultPrinter();
+        BufferedImage canvas = runner.getCurrentCanvas().getCanvas().getCanvasImage();
+        WritableImage canvasImage = SwingFXUtils.toFXImage(canvas, null);
+        ImageView image = new ImageView(canvasImage);
+        aPane.getChildren().add(image);
+        
         if(defaultPrinter != null){
-            Node node = runner.getCurrentCanvas();
+            Node node = aPane;
             String name = defaultPrinter.getName();
             System.out.println("Default printer name: " + name);
-            
             PrinterJob job = PrinterJob.createPrinterJob();
-            if(job != null){
-                boolean printed = job.printPage(node);
+            PageLayout pageLayout = defaultPrinter.createPageLayout(Paper.A4, PageOrientation.LANDSCAPE,Printer.MarginType.DEFAULT);
+
+            if(job != null && job.showPrintDialog(node.getScene().getWindow())){
+                boolean printed = job.printPage(pageLayout, node);
                 if(printed){
-                    System.out.println("yay! printing works!");
+                    System.out.println("Printing " + job.getJobSettings().getJobName() + " to " + name);
                     job.endJob();
                 }
                 else{
@@ -514,6 +532,7 @@ public class FXMLController implements Initializable {
         else{
             System.out.println("No printers installed!");
         }
+        aPane.getChildren().remove(image);
     }
     
     @FXML
