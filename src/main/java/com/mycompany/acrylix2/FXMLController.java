@@ -3,12 +3,16 @@ package com.mycompany.acrylix2;
 import com.defano.jmonet.canvas.JFXPaintCanvasNode;
 import com.defano.jmonet.canvas.JMonetCanvas;
 import com.defano.jmonet.model.PaintToolType;
+import java.awt.AWTException;
 import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Robot;
 import javafx.scene.control.TextField;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -29,6 +33,7 @@ import javafx.print.Printer;
 import javafx.print.PrinterJob;
 import javafx.scene.Node;
 import javafx.scene.transform.Scale;
+import javafx.application.Platform;
 
 public class FXMLController implements Initializable {
     
@@ -53,6 +58,12 @@ public class FXMLController implements Initializable {
     @FXML 
     private TextField fileName;
     
+    @FXML
+    private TextField goToX;
+    
+    @FXML
+    private TextField goToY;
+    
     public int width;
     
     public int height;
@@ -60,6 +71,10 @@ public class FXMLController implements Initializable {
     public int xCoordinate;
     
     public int yCoordinate;
+    
+    public int gotox = -1;
+    
+    public int gotoy = -1;
     
     @FXML
     private void clickExport(ActionEvent event){
@@ -589,7 +604,7 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void clickEye(ActionEvent event){
-        System.out.println("You clicked the eye dropper button!");
+        
     }
     
     @FXML
@@ -633,6 +648,33 @@ public class FXMLController implements Initializable {
             System.out.println("Theres nothing to redo");
         }
         
+    }
+    
+    @FXML
+    private void goToXCoordinate(ActionEvent event){
+        gotox = Integer.parseInt(goToX.getText());
+        if(gotox >= 0 && gotoy >= 0){
+            moveCursor(gotox, gotoy);
+        }
+        
+    }
+    
+    @FXML
+    private void goToYCoordinate(ActionEvent event){
+        gotoy = Integer.parseInt(goToY.getText());
+        if(gotox >= 0 && gotoy >= 0){
+            moveCursor(gotox, gotoy);
+        }
+    }
+    
+    public void moveCursor(int screenX, int screenY) {
+        try {
+            Robot robot = new Robot();
+            robot.mouseMove(290 + screenX, 229+screenY);
+        } catch (AWTException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
     
 

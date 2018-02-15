@@ -565,11 +565,11 @@
                         <Insets top="10.0" />
                      </padding>
                   </Label>
-                  <TextField fx:id="goToX" layoutX="47.0" layoutY="145.0" prefHeight="27.0" prefWidth="50.0">
+                  <TextField fx:id="goToX" layoutX="47.0" layoutY="145.0" onAction="#goToXCoordinate" prefHeight="27.0" prefWidth="50.0">
                      <padding>
                         <Insets top="10.0" />
                      </padding></TextField>
-                  <TextField fx:id="goToY" layoutX="47.0" layoutY="184.0" prefHeight="27.0" prefWidth="50.0">
+                  <TextField fx:id="goToY" layoutX="47.0" layoutY="184.0" onAction="#goToYCoordinate" prefHeight="27.0" prefWidth="50.0">
                      <padding>
                         <Insets top="10.0" />
                      </padding></TextField>
