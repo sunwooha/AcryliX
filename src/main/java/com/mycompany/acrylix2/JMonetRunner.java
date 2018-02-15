@@ -16,6 +16,7 @@ public class JMonetRunner {
     JFXPaintCanvasNode currentCanvas;
     PaintTool activeTool;
     Color gradientColor;
+    Color eyeDropperColor;
     
     JMonetRunner() {
     }
@@ -215,5 +216,13 @@ public class JMonetRunner {
     
     Color getGradientColor() {
         return gradientColor;
+    }
+    
+    void setEyeDropperColor(Color col) {
+        eyeDropperColor = col;
+    }
+    
+    Color getEyeDropperColor() {
+        return eyeDropperColor;
     }
 }
