@@ -25,6 +25,7 @@ public class JMonetRunner {
         currentCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
         setDefaultTool();
         gradientColor = new Color(0, 0, 0);
+        eyeDropperColor = new Color(0, 0, 0);
     }
     
     void newCanvas() {
