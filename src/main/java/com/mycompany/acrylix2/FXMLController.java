@@ -37,6 +37,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import java.awt.Graphics2D;
 import java.awt.Paint;
+import javafx.stage.Modality;
 import javafx.stage.StageStyle;
 
 public class FXMLController implements Initializable {
@@ -120,6 +121,9 @@ public class FXMLController implements Initializable {
         //set transparency
         stage.setOpacity(0.85);
         
+        //window stays on top
+        stage.setAlwaysOnTop(true);
+
         stage.setTitle("Acrylix");
         stage.setScene(scene);
         stage.show();
@@ -214,6 +218,9 @@ public class FXMLController implements Initializable {
         //set transparency
         stage.setOpacity(0.85);
         
+        //window stays on top
+        stage.setAlwaysOnTop(true);
+        
         //set attributes of the window.
         stage.setTitle("Gradient Attributes");
         stage.setScene(scene);
@@ -245,6 +252,9 @@ public class FXMLController implements Initializable {
         //move window to leftmost side
         stage.setX(0);
         stage.setY(0);
+        
+        //window stays on top
+        stage.setAlwaysOnTop(true);
         
         //set attributes of the window.
         stage.setTitle("Text Attributes");
@@ -279,10 +289,12 @@ public class FXMLController implements Initializable {
         //set transparency
         stage.setOpacity(0.85);
 
-        
         //move window to leftmost side
         stage.setX(0);
         stage.setY(0);
+        
+        //window stays on top
+        stage.setAlwaysOnTop(true);
         
         //set attributes of the window.
         stage.setTitle("Brush Attributes");
@@ -342,6 +354,9 @@ public class FXMLController implements Initializable {
                 //set transparency
                 stage2.setOpacity(0.85);
                 
+                //window stays on top
+                stage2.setAlwaysOnTop(true);
+                
                 //set attributes of the window.
                 stage2.setTitle("Selection Attributes");
                 stage2.setScene(scene);
@@ -381,6 +396,9 @@ public class FXMLController implements Initializable {
         //set transparency
         stage.setOpacity(0.85);
         
+        //window stays on top
+        stage.setAlwaysOnTop(true);
+        
         //set attributes of the window.
         stage.setTitle("Line Attributes");
         stage.setScene(scene);
@@ -415,6 +433,9 @@ public class FXMLController implements Initializable {
         
         //set transparency
         stage.setOpacity(0.85);
+        
+        //window stays on top
+        stage.setAlwaysOnTop(true);
         
         //set attributes of the window.
         stage.setTitle("Selection Attributes");
@@ -487,6 +508,9 @@ public class FXMLController implements Initializable {
         //set transparency
         stage.setOpacity(0.85);
         
+        //window stays on top
+        stage.setAlwaysOnTop(true);
+        
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
         stage.setScene(scene);
@@ -528,6 +552,9 @@ public class FXMLController implements Initializable {
         //set transparency
         stage.setOpacity(0.85);
         
+        //window stays on top
+        stage.setAlwaysOnTop(true);
+        
         //set attributes of the window.
         stage.setTitle("Shape Attributes");
         stage.setScene(scene);
@@ -564,6 +591,9 @@ public class FXMLController implements Initializable {
         
         //set transparency
         stage.setOpacity(0.85);
+        
+        //window stays on top
+        stage.setAlwaysOnTop(true);
         
         //set attributes of the window.
         stage.setTitle("Polygon Attributes");
@@ -627,8 +657,8 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-         JFXPaintCanvasNode myCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
-        
+        JFXPaintCanvasNode myCanvas = new JFXPaintCanvasNode(new JMonetCanvas());
+                
         runner = new JMonetRunner();
         runner.startJMonet();
         
