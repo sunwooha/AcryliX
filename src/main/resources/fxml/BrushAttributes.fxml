@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51, 0.5);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLBrush">
    <children>
-      <VBox alignment="CENTER" layoutX="-28.0" layoutY="-13.0" prefHeight="277.0" prefWidth="357.0" spacing="10.0">
+      <VBox alignment="CENTER" layoutX="-28.0" layoutY="-13.0" prefHeight="277.0" prefWidth="357.0" spacing="40.0">
          <children>
             <HBox alignment="CENTER" prefHeight="49.0" prefWidth="220.0" spacing="30.0">
                <children>
@@ -51,21 +51,12 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="357.0" spacing="10.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="112.0" text="Size" textAlignment="CENTER" textFill="#fffafa">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="112.0" text="Size" textFill="#fffafa">
                      <font>
                         <Font size="15.0" />
                      </font></Label>
                   <Slider fx:id="size" majorTickUnit="10.0" max="50.0" onMouseDragReleased="#setSize" prefHeight="16.0" prefWidth="100.0" showTickLabels="true" showTickMarks="true" value="8.0" />
                </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="357.0" spacing="30.0">
-               <children>
-                  <Button fx:id="ungroupButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickUngroup" prefHeight="40.0" prefWidth="80.0" style="-fx-background-radius: 20;" text="Ungroup" />
-                  <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickDelete" prefHeight="40.0" prefWidth="80.0" style="-fx-background-radius: 20;" text="Delete" />
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" />
-               </padding>
             </HBox>
          </children>
       </VBox>

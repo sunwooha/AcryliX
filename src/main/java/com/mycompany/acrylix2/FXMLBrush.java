@@ -56,10 +56,7 @@ public class FXMLBrush implements Initializable {
         runner.switchToolType(PaintToolType.PENCIL);
     }
 
-    @FXML
-    private void clickUngroup(ActionEvent event){
-        System.out.println("Ungroup");
-    }
+    
     
     @FXML
     private void setSize(DragEvent event){
@@ -68,10 +65,7 @@ public class FXMLBrush implements Initializable {
         runner.switchToolSize(newSize);
     }
 
-    @FXML
-    private void clickDelete(ActionEvent event){
-        System.out.println("Delete");
-    }
+
 
     
     @Override
