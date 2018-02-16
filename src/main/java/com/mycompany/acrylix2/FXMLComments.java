@@ -19,12 +19,18 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
 /**
  *
  */
@@ -39,6 +45,9 @@ public class FXMLComments extends FXMLController{
     @FXML
     public TextArea commentsTextArea;
     
+    public String newComment;
+    
+    
     public void setJMonetRunner(JMonetRunner run) {
         this.runner = run;
     }
@@ -46,46 +55,27 @@ public class FXMLComments extends FXMLController{
     //and a submit comment button
     @FXML
     private void clickComment(ActionEvent event){
-        
+
         //the comment is entered as a string
-        String newComment = commentsTextArea.getText();
-        
-        //now, send this comment to the arraylist of comments on the FXMLController.
-        //FXMLController mainClass = new FXMLController();
-        //mainClass.getComments().add(newComment);
-        runner.addComments(newComment);
+        newComment = commentsTextArea.getText();
         runner.getCurrentCanvas().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+                
                 x = (int) Math.round(event.getX());
                 y = (int) Math.round(event.getY());
-                
+                String finalComment = "(" + x + ", " + y +"): " + newComment;
+                System.out.println(finalComment);
+                runner.addComments(finalComment);
             }
         });
-        
-        Label newLabel = new Label(newComment);
-        newLabel.setBounds(x, y, 50, 100);
-        newLabel.setAlignment(Label.CENTER);
-        newLabel.setVisible(true);
-        
-        HBox hbox = new HBox();
-        hbox.setAlignment(Pos.CENTER);
-        
-        //hbox.getChildren().add(newLabel);
-        
-      
-        aPane.getChildren().add(hbox);
-        
-        
     }
     
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
+      
     }
-    
-    
     
 }
 

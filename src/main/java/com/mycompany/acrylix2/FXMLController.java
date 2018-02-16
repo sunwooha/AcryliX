@@ -718,13 +718,34 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void clickShowComments(ActionEvent event) throws IOException{
-        System.out.println("You clicked the show comment button!");
-        ArrayList<String> com = runner.getComments();
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/CommentBoxAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
         
+        //then, set the scene from that file
+        Scene scene = new Scene(p);
+        scene.getStylesheets().add("/styles/Styles.css");
         
-        for(int i = 0; i < com.size(); i++) {
-            System.out.println(com.get(i));
-        }
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(0);
+        stage.setY(0);
+        
+        //set transparency
+        stage.setOpacity(0.85);
+        
+        //window stays on top
+        stage.setAlwaysOnTop(true);
+
+        stage.setTitle("Comment Box");
+        stage.setScene(scene);
+        stage.show();
+        FXMLCommentBox controller = loader.getController();
+        controller.setJMonetRunner(runner); 
     }
     
     @FXML

@@ -318,7 +318,7 @@ public class JMonetRunner implements Observer {
         comments.add(comment);
     }
     
-    ArrayList<String> getComments(){
+    public ArrayList<String> getComments(){
         return comments;
     }
     
