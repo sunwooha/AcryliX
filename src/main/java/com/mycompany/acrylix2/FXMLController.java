@@ -657,23 +657,7 @@ public class FXMLController implements Initializable {
     @FXML
     private void clickEye(ActionEvent event){
         System.out.println("You clicked the eye dropper button!");
-        runner.getCurrentCanvas().setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                System.out.println(event.getX() + ", " + event.getY());
-                Point point = new Point((int)event.getX(), (int)event.getY());
-                try {
-                Robot robot = new Robot();
-                Color color = robot.getPixelColor((380 + (int) point.getX()), (217 + (int) point.getY()));
-                System.out.println(color.getRed() + ", " + color.getGreen() + ", " +color.getGreen());
-                }
-                catch (AWTException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        Color col = runner.getEyeDropperColor();
-        runner.switchToolColor(col);
+        runner.startEyeDropper();
     }
     
     @FXML

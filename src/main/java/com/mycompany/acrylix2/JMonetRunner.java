@@ -10,8 +10,10 @@ import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
 import javax.imageio.*;
+import java.util.Observable;
+import java.util.Observer;
 
-public class JMonetRunner {
+public class JMonetRunner implements Observer {
     
     JFXPaintCanvasNode currentCanvas;
     PaintTool activeTool;
@@ -19,6 +21,18 @@ public class JMonetRunner {
     Color eyeDropperColor;
     
     JMonetRunner() {
+    }
+    
+    public void observe(Observable o) {
+        o.addObserver(this);
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        Color pickedColor = ((EyeDropper) o).getPickedColor();
+        System.out.println("All is in flux! The picked color is now " + pickedColor);
+        o.deleteObservers();
+        stopEyeDropper((EyeDropper) o);
     }
     
     void startJMonet() {
@@ -209,6 +223,21 @@ public class JMonetRunner {
         } catch (IOException e) {
             System.err.println("An error occurred. File not saved.");
         }
+    }
+    
+    void startEyeDropper() {
+        activeTool.deactivate();
+        EyeDropper eyeTool = new EyeDropper();
+        eyeTool.activate(currentCanvas.getCanvas());
+        observe(eyeTool);
+    }
+    
+    void stopEyeDropper(EyeDropper eyeTool) {
+        setEyeDropperColor(eyeTool.getPickedColor());
+        eyeTool.deactivate();
+        activeTool.activate(currentCanvas.getCanvas());
+        Color col = getEyeDropperColor();
+        switchToolColor(col);
     }
     
     void setGradientColor(Color col) {
