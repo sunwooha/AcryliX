@@ -15,8 +15,10 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.input.MouseEvent;
 
 /**
  *
@@ -75,6 +77,14 @@ public class FXMLSelection implements Initializable {
                     RotateTool rotateTool = (RotateTool)runner.getActiveTool();
                     rotateTool.createSelection(img, p);
                     runner.setActiveTool(rotateTool);
+                    
+                   /* runner.getCurrentCanvas().setOnMouseReleased(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        runner.switchToolType(PaintToolType.SELECTION);
+                    }
+                    });*/
+                    
                 }
             }
         }

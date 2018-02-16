@@ -6,6 +6,7 @@ import com.defano.jmonet.tools.builder.PaintTool;
 import com.defano.jmonet.tools.builder.PaintToolBuilder;
 import com.defano.jmonet.model.PaintToolType;
 import com.defano.jmonet.tools.SelectionTool;
+import com.defano.jmonet.tools.FillTool;
 import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
@@ -70,6 +71,12 @@ public class JMonetRunner implements Observer {
                 .withStrokePaint(activeTool.getStrokePaint())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
+            
+            if (tooltype == PaintToolType.FILL) {
+                FillBoundaryFunction newBoundaryFunction = new FillBoundaryFunction();
+                newBoundaryFunction.setJMonetRunner(this);
+                ((FillTool)activeTool).setBoundaryFunction(newBoundaryFunction);
+            }
         }
     }
     
@@ -168,7 +175,7 @@ public class JMonetRunner implements Observer {
                 .withFontColor(activeTool.getFontColor())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
-        }  
+        }
     }
     
     void setActiveTool(PaintTool p) {
