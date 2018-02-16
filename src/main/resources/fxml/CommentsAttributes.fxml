@@ -5,10 +5,10 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="380.0" prefWidth="358.0" style="-fx-background-color: rgb(51, 51, 51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLComments">
+<AnchorPane id="AnchorPane" prefHeight="339.0" prefWidth="317.0" style="-fx-background-color: rgb(51, 51, 51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLComments">
    <children>
-      <TextArea fx:id="commentsTextField" layoutX="34.0" layoutY="63.0" prefHeight="200.0" prefWidth="290.0" />
-      <Button fx:id="comment" layoutX="140.0" layoutY="297.0" mnemonicParsing="false" onAction="#clickComment" prefHeight="40.0" prefWidth="78.0" style="-fx-background-radius: 10;" text="Submit" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="14.0" prefHeight="34.0" prefWidth="86.0" text="Comment" textFill="WHITE" />
+      <TextArea fx:id="commentsTextArea" layoutX="34.0" layoutY="56.0" prefHeight="166.0" prefWidth="247.0" style="-fx-background-radius: 0;" />
+      <Button fx:id="comment" layoutX="119.0" layoutY="246.0" mnemonicParsing="false" onAction="#clickComment" prefHeight="40.0" prefWidth="78.0" style="-fx-background-radius: 20;" text="Submit" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="14.0" prefHeight="34.0" prefWidth="86.0" text="Comment" textFill="WHITE" />
    </children>
 </AnchorPane>

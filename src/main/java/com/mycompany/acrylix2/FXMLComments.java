@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 /**
  *
  */
@@ -27,7 +27,7 @@ public class FXMLComments implements Initializable {
     
     //below, we have a text field accepting text as a comment
     @FXML
-    public TextField commentsTextField;
+    public TextArea commentsTextArea;
     
     
     //and a submit comment button
@@ -35,11 +35,11 @@ public class FXMLComments implements Initializable {
     private void clickComment(ActionEvent event){
         
         //the comment is entered as a string
-        //String newComment = commentsTextField.getText();
+        String newComment = commentsTextArea.getText();
         
         //now, send this comment to the arraylist of comments on the FXMLController.
-        //FXMLController mainClass = new FXMLController();
-        //mainClass.comments.add(newComment);
+        FXMLController mainClass = new FXMLController();
+        mainClass.comments.add(newComment);
         
     }
     

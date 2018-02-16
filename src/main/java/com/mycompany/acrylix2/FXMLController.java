@@ -719,32 +719,6 @@ public class FXMLController implements Initializable {
     private void clickShowComments(ActionEvent event) throws IOException{
         System.out.println("You clicked the show comment button!");
         
-                //fist get the XML file
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/CommentsAttributes.fxml"));
-        loader.load();
-        Parent p = loader.getRoot();
-        
-        //then, set the scene from that file
-        Scene scene = new Scene(p);
-        scene.getStylesheets().add("/styles/Styles.css");
-        
-        //put the scene in a stage (new window)
-        Stage stage = new Stage();
-        
-        //move window to leftmost side
-        stage.setX(0);
-        stage.setY(0);
-        
-        //set transparency
-        stage.setOpacity(0.85);
-        
-        //window stays on top
-        stage.setAlwaysOnTop(true);
-
-        stage.setTitle("Comments");
-        stage.setScene(scene);
-        stage.show();
         
         for(int i = 0; i < comments.size(); i++) {
             System.out.println(comments.get(i));
@@ -837,10 +811,7 @@ public class FXMLController implements Initializable {
                 currX.setText(Integer.toString(currentX));
                 currY.setText(Integer.toString(currentY));
             }
-<<<<<<< HEAD
         });  
-=======
-        });
         
         size.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
@@ -849,6 +820,5 @@ public class FXMLController implements Initializable {
                 runner.switchToolSize((double) newValue.intValue());
             }
         });
->>>>>>> 5d8547349306670821ffbf62be9a89dd0e9f3794
     }    
 }
