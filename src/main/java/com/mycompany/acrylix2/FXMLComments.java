@@ -73,26 +73,6 @@ public class FXMLComments extends FXMLController{
                 runner.addComments(finalComment);
             }
         });
-<<<<<<< HEAD
-=======
-        
-        Label newLabel = new Label(newComment);
-        //newLabel.setVisible(true);
-        //newLabel.setFill(black);
-        
-        HBox hbox = new HBox();
-        hbox.setAlignment(Pos.CENTER);
-        
-        hbox.getChildren().add(newLabel);
-       
-        hbox.setMinWidth(400);
-        hbox.setMinHeight(400);
-        hbox.setPrefWidth(400);
-        hbox.setPrefHeight(400);
-
-        //aPane.getChildren().add(hbox);
-        
->>>>>>> cdcf6043532cb45b8a2400a8a2364775b93c3757
     }
     
     
