@@ -8,15 +8,10 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<<<<<<< HEAD
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="302.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51, 0.5);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLBrush">
-   <children>
-      <VBox alignment="CENTER" layoutX="-11.0" layoutY="43.0" prefHeight="83.0" prefWidth="324.0" spacing="40.0">
-=======
+
 <AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="302.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51, 0.5);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLBrush">
    <children>
       <VBox alignment="CENTER" layoutY="1.0" prefHeight="206.0" prefWidth="302.0" spacing="40.0">
->>>>>>> b8d19dff55c248a89deb0a30a4561abb58c1d323
          <children>
             <HBox alignment="CENTER" prefHeight="49.0" prefWidth="220.0" spacing="30.0">
                <children>
