@@ -37,12 +37,9 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import com.sun.javafx.robot.FXRobot;
-<<<<<<< HEAD
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-=======
 import java.util.ArrayList;
->>>>>>> 4161044d61b7db10793f7a3d029cff5105fed2e9
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Slider;
 import javafx.scene.transform.Scale;
