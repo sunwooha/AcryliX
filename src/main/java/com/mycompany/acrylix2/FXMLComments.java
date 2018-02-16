@@ -30,11 +30,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.control.Label;
-<<<<<<< HEAD
 import javafx.stage.Stage;
 
-=======
->>>>>>> cdcf6043532cb45b8a2400a8a2364775b93c3757
+
 /**
  *
  */
