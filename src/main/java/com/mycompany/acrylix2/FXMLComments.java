@@ -77,6 +77,7 @@ public class FXMLComments extends FXMLController{
         
     }
     
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
       
