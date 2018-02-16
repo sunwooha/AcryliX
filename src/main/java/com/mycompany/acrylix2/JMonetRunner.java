@@ -76,6 +76,7 @@ public class JMonetRunner implements Observer {
             if (tooltype == PaintToolType.FILL) {
                 FillBoundaryFunction newBoundaryFunction = new FillBoundaryFunction();
                 newBoundaryFunction.setJMonetRunner(this);
+                newBoundaryFunction.setFillColor((Color)activeTool.getStrokePaint());
                 ((FillTool)activeTool).setBoundaryFunction(newBoundaryFunction);
             }
         }
@@ -101,7 +102,14 @@ public class JMonetRunner implements Observer {
                 .withStrokePaint(col)
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
-        }  
+            
+            if (currentToolType == PaintToolType.FILL) {
+                FillBoundaryFunction newBoundaryFunction = new FillBoundaryFunction();
+                newBoundaryFunction.setJMonetRunner(this);
+                newBoundaryFunction.setFillColor(col);
+                ((FillTool)activeTool).setBoundaryFunction(newBoundaryFunction);
+            }
+        }
     }
     
     void switchToolSize(Double size) {
@@ -112,7 +120,8 @@ public class JMonetRunner implements Observer {
             PaintToolType currentToolType = activeTool.getToolType();
             Paint currentStokePaint = activeTool.getStrokePaint();
             Font currentFont = activeTool.getFont();
-                        
+            
+            
             // Deactivate the current tool
             activeTool.deactivate();
 
@@ -128,18 +137,18 @@ public class JMonetRunner implements Observer {
         }  
     }
     
-        void switchFontSize(Double size) {
-        
+    void switchFontSize(Double size) {
+ 
         // Check whether or not a tool is already active
         if (activeTool != null) {
-
+            
             PaintToolType currentToolType = activeTool.getToolType();
             Paint currentStokePaint = activeTool.getStrokePaint();
-            Font currentFont = activeTool.getFont();
-                        
+            Font currentFont = activeTool.getFont();     
+ 
             // Deactivate the current tool
             activeTool.deactivate();
-
+            
             // Switch the tool's color
             activeTool = PaintToolBuilder.create(currentToolType)
                 .withStroke(activeTool.getStroke())
@@ -149,7 +158,7 @@ public class JMonetRunner implements Observer {
                 .withFontColor(activeTool.getFontColor())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
-        }  
+        }
     }
     
     void switchFontStyle(int style) {
