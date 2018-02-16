@@ -34,9 +34,6 @@ public class FXMLBrush implements Initializable {
         this.runner = run;
     }
     
-    @FXML
-    private Slider size;
-    
     
     @FXML
     private void clickSpray(ActionEvent event){
@@ -55,28 +52,9 @@ public class FXMLBrush implements Initializable {
         System.out.println("Pencil");
         runner.switchToolType(PaintToolType.PENCIL);
     }
-
-    
-    
-    @FXML
-    private void setSize(DragEvent event){
-        System.out.println("Size: " + size.getValue());
-        double newSize = size.getValue();
-        runner.switchToolSize(newSize);
-    }
-
-
-
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        size.valueProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                System.out.println("Slider Value Changed (newValue: " + newValue.intValue() + ")\n");
-                runner.switchToolSize((double) newValue.intValue());
-            }
-        });
+       
     }
 }
