@@ -37,13 +37,21 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import com.sun.javafx.robot.FXRobot;
+import java.awt.Desktop;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import java.util.ArrayList;
 import javafx.scene.SnapshotParameters;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Slider;
+import javafx.scene.control.Tooltip;
 import javafx.scene.transform.Scale;
 import javax.print.PrintException;
+import javafx.application.HostServices;
+import javafx.application.*;
 
 public class FXMLController implements Initializable {
     
@@ -748,9 +756,37 @@ public class FXMLController implements Initializable {
         controller.setJMonetRunner(runner); 
     }
     
+    public static boolean openWebpage(URI uri) {
+        Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+        if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+            try {
+                desktop.browse(uri);
+                return true;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
+
+    public static boolean openWebpage(URL url) {
+        try {
+            return openWebpage(url.toURI());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
+    
     @FXML
-    private void clickHelp(ActionEvent event){
+    private void clickHelp(ActionEvent event) throws MalformedURLException{
         System.out.println("You clicked the help button!");
+        
+        URL url = new URL("https://acrylix.squarespace.com/");
+        openWebpage(url);
+        
     }
     
     @FXML

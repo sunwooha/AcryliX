@@ -13,6 +13,7 @@ import com.defano.jmonet.tools.ScaleTool;
 import java.awt.Graphics2D;
 import java.net.URL;
 import java.awt.*;
+import static java.awt.Color.black;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -29,8 +30,11 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.control.Label;
+<<<<<<< HEAD
 import javafx.stage.Stage;
 
+=======
+>>>>>>> cdcf6043532cb45b8a2400a8a2364775b93c3757
 /**
  *
  */
@@ -69,6 +73,26 @@ public class FXMLComments extends FXMLController{
                 runner.addComments(finalComment);
             }
         });
+<<<<<<< HEAD
+=======
+        
+        Label newLabel = new Label(newComment);
+        //newLabel.setVisible(true);
+        //newLabel.setFill(black);
+        
+        HBox hbox = new HBox();
+        hbox.setAlignment(Pos.CENTER);
+        
+        hbox.getChildren().add(newLabel);
+       
+        hbox.setMinWidth(400);
+        hbox.setMinHeight(400);
+        hbox.setPrefWidth(400);
+        hbox.setPrefHeight(400);
+
+        //aPane.getChildren().add(hbox);
+        
+>>>>>>> cdcf6043532cb45b8a2400a8a2364775b93c3757
     }
     
     
