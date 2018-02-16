@@ -7,6 +7,7 @@ package com.mycompany.acrylix2;
 
 import com.defano.jmonet.model.PaintToolType;
 import com.defano.jmonet.tools.builder.PaintTool;
+import com.defano.jmonet.tools.base.AbstractSelectionTool;
 import com.defano.jmonet.tools.SelectionTool;
 import com.defano.jmonet.tools.RotateTool;
 import com.defano.jmonet.tools.ScaleTool;
@@ -163,9 +164,29 @@ public class FXMLSelection implements Initializable {
     
     @FXML
     private void clickSelection(ActionEvent event) {
+        System.out.println("Select");
+        BufferedImage img;
+        Point p;
         
-        runner.switchToolType(PaintToolType.SELECTION);
-       
+        PaintTool currentTool = runner.getActiveTool();
+        if (currentTool instanceof AbstractSelectionTool && !(currentTool instanceof SelectionTool)) {
+            AbstractSelectionTool newTool = (AbstractSelectionTool)currentTool;
+            if (newTool.hasSelection()) {
+                img = newTool.getSelectedImage();
+                p = newTool.getSelectionOutline().getBounds().getLocation();
+                newTool.deleteSelection();
+                
+                runner.switchToolType(PaintToolType.SELECTION);
+                if (runner.getActiveTool().getToolType() == PaintToolType.SELECTION) {
+                    SelectionTool selectTool = (SelectionTool)runner.getActiveTool();
+                    selectTool.createSelection(img, p);
+                    runner.setActiveTool(selectTool);
+                }
+            }
+        }
+        else {
+            System.out.println("Nothing is selected.");
+        }
     }
     
     @Override
