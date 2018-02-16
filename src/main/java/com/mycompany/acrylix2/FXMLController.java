@@ -867,7 +867,7 @@ public class FXMLController implements Initializable {
         
         
         aPane.getChildren().add(myCanvas);
-        myCanvas.getCanvas().setSize((int) aPane.getPrefWidth() + 10000, (int) aPane.getPrefHeight() + 10000);
+        myCanvas.getCanvas().setSize((int) aPane.getPrefWidth() + 1000, (int) aPane.getPrefHeight() + 1000);
         
         //getting canvas coordinates of mouse
         myCanvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
