@@ -37,7 +37,7 @@ public class FXMLSelection implements Initializable {
     private void clickFlipHorizontally(ActionEvent event){
         System.out.println("Horizontal");
         PaintTool currentTool = runner.getActiveTool();
-        if (currentTool.getToolType() == PaintToolType.SELECTION){
+        if (currentTool instanceof SelectionTool){
             SelectionTool newTool = (SelectionTool)currentTool;
             newTool.flipHorizontal();
         }
@@ -50,7 +50,7 @@ public class FXMLSelection implements Initializable {
     private void clickFlipVertically(ActionEvent event){
         System.out.println("Vertical");
         PaintTool currentTool = runner.getActiveTool();
-        if (currentTool.getToolType() == PaintToolType.SELECTION){
+        if (currentTool instanceof SelectionTool){
             SelectionTool newTool = (SelectionTool)currentTool;
             newTool.flipVertical();
         }
@@ -66,8 +66,8 @@ public class FXMLSelection implements Initializable {
         Point p;
         
         PaintTool currentTool = runner.getActiveTool();
-        if (currentTool instanceof SelectionTool) {
-            SelectionTool newTool = (SelectionTool)currentTool;
+        if (currentTool instanceof AbstractSelectionTool && !(currentTool instanceof RotateTool)) {
+            AbstractSelectionTool newTool = (AbstractSelectionTool)currentTool;
             if (newTool.hasSelection()) {
                 img = newTool.getSelectedImage();
                 p = newTool.getSelectionOutline().getBounds().getLocation();
@@ -78,14 +78,6 @@ public class FXMLSelection implements Initializable {
                     RotateTool rotateTool = (RotateTool)runner.getActiveTool();
                     rotateTool.createSelection(img, p);
                     runner.setActiveTool(rotateTool);
-                    
-                   /* runner.getCurrentCanvas().setOnMouseReleased(new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent event) {
-                        runner.switchToolType(PaintToolType.SELECTION);
-                    }
-                    });*/
-                    
                 }
             }
         }
@@ -102,8 +94,8 @@ public class FXMLSelection implements Initializable {
         Point p;
         
         PaintTool currentTool = runner.getActiveTool();
-        if (currentTool instanceof SelectionTool) {
-            SelectionTool newTool = (SelectionTool)currentTool;
+        if (currentTool instanceof AbstractSelectionTool && !(currentTool instanceof ScaleTool)) {
+            AbstractSelectionTool newTool = (AbstractSelectionTool)currentTool;
             if (newTool.hasSelection()) {
                 img = newTool.getSelectedImage();
                 p = newTool.getSelectionOutline().getBounds().getLocation();
@@ -150,9 +142,9 @@ public class FXMLSelection implements Initializable {
         BufferedImage img; 
         Point p; 
          
-        PaintTool currentTool = runner.getActiveTool(); 
-        if (currentTool instanceof SelectionTool) { 
-            SelectionTool newTool = (SelectionTool)currentTool; 
+        PaintTool currentTool = runner.getActiveTool();
+        if (currentTool instanceof AbstractSelectionTool) {
+            AbstractSelectionTool newTool = (AbstractSelectionTool)currentTool;
             if (newTool.hasSelection()) { 
                 img = newTool.getSelectedImage(); 
                 p = newTool.getSelectionOutline().getBounds().getLocation(); 
