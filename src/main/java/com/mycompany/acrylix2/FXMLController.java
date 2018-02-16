@@ -101,6 +101,8 @@ public class FXMLController implements Initializable {
     
     public int currentY;
     
+    public String allTheComments = "";
+    
     public ArrayList<String> comments = new ArrayList<String>();
     
     @FXML
@@ -720,8 +722,7 @@ public class FXMLController implements Initializable {
         stage.setScene(scene);
         stage.show();
         FXMLComments controller = loader.getController();
-        controller.setJMonetRunner(runner); 
-        
+        controller.setJMonetRunner(runner);
     }
     
     @FXML
@@ -753,7 +754,15 @@ public class FXMLController implements Initializable {
         stage.setScene(scene);
         stage.show();
         FXMLCommentBox controller = loader.getController();
-        controller.setJMonetRunner(runner); 
+        ArrayList<String> mycomments = runner.getComments();
+        System.out.println(mycomments.size());
+        if(mycomments.size() > 0){
+            for(int i = 0; i < mycomments.size(); i++){
+                System.out.println(mycomments.get(i));
+                allTheComments += mycomments.get(i) + "\n";
+            }
+            controller.textArea.setText(allTheComments);
+        }
     }
     
     public static boolean openWebpage(URI uri) {

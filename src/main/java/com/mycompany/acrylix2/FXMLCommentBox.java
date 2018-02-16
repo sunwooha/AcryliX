@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
+import java.util.*;
 
 /**
  *
@@ -26,13 +27,12 @@ public class FXMLCommentBox implements Initializable {
         this.runner = run;
     }
     
-    
-    public void setText(){
+    public TextArea getTextArea(){
+        return textArea;
     }
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
          
     }
 

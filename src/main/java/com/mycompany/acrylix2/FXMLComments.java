@@ -17,6 +17,7 @@ import static java.awt.Color.black;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.animation.Animation;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -49,7 +50,8 @@ public class FXMLComments extends FXMLController{
     
     public String newComment;
     
-    
+    public String finalComment;
+ 
     public void setJMonetRunner(JMonetRunner run) {
         this.runner = run;
     }
@@ -66,13 +68,15 @@ public class FXMLComments extends FXMLController{
                 
                 x = (int) Math.round(event.getX());
                 y = (int) Math.round(event.getY());
-                String finalComment = "(" + x + ", " + y +"): " + newComment;
-                System.out.println(finalComment);
+                finalComment = "(" + x + ", " + y +"): " + newComment;
                 runner.addComments(finalComment);
+                Stage stage = (Stage) commentsTextArea.getScene().getWindow();
+                stage.close();
+                System.out.println(finalComment);
             }
         });
+        
     }
-    
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {

@@ -3,9 +3,8 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="225.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="com.mycompany.acrylix2.FXMLCommentBox">
+<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="225.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLCommentBox">
    <children>
-      <TextArea fx:id="textArea" layoutX="13.0" layoutY="14.0" prefHeight="535.0" prefWidth="199.0" />
+      <TextArea fx:id="textArea" disable="true" layoutX="13.0" layoutY="14.0" prefHeight="535.0" prefWidth="199.0" wrapText="true" />
    </children>
 </AnchorPane>
