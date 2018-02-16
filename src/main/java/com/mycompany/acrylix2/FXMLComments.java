@@ -33,10 +33,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2425a808ec90d08dba813dbbb58d2aa717f85939
 /**
  *
  */
