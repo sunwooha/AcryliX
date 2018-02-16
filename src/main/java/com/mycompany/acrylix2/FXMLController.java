@@ -674,6 +674,42 @@ public class FXMLController implements Initializable {
     private void clickComment(ActionEvent event) throws IOException{
         System.out.println("You clicked the click comment button!");
         
+        //now, we will create a pop-up window
+        
+        //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/CommentsAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
+        
+        //then, set the scene from that file
+        Scene scene = new Scene(p);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(0);
+        stage.setY(0);
+        
+        //set transparency
+        stage.setOpacity(0.85);
+        
+        //window stays on top
+        stage.setAlwaysOnTop(true);
+
+        stage.setTitle("Comments");
+        stage.setScene(scene);
+        stage.show();
+        
+        
+    }
+    
+    @FXML
+    private void clickShowComments(ActionEvent event) throws IOException{
+        System.out.println("You clicked the show comment button!");
+        
                 //fist get the XML file
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/CommentsAttributes.fxml"));
@@ -696,17 +732,10 @@ public class FXMLController implements Initializable {
         
         //window stays on top
         stage.setAlwaysOnTop(true);
-        
-        //set attributes of the window.
-        stage.setTitle("Comments Attributes");
+
+        stage.setTitle("Comments");
         stage.setScene(scene);
         stage.show();
-        
-    }
-    
-    @FXML
-    private void clickShowComments(ActionEvent event){
-        System.out.println("You clicked the show comment button!");
         
         for(int i = 0; i < comments.size(); i++) {
             System.out.println(comments.get(i));
@@ -785,8 +814,6 @@ public class FXMLController implements Initializable {
         
         myCanvas = runner.currentCanvas;
         
-        //myCanvas.setLayoutX(100000);
-        //myCanvas.setLayoutY(100000);
         
         aPane.getChildren().add(myCanvas);
         myCanvas.getCanvas().setSize((int) aPane.getPrefWidth(), (int) aPane.getPrefHeight());
@@ -801,6 +828,6 @@ public class FXMLController implements Initializable {
                 currX.setText(Integer.toString(currentX));
                 currY.setText(Integer.toString(currentY));
             }
-        });
+        });  
     }    
 }
