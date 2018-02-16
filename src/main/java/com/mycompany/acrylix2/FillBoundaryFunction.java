@@ -15,12 +15,17 @@ public class FillBoundaryFunction implements BoundaryFunction {
         Color scratchPixel = new Color(scratch.getRGB(point.x, point.y), true);
         
         Paint currentStrokePaint = runner.getActiveTool().getStrokePaint();
-        System.out.print("x: " + point.x + "y: " + point.y + " ");
-        System.out.println(canvasPixel != (Color) currentStrokePaint && scratchPixel != (Color) currentStrokePaint);
+        /*System.out.print("x: " + point.x + "y: " + point.y + " ");
+        System.out.println(canvasPixel != (Color) currentStrokePaint && scratchPixel != (Color) currentStrokePaint);*/
         
-        return (canvasPixel == colorToFill && scratchPixel == colorToFill);
-        
-        //return canvasPixel.getAlpha() == 0 && scratchPixel.getAlpha() == 0;
+        boolean shouldFillPixel = false;
+        if (canvasPixel.getAlpha() == 0 && scratchPixel.getAlpha() == 0) {
+            shouldFillPixel = true;
+        }
+        /*else if (canvasPixel != colorToFill && scratchPixel != colorToFill) {
+            shouldFillPixel = true;
+        }*/
+        return shouldFillPixel;
     }
     
     public void setJMonetRunner(JMonetRunner runner) {
