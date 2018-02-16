@@ -37,8 +37,12 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import com.sun.javafx.robot.FXRobot;
+<<<<<<< HEAD
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+=======
+import java.util.ArrayList;
+>>>>>>> 4161044d61b7db10793f7a3d029cff5105fed2e9
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Slider;
 import javafx.scene.transform.Scale;
@@ -91,6 +95,8 @@ public class FXMLController implements Initializable {
     public int currentX;
     
     public int currentY;
+    
+    public ArrayList<String> comments;
     
     @FXML
     private Slider size;
@@ -677,13 +683,46 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
-    private void clickComment(ActionEvent event){
+    private void clickComment(ActionEvent event) throws IOException{
         System.out.println("You clicked the click comment button!");
+        
+                //fist get the XML file
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/CommentsAttributes.fxml"));
+        loader.load();
+        Parent p = loader.getRoot();
+        
+        //then, set the scene from that file
+        Scene scene = new Scene(p);
+        scene.getStylesheets().add("/styles/Styles.css");
+        
+        //put the scene in a stage (new window)
+        Stage stage = new Stage();
+        
+        //move window to leftmost side
+        stage.setX(0);
+        stage.setY(0);
+        
+        //set transparency
+        stage.setOpacity(0.85);
+        
+        //window stays on top
+        stage.setAlwaysOnTop(true);
+        
+        //set attributes of the window.
+        stage.setTitle("Comments Attributes");
+        stage.setScene(scene);
+        stage.show();
+        
     }
     
     @FXML
     private void clickShowComments(ActionEvent event){
         System.out.println("You clicked the show comment button!");
+        
+        for(int i = 0; i < comments.size(); i++) {
+            System.out.println(comments.get(i));
+        }
     }
     
     @FXML
