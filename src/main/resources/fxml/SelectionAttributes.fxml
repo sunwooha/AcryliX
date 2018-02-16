@@ -16,20 +16,20 @@
          <children>
             <HBox alignment="CENTER" prefHeight="72.0" prefWidth="208.0" spacing="30.0">
                <children>
-                  <Button fx:id="flipHorizontally1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipHorizontally" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 15;">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0">
-                           <image>
-                              <Image url="@../icons/Horizontal.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="flipVertically1" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipVertically" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 15;">
+                  <Button fx:id="flipVertically1" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipHorizontally" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 15;">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@../icons/Vertical.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="flipHorizontally1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickFlipVertically" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 15;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0">
+                           <image>
+                              <Image url="@../icons/Horizontal.png" />
                            </image>
                         </ImageView>
                      </graphic>
