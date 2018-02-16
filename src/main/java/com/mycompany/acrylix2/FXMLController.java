@@ -37,7 +37,10 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import com.sun.javafx.robot.FXRobot;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.SnapshotParameters;
+import javafx.scene.control.Slider;
 import javafx.scene.transform.Scale;
 import javax.print.PrintException;
 
@@ -88,6 +91,9 @@ public class FXMLController implements Initializable {
     public int currentX;
     
     public int currentY;
+    
+    @FXML
+    private Slider size;
     
     @FXML
     private void clickExport(ActionEvent event){
@@ -474,9 +480,12 @@ public class FXMLController implements Initializable {
     private void clickZoomIn(ActionEvent event){
         System.out.println("You clicked the zoom in button!");
         double scale = runner.getCurrentCanvas().getCanvas().getScale();
-        runner.getCurrentCanvas().getCanvas().setScale(scale*2);
-        
-        //runner.switchToolType(PaintToolType.MAGNIFIER);
+        if(scale >= 100){
+            //nothing
+        }
+        else{
+            runner.getCurrentCanvas().getCanvas().setScale(scale*2);
+        }
     }
     
     @FXML
@@ -764,6 +773,14 @@ public class FXMLController implements Initializable {
                 currentY = (int) Math.round(event.getY());
                 currX.setText(Integer.toString(currentX));
                 currY.setText(Integer.toString(currentY));
+            }
+        });
+        
+        size.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                System.out.println("Slider Value Changed (newValue: " + newValue.intValue() + ")\n");
+                runner.switchToolSize((double) newValue.intValue());
             }
         });
     }    

@@ -69,6 +69,7 @@ public class JMonetRunner implements Observer {
                 .withStroke(currentStroke)
                 .withFillPaint(activeTool.getStrokePaint())
                 .withStrokePaint(activeTool.getStrokePaint())
+                .withFontColor(activeTool.getFontColor())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
             
@@ -111,14 +112,37 @@ public class JMonetRunner implements Observer {
             PaintToolType currentToolType = activeTool.getToolType();
             Paint currentStokePaint = activeTool.getStrokePaint();
             Font currentFont = activeTool.getFont();
-            
-            
+                        
             // Deactivate the current tool
             activeTool.deactivate();
 
             // Switch the tool's color
             activeTool = PaintToolBuilder.create(currentToolType)
                 .withStroke(new BasicStroke(size.floatValue(), BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL))
+                .withStrokePaint(currentStokePaint)
+                .withFillPaint(currentStokePaint)
+                .withFont(new Font(currentFont.getName(), currentFont.getStyle(), size.intValue()))
+                .withFontColor(activeTool.getFontColor())
+                .makeActiveOnCanvas(currentCanvas)
+                .build();
+        }  
+    }
+    
+        void switchFontSize(Double size) {
+        
+        // Check whether or not a tool is already active
+        if (activeTool != null) {
+
+            PaintToolType currentToolType = activeTool.getToolType();
+            Paint currentStokePaint = activeTool.getStrokePaint();
+            Font currentFont = activeTool.getFont();
+                        
+            // Deactivate the current tool
+            activeTool.deactivate();
+
+            // Switch the tool's color
+            activeTool = PaintToolBuilder.create(currentToolType)
+                .withStroke(activeTool.getStroke())
                 .withStrokePaint(currentStokePaint)
                 .withFillPaint(currentStokePaint)
                 .withFont(new Font(currentFont.getName(), currentFont.getStyle(), size.intValue()))

@@ -36,7 +36,7 @@ public class FXMLText implements Initializable {
         int size = Integer.parseInt(fontSize.getText());
         PaintTool currentTool = runner.getActiveTool();
         if(currentTool.getToolType() == PaintToolType.TEXT){
-            runner.switchToolSize((double) size);
+            runner.switchFontSize((double) size);
         }
         System.out.println("Size: " + size);
     }
