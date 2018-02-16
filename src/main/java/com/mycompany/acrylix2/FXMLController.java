@@ -741,6 +741,10 @@ public class FXMLController implements Initializable {
         runner.startJMonet();
         
         myCanvas = runner.currentCanvas;
+        
+        //myCanvas.setLayoutX(100000);
+        //myCanvas.setLayoutY(100000);
+        
         aPane.getChildren().add(myCanvas);
         myCanvas.getCanvas().setSize(1140, 595);
         

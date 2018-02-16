@@ -123,6 +123,7 @@ public class FXMLSelection implements Initializable {
                 img = newTool.getSelectedImage();
                 p = newTool.getSelectionOutline().getBounds().getLocation();
                 newTool.clearSelection();
+                
                 SelectionTool secondTool = (SelectionTool)runner.getActiveTool();
                 secondTool.createSelection(img, p);
                 runner.setActiveTool(secondTool);
@@ -148,6 +149,13 @@ public class FXMLSelection implements Initializable {
             } 
         } 
         System.out.println("Delete"); 
+    }
+    
+    @FXML
+    private void clickSelection(ActionEvent event) {
+        
+        runner.switchToolType(PaintToolType.SELECTION);
+       
     }
     
     @Override
