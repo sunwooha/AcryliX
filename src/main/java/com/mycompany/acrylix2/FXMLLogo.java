@@ -5,6 +5,7 @@
  */
 package com.mycompany.acrylix2;
 
+import com.defano.jmonet.canvas.JFXPaintCanvasNode;
 import com.defano.jmonet.model.PaintToolType;
 import com.defano.jmonet.tools.SelectionTool;
 import java.awt.Point;
@@ -24,6 +25,8 @@ public class FXMLLogo implements Initializable {
     
     JMonetRunner runner;
     
+    JFXPaintCanvasNode myCanvas;
+    
     public void setJMonetRunner(JMonetRunner run) {
         this.runner = run;
     }
@@ -32,6 +35,8 @@ public class FXMLLogo implements Initializable {
     private void clickNewFile(ActionEvent event){
         System.out.println("New File");
         //runner.newCanvas();
+        myCanvas = runner.getCurrentCanvas();
+        myCanvas.getCanvas().clearCanvas();
     } 
     
     @FXML

@@ -634,7 +634,7 @@
                   <Insets top="15.0" />
                </HBox.margin>
             </TextField>
-            <Button fx:id="reset" mnemonicParsing="false" onAction="#clickOnReset" prefHeight="45.0" prefWidth="100.0" text="Reset">
+            <Button fx:id="reset" disable="true" mnemonicParsing="false" onAction="#clickOnReset" prefHeight="45.0" prefWidth="100.0" style="-fx-opacity: 0;" text="Reset">
                <effect>
                   <Glow />
                </effect>
