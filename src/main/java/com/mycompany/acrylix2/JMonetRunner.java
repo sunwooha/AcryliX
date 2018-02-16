@@ -75,8 +75,6 @@ public class JMonetRunner implements Observer {
             
             if (tooltype == PaintToolType.FILL) {
                 FillBoundaryFunction newBoundaryFunction = new FillBoundaryFunction();
-                newBoundaryFunction.setJMonetRunner(this);
-                newBoundaryFunction.setFillColor((Color)activeTool.getStrokePaint());
                 ((FillTool)activeTool).setBoundaryFunction(newBoundaryFunction);
             }
         }
@@ -105,8 +103,6 @@ public class JMonetRunner implements Observer {
             
             if (currentToolType == PaintToolType.FILL) {
                 FillBoundaryFunction newBoundaryFunction = new FillBoundaryFunction();
-                newBoundaryFunction.setJMonetRunner(this);
-                newBoundaryFunction.setFillColor(col);
                 ((FillTool)activeTool).setBoundaryFunction(newBoundaryFunction);
             }
         }

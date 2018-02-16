@@ -6,8 +6,6 @@ import java.awt.image.BufferedImage;
 
 public class FillBoundaryFunction implements BoundaryFunction {
     
-    JMonetRunner runner;
-    Color colorToFill;
     Color firstCanvasColor;
     Color firstScratchColor;
     boolean firstColorSet = false;
@@ -30,13 +28,5 @@ public class FillBoundaryFunction implements BoundaryFunction {
         }
         
         return shouldFillPixel;
-    }
-    
-    public void setJMonetRunner(JMonetRunner runner) {
-        this.runner = runner;
-    }
-    
-    public void setFillColor(Color col) {
-        this.colorToFill = col;
     }
 }
