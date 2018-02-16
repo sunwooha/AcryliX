@@ -13,6 +13,7 @@ import java.io.*;
 import javax.imageio.*;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.*;
 
 public class JMonetRunner implements Observer {
     
@@ -20,6 +21,7 @@ public class JMonetRunner implements Observer {
     PaintTool activeTool;
     Color gradientColor;
     Color eyeDropperColor;
+    ArrayList<String> comments = new ArrayList<String>();
     
     JMonetRunner() {
     }
@@ -286,4 +288,14 @@ public class JMonetRunner implements Observer {
     Color getEyeDropperColor() {
         return eyeDropperColor;
     }
+    
+    void addComments(String comment){
+        comments.add(comment);
+    }
+    
+    ArrayList<String> getComments(){
+        return comments;
+    }
+    
+    
 }

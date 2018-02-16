@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="302.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51, 0.5);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLBrush">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="302.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51, 0.5);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLBrush">
    <children>
-      <VBox alignment="CENTER" layoutX="-28.0" layoutY="-13.0" prefHeight="277.0" prefWidth="357.0" spacing="40.0">
+      <VBox alignment="CENTER" layoutX="-11.0" layoutY="43.0" prefHeight="83.0" prefWidth="324.0" spacing="40.0">
          <children>
             <HBox alignment="CENTER" prefHeight="49.0" prefWidth="220.0" spacing="30.0">
                <children>

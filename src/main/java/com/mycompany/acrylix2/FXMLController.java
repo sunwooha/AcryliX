@@ -64,7 +64,7 @@ public class FXMLController implements Initializable {
     private Pane pane;
     
     @FXML
-    private AnchorPane aPane;
+    public AnchorPane aPane;
     
     @FXML 
     private TextField fileName;
@@ -93,7 +93,7 @@ public class FXMLController implements Initializable {
     
     public int currentY;
     
-    public ArrayList<String> comments;
+    public ArrayList<String> comments = new ArrayList<String>();
     
     @FXML
     private Slider size;
@@ -711,17 +711,19 @@ public class FXMLController implements Initializable {
         stage.setTitle("Comments");
         stage.setScene(scene);
         stage.show();
-        
+        FXMLComments controller = loader.getController();
+        controller.setJMonetRunner(runner); 
         
     }
     
     @FXML
     private void clickShowComments(ActionEvent event) throws IOException{
         System.out.println("You clicked the show comment button!");
+        ArrayList<String> com = runner.getComments();
         
         
-        for(int i = 0; i < comments.size(); i++) {
-            System.out.println(comments.get(i));
+        for(int i = 0; i < com.size(); i++) {
+            System.out.println(com.get(i));
         }
     }
     
