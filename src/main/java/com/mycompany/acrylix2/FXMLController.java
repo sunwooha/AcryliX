@@ -37,6 +37,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import com.sun.javafx.robot.FXRobot;
+import javafx.scene.SnapshotParameters;
+import javafx.scene.transform.Scale;
 import javax.print.PrintException;
 
 public class FXMLController implements Initializable {
@@ -501,33 +503,38 @@ public class FXMLController implements Initializable {
     private void clickPrint(ActionEvent event) throws PrintException{
         System.out.println("You clicked the print button!");
         Printer defaultPrinter = Printer.getDefaultPrinter();
-        BufferedImage canvas = runner.getCurrentCanvas().getCanvas().getCanvasImage();
-        WritableImage canvasImage = SwingFXUtils.toFXImage(canvas, null);
+        WritableImage canvasImage = new WritableImage(1140, 595);
+        SnapshotParameters snapshotParams = new SnapshotParameters();
+        canvasImage = runner.getCurrentCanvas().snapshot(snapshotParams, canvasImage);
+        
         ImageView image = new ImageView(canvasImage);
-        aPane.getChildren().add(image);
+        PrinterJob job = PrinterJob.createPrinterJob();
         
         if(defaultPrinter != null){
-            Node node = aPane;
             String name = defaultPrinter.getName();
             System.out.println("Default printer name: " + name);
-            PrinterJob job = PrinterJob.createPrinterJob();
-            PageLayout pageLayout = defaultPrinter.createPageLayout(Paper.A4, PageOrientation.LANDSCAPE,Printer.MarginType.DEFAULT);
-
-            if(job != null && job.showPrintDialog(node.getScene().getWindow())){
-                boolean printed = job.printPage(pageLayout, node);
-                if(printed){
-                    System.out.println("Printing " + job.getJobSettings().getJobName() + " to " + name);
-                    job.endJob();
-                }
-                else{
-                    System.out.println("Printing failed");
+      
+            if(job != null){
+                PageLayout pageLayout = job.getJobSettings().getPageLayout();
+                pageLayout = defaultPrinter.createPageLayout(pageLayout.getPaper(), PageOrientation.LANDSCAPE, Printer.MarginType.DEFAULT);
+                job.getJobSettings().setPageLayout(pageLayout);
+                if (job.showPrintDialog(runner.getCurrentCanvas().getScene().getWindow())) {
+                    pageLayout = job.getJobSettings().getPageLayout();
+                    final double scale = Math.min(pageLayout.getPrintableWidth() / image.getBoundsInParent().getWidth(), pageLayout.getPrintableHeight() / image.getBoundsInParent().getHeight());
+                    image.getTransforms().add(new Scale(scale, scale));
+                    if (job.printPage(image)) {
+                        System.out.println("Printing " + job.getJobSettings().getJobName() + " to " + name);
+                        job.endJob();
+                    }
+                    else{
+                        System.out.println("Printing failed");
+                    }
                 }
             } 
         }
         else{
             System.out.println("No printers installed!");
         }
-        aPane.getChildren().remove(image);
     }
     
     @FXML
