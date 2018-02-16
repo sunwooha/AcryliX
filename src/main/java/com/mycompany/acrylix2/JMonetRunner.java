@@ -132,6 +132,11 @@ public class JMonetRunner implements Observer {
                 .withFontColor(activeTool.getFontColor())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
+            
+            if (currentToolType == PaintToolType.FILL) {
+                FillBoundaryFunction newBoundaryFunction = new FillBoundaryFunction();
+                ((FillTool)activeTool).setBoundaryFunction(newBoundaryFunction);
+            }
         }  
     }
     
@@ -156,6 +161,11 @@ public class JMonetRunner implements Observer {
                 .withFontColor(activeTool.getFontColor())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
+            
+            if (currentToolType == PaintToolType.FILL) {
+                FillBoundaryFunction newBoundaryFunction = new FillBoundaryFunction();
+                ((FillTool)activeTool).setBoundaryFunction(newBoundaryFunction);
+            }
         }
     }
     
@@ -181,6 +191,11 @@ public class JMonetRunner implements Observer {
                 .withFontColor(activeTool.getFontColor())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
+            
+            if (currentToolType == PaintToolType.FILL) {
+                FillBoundaryFunction newBoundaryFunction = new FillBoundaryFunction();
+                ((FillTool)activeTool).setBoundaryFunction(newBoundaryFunction);
+            }
         }  
     }
     
@@ -206,6 +221,11 @@ public class JMonetRunner implements Observer {
                 .withFontColor(activeTool.getFontColor())
                 .makeActiveOnCanvas(currentCanvas)
                 .build();
+            
+            if (currentToolType == PaintToolType.FILL) {
+                FillBoundaryFunction newBoundaryFunction = new FillBoundaryFunction();
+                ((FillTool)activeTool).setBoundaryFunction(newBoundaryFunction);
+            }
         }
     }
     
