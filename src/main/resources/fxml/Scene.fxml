@@ -636,7 +636,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <TextField fx:id="fileName" alignment="CENTER" text="Untitled">
+            <TextField fx:id="fileName" alignment="CENTER" promptText="Untitled" style="-fx-background-radius: 10;">
                <HBox.margin>
                   <Insets top="15.0" />
                </HBox.margin>

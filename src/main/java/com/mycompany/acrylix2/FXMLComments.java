@@ -35,11 +35,11 @@ public class FXMLComments implements Initializable {
     private void clickComment(ActionEvent event){
         
         //the comment is entered as a string
-        String newComment = commentsTextField.getText();
+        //String newComment = commentsTextField.getText();
         
         //now, send this comment to the arraylist of comments on the FXMLController.
-        FXMLController mainClass = new FXMLController();
-        mainClass.comments.add(newComment);
+        //FXMLController mainClass = new FXMLController();
+        //mainClass.comments.add(newComment);
         
     }
     

@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0" prefWidth="280.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLText">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="280.0" style="-fx-background-color: rgb(51,51,51)rgb(51,51,51) rgb(51,51,51)rgb(51,51,51);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.acrylix2.FXMLText">
    <children>
-      <VBox alignment="CENTER" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.0" prefWidth="280.0" spacing="20.0">
+      <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="280.0" spacing="20.0">
          <children>
             <VBox prefHeight="70.0" prefWidth="325.0">
                <children>
